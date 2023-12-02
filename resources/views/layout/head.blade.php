@@ -27,5 +27,10 @@
     <!-- INTERNAL SWITCHER CSS -->
     <link href="assets/switcher/css/switcher.css" rel="stylesheet" />
     <link href="assets/switcher/demo.css" rel="stylesheet" />
+    <style>
+        .custom-container{
+            width: 95%;
+        }
+    </style>
 
 </head>

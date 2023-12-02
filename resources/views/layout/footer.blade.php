@@ -14,6 +14,9 @@
  <!-- BACK TO TOP -->
  <a href="#top" id="back-to-top"><span class="feather feather-chevrons-up"></span></a>
 
+ {{-- fontawesome link --}}
+ <script src="https://kit.fontawesome.com/1fa92a4595.js" crossorigin="anonymous"></script>
+
  <!-- JQUERY JS -->
  <script src="assets/plugins/jquery/jquery.min.js"></script>
 

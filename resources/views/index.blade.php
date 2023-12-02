@@ -57,7 +57,7 @@
                             <div class="card-image-wrapper">
                                 <img src="assets/images/brand/it.png" width="180" height="180"
                                     class="card-img-top img-fluid" alt="...">
-                                <h1 class="text-center"><a href="it.html"
+                                <h1 class="text-center"><a href="./depo"
                                         class="btn btn-outline-orange it3 border-bottom  font-weight-bold border-top">کتل</a>
                                 </h1>
                             </div>

@@ -22,6 +22,13 @@ Route::get("/report", function () {
     return view("report");
 });
 
+Route::get("/depo", function () {
+    return view("./depo/index");
+});
+Route::get("/all-items", function () {
+    return view("./depo/items/all-items");
+});
+
 Route::get("/employee", function () {
     return view("./employee/Employee-list");
 });
