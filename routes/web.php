@@ -16,5 +16,21 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get("/", function () {
-    return view("welcome");
+    return view("index");
+});
+Route::get("/report", function () {
+    return view("report");
+});
+
+Route::get("/employee", function () {
+    return view("./employee/Employee-list");
+});
+
+
+Route::get("/add-employee", function () {
+    return view("./employee/add-Employee");
+});
+
+Route::get("/view-employee", function () {
+    return view("./employee/view-Employee");
 });
