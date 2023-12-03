@@ -28,6 +28,13 @@ Route::get("/depo", function () {
 Route::get("/all-items", function () {
     return view("./depo/items/all-items");
 });
+Route::get("/new-arrival-items", function () {
+    return view("./depo/items/new-items");
+});
+
+Route::get("/delivered-items", function () {
+    return view("./depo/items/delivered-item");
+});
 
 Route::get("/employee", function () {
     return view("./employee/Employee-list");

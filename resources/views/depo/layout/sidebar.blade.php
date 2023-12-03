@@ -22,7 +22,7 @@
 
                     </li>
                     <li class="slide">
-                        <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0);">
+                        <a class="side-menu__item" data-bs-toggle="slide" href="/new-arrival-items">
                             <i class="fa-solid fa-list-ol sidemenu_icon"></i>
                             <span class="side-menu__label">نوي اجناس</span><i class="angle fa fa-angle-right"></i></a>
 
@@ -34,7 +34,7 @@
 
                     </li>
                     <li class="slide">
-                        <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0);">
+                        <a class="side-menu__item" data-bs-toggle="slide" href="/delivered-items">
                             <i class="fa-regular fa-address-book sidemenu_icon"></i>
                             <span class="side-menu__label">توزیع شوي اجناس</span><i class="angle fa fa-angle-right"></i></a>
 

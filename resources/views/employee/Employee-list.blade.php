@@ -26,7 +26,7 @@
                         <div class="page-rightheader ms-md-auto">
                             <div class="align-items-end flex-wrap my-auto right-content breadcrumb-right">
                                 <div class="btn-list">
-                                    <a href="hr-addemployee.html" class="btn btn-primary me-3">د کامند اضافه کول</a>
+                                    <a href="/add-employee" class="btn btn-primary me-3">د کامند اضافه کول</a>
 
                                 </div>
                             </div>
@@ -72,7 +72,7 @@
                                         <td>161600</td>
                                         <td><span>2023/9/9</span></td>
                                         <td>
-                                            <a class="btn btn-primary btn-icon btn-sm" href="hr-empview.html">
+                                            <a class="btn btn-primary btn-icon btn-sm" href="/view-employee">
                                                 <i class="feather feather-edit" data-bs-toggle="tooltip"
                                                     data-original-title="View/Edit"></i>
                                             </a>

@@ -162,7 +162,7 @@
                                     </div>
                                     <div class="media me-4">
                                         <div class="media-icon bg-warning-transparent text-warning me-3 mt-1">
-                                            <i class="fa fa-slack"></i>
+                                            <i class="fa-solid fa-envelope-open-text"></i>
                                         </div>
                                         <div class="media-body">
                                             <small class="text-muted">ایمیل</small>
@@ -173,7 +173,7 @@
                                     </div>
                                     <div class="media">
                                         <div class="media-icon bg-info-transparent text-info me-3 mt-1">
-                                            <i class="fa fa-map"></i>
+                                            <i class="fa-solid fa-map-location"></i>
                                         </div>
                                         <div class="media-body">
                                             <small class="text-muted">اوسنی ادرس</small>
