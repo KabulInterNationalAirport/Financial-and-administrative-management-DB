@@ -7,34 +7,74 @@
                     <div class="page-title" dir="rtl"><span class="font-weight-normal text-muted ms-2"></span>
                         توزیع شوي اجناس</div>
                 </div>
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
                     <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h1 class="modal-title fs-5" id="exampleModalLabel">د نوي جنس توزیع</h1>
-                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                          <form>
-                            <div class="mb-3">
-                              <label for="recipient-name" class="col-form-label">Recipient:</label>
-                              <input type="text" class="form-control" id="recipient-name">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">د جنس توزیع</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
                             </div>
-                            <div class="mb-3">
-                              <label for="message-text" class="col-form-label">Message:</label>
-                              <textarea class="form-control" id="message-text"></textarea>
+                            <div class="modal-body">
+                                <form>
+                                    <div>
+                                        <label for="cagegory-name" class="col-form-label">کټګوري:</label>
+                                        <input type="text" class="form-control" id="cagegory-name">
+                                    </div>
+                                    <div>
+                                        <label for="item-name" class="col-form-label">نوم:</label>
+                                        <input type="text" class="form-control" id="item-name">
+                                    </div>
+                                    <div>
+                                        <label for="quantity" class="col-form-label">تعداد:</label>
+                                        <input type="number" class="form-control" id="quantity">
+                                    </div>
+                                    <div>
+                                        <label for="wahid" class="col-form-label">واحد:</label>
+                                        <input type="number" class="form-control" id="wahid">
+                                    </div>
+                                    <div class="">
+                                        <label for="price" class="col-form-label">قیمت:</label>
+                                        <input type="number" class="form-control" id="price">
+                                    </div>
+                                    <div>
+                                        <label for="Trustee-name" class="col-form-label">مجموعه:</label>
+                                        <input type="text" class="form-control" id="Trustee-name">
+                                    </div>
+                                    <div>
+                                        <label for="f-s9-number" class="col-form-label">د پیشنهاد نمبر:</label>
+                                        <input type="number" class="form-control" id="f-s9-number">
+                                    </div>
+                                    <div>
+                                        <label for="order-number" class="col-form-label"> د پیشنهاد تاریخ:</label>
+                                        <input type="number" class="form-control" id="order-number">
+                                    </div>
+                                    <div>
+                                        <label for="administration" class="col-form-label">د پیشنهاد اداره:</label>
+                                        <input type="text" class="form-control" id="administration">
+                                    </div>
+                                    <div>
+                                        <label for="buyer" class="col-form-label"> د توزیع تاریخ:</label>
+                                        <input type="text" class="form-control" id="buyer">
+                                    </div>
+                                    <div>
+                                        <label for="buyer" class="col-form-label"> د اخیستونکي نوم او تخلص:</label>
+                                        <input type="text" class="form-control" id="buyer">
+                                    </div>
+
+                                </form>
                             </div>
-                          </form>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">بند کړۍ</button>
+                                <button type="button" class="btn btn-primary">ذخیره کړۍ</button>
+                            </div>
                         </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">بند کړۍ</button>
-                          <button type="button" class="btn btn-primary">ذخیره کړۍ</button>
-                        </div>
-                      </div>
                     </div>
-                  </div>
+                </div>
                 <div class="page-rightheader">
-                    <button class="btn btn-primary" data-bs-target="#exampleModal" data-bs-toggle="modal">د جنس اضافه کول <i class="fa-solid fa-plus"></i></button>
+                    <button class="btn btn-primary" data-bs-target="#exampleModal" data-bs-toggle="modal">د جنس اضافه کول <i
+                            class="fa-solid fa-plus"></i></button>
                 </div>
             </div>
             <div class="">
@@ -51,13 +91,13 @@
                         <div class="page-rightheader ms-md-auto ">
                             <div class="align-items-end  right-content breadcrumb-right d-block d-flex">
                                 <div class="btn-list">
-                                    <a href="hr-addemployee.html" class="btn btn-outline-success">Copy</a>
+                                    <a href="hr-addemployee.html" class="btn btn-outline-light">Copy</a>
                                 </div>
                                 <div class="btn-list">
-                                    <a href="hr-addemployee.html" class="btn btn-outline-primary">PDF</a>
+                                    <a href="hr-addemployee.html" class="btn btn-outline-light">Print</a>
                                 </div>
                                 <div class="btn-list">
-                                    <a href="hr-addemployee.html" class="btn btn-outline-secondary">PDF</a>
+                                    <a href="hr-addemployee.html" class="btn btn-outline-light">PDF</a>
                                 </div>
                             </div>
                         </div>
@@ -95,7 +135,8 @@
                                 <td>۱۴۰۲/۹/۱۲</td>
                                 <td>عبدالصبور همت</td>
                                 <td>
-                                    <a href="#" class="btn small btn-outline-success">تشریحات</a>
+                                    <a href="#" class="btn small btn-outline-dark">تشریحات <i
+                                            class="fa-solid fa-circle-info"></i></a>
                                 </td>
                             </tr>
                             <th scope="row">1</th>
@@ -111,7 +152,8 @@
                             <td>۱۴۰۲/۹/۱۲</td>
                             <td>عبدالصبور همت</td>
                             <td>
-                                <a href="#" class="btn small btn-outline-success">تشریحات</a>
+                                <a href="#" class="btn small btn-outline-dark">تشریحات <i
+                                        class="fa-solid fa-circle-info"></i></a>
                             </td>
                             </tr>
                             <th scope="row">1</th>
@@ -127,7 +169,8 @@
                             <td>۱۴۰۲/۹/۱۲</td>
                             <td>عبدالصبور همت</td>
                             <td>
-                                <a href="#" class="btn small btn-outline-success">تشریحات</a>
+                                <a href="#" class="btn small btn-outline-dark">تشریحات <i
+                                        class="fa-solid fa-circle-info"></i></a>
                             </td>
                             </tr>
                             <th scope="row">1</th>
@@ -143,7 +186,8 @@
                             <td>۱۴۰۲/۹/۱۲</td>
                             <td>عبدالصبور همت</td>
                             <td>
-                                <a href="#" class="btn small btn-outline-success">تشریحات</a>
+                                <a href="#" class="btn small btn-outline-dark">تشریحات <i
+                                        class="fa-solid fa-circle-info"></i></a>
                             </td>
                             </tr>
                             <th scope="row">1</th>
@@ -159,11 +203,10 @@
                             <td>۱۴۰۲/۹/۱۲</td>
                             <td>عبدالصبور همت</td>
                             <td>
-                                <a href="#" class="btn small btn-outline-success">تشریحات</a>
+                                <a href="#" class="btn small btn-outline-dark">تشریحات <i
+                                        class="fa-solid fa-circle-info"></i></a>
                             </td>
                             </tr>
-
-
                         </tbody>
                     </table>
 

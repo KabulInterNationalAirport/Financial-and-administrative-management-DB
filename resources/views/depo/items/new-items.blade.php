@@ -87,13 +87,13 @@
                         <div class="page-rightheader ms-md-auto ">
                             <div class="align-items-end  right-content breadcrumb-right d-block d-flex">
                                 <div class="btn-list">
-                                    <a href="hr-addemployee.html" class="btn btn-outline-success">Copy</a>
+                                    <a href="hr-addemployee.html" class="btn btn-outline-light">Copy</a>
                                 </div>
                                 <div class="btn-list">
-                                    <a href="hr-addemployee.html" class="btn btn-outline-primary">PDF</a>
+                                    <a href="hr-addemployee.html" class="btn btn-outline-light">Print</a>
                                 </div>
                                 <div class="btn-list">
-                                    <a href="hr-addemployee.html" class="btn btn-outline-secondary">PDF</a>
+                                    <a href="hr-addemployee.html" class="btn btn-outline-light">PDF</a>
                                 </div>
                             </div>
                         </div>
@@ -133,7 +133,7 @@
                                 <td>آی ټي</td>
                                 <td>نه</td>
                                 <td>
-                                    <a href="#" class="btn small btn-outline-success">تشریحات</a>
+                                    <a href="#" class="btn small btn-outline-dark">تشریحات</a>
                                 </td>
                             </tr>
                             <tr>
@@ -151,7 +151,7 @@
                                 <td>آی ټي</td>
                                 <td>نه</td>
                                 <td>
-                                    <a href="#" class="btn small btn-outline-success">تشریحات</a>
+                                    <a href="#" class="btn small btn-outline-dark">تشریحات</a>
                                 </td>
                             </tr>
                             <tr>
@@ -169,7 +169,7 @@
                                 <td>آی ټي</td>
                                 <td>نه</td>
                                 <td>
-                                    <a href="#" class="btn small btn-outline-success">تشریحات</a>
+                                    <a href="#" class="btn small btn-outline-dark">تشریحات</a>
                                 </td>
                             </tr>
                             <tr>
@@ -187,7 +187,7 @@
                                 <td>آی ټي</td>
                                 <td>نه</td>
                                 <td>
-                                    <a href="#" class="btn small btn-outline-success">تشریحات</a>
+                                    <a href="#" class="btn small btn-outline-dark">تشریحات</a>
                                 </td>
                             </tr>
                             <tr>
@@ -205,7 +205,7 @@
                                 <td>آی ټي</td>
                                 <td>نه</td>
                                 <td>
-                                    <a href="#" class="btn small btn-outline-success">تشریحات</a>
+                                    <a href="#" class="btn small btn-outline-dark">تشریحات</a>
                                 </td>
                             </tr>
                             <tr>
@@ -223,7 +223,7 @@
                                 <td>آی ټي</td>
                                 <td>نه</td>
                                 <td>
-                                    <a href="#" class="btn small btn-outline-success">تشریحات</a>
+                                    <a href="#" class="btn small btn-outline-dark">تشریحات</a>
                                 </td>
                             </tr>
                             <tr>
@@ -241,7 +241,7 @@
                                 <td>آی ټي</td>
                                 <td>نه</td>
                                 <td>
-                                    <a href="#" class="btn small btn-outline-success">تشریحات</a>
+                                    <a href="#" class="btn small btn-outline-dark">تشریحات</a>
                                 </td>
                             </tr>
                         </tbody>

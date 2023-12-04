@@ -5,11 +5,11 @@
                 <div class="main-menu">
                     <div class="app-sidebar__user">
                         <div class="dropdown user-pro-body text-center">
-                            <div class="">
+                            <a class="" href="/depo">
                                 <h1>
-                                    د ډیپو لوی مدیریت
+                                    د ډیپو مدیریت <i class="fa-solid fa-tent-arrow-down-to-line"></i>
                                 </h1>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -18,31 +18,37 @@
                     <li class="slide">
                         <a class="side-menu__item" data-bs-toggle="slide" href="/all-items">
                             <i class="fa-solid fa-list-ul sidemenu_icon"></i>
-                            <span class="side-menu__label">مکمل اجناس</span><i class="angle fa fa-angle-right"></i></a>
+                            <span class="side-menu__label">د مکملو اجناسو لیست </span><i class="angle fa fa-angle-right"></i></a>
 
                     </li>
                     <li class="slide">
                         <a class="side-menu__item" data-bs-toggle="slide" href="/new-arrival-items">
                             <i class="fa-solid fa-list-ol sidemenu_icon"></i>
-                            <span class="side-menu__label">نوي اجناس</span><i class="angle fa fa-angle-right"></i></a>
+                            <span class="side-menu__label">د نوي راغلو اجناسو لیست</span><i class="angle fa fa-angle-right"></i></a>
 
                     </li>
                     <li class="slide">
-                        <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0);">
+                        <a class="side-menu__item" data-bs-toggle="slide" href="/damaged-items">
                             <i class="fa-solid fa-triangle-exclamation sidemenu_icon"></i>
-                            <span class="side-menu__label">خراپ شوي اجناس</span><i class="angle fa fa-angle-right"></i></a>
+                            <span class="side-menu__label">د خراپ شویو اجناسو لیست</span><i class="angle fa fa-angle-right"></i></a>
 
                     </li>
                     <li class="slide">
                         <a class="side-menu__item" data-bs-toggle="slide" href="/delivered-items">
                             <i class="fa-regular fa-address-book sidemenu_icon"></i>
-                            <span class="side-menu__label">توزیع شوي اجناس</span><i class="angle fa fa-angle-right"></i></a>
+                            <span class="side-menu__label">د توزیع شویو اجناسو لیست</span><i class="angle fa fa-angle-right"></i></a>
 
                     </li>
                     <li class="slide">
-                        <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0);">
+                        <a class="side-menu__item" data-bs-toggle="slide" href="/depo-emp">
                             <i class="fa-solid fa-users sidemenu_icon"></i>
-                            <span class="side-menu__label">کارمندان</span><i class="angle fa fa-angle-right"></i></a>
+                            <span class="side-menu__label">د ثبت شویو کارمندانو لیست</span><i class="angle fa fa-angle-right"></i></a>
+
+                    </li>
+                    <li class="slide">
+                        <a class="side-menu__item" data-bs-toggle="slide" href="/motamid">
+                            <i class="fa-solid fa-user-pen sidemenu_icon"></i>
+                            <span class="side-menu__label">د معتمدینو لیست</span><i class="angle fa fa-angle-right"></i></a>
 
                     </li>
             </div>

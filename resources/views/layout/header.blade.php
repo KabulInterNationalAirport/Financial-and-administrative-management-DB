@@ -188,15 +188,15 @@
                                             <a href="javascript:void(0);" class="nav-link pe-1 ps-0 leading-none"
                                                 data-bs-toggle="dropdown">
                                                 <span>
-                                                    <img src="assets/images/users/16.jpg1" alt="img"
+                                                    <img src="assets/images/users/16.jpg" alt="img"
                                                         class="avatar avatar-md bradius">
                                                 </span>
                                             </a>
                                             <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow animated">
                                                 <div class="p-3 text-center border-bottom">
                                                     <a href="profile.html"
-                                                        class="text-center user pb-0 font-weight-bold">user name</a>
-                                                    <p class="text-center user-semi-title">job title</p>
+                                                        class="text-center user pb-0 font-weight-bold">Abdul Saboor Hemat</a>
+                                                    <p class="text-center user-semi-title">Manager of system developmet</p>
                                                 </div>
                                                 <a class="dropdown-item d-flex" href="profile.html">
                                                     <i class="feather feather-user me-3 fs-16 my-auto"></i>

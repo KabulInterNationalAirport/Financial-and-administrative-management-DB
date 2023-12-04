@@ -35,6 +35,30 @@ Route::get("/new-arrival-items", function () {
 Route::get("/delivered-items", function () {
     return view("./depo/items/delivered-item");
 });
+Route::get("/damaged-items", function () {
+    return view("./depo/items/damaged-items");
+});
+
+Route::get("/depo-emp", function () {
+    return view("./depo/employee/employee-list");
+});
+
+Route::get("/depo-emp-add", function () {
+    return view("./depo/employee/add-employee");
+});
+
+Route::get("/depo-emp-items", function () {
+    return view("./depo/employee/view-employee-items");
+});
+
+Route::get("/motamid", function () {
+    return view("./depo/motamid/motamid-list");
+});
+
+Route::get("/motamid-items", function () {
+    return view("./depo/motamid/view-motamid-items");
+});
+
 
 Route::get("/employee", function () {
     return view("./employee/Employee-list");
