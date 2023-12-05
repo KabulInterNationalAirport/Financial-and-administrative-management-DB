@@ -25,21 +25,14 @@
                             </form>
                         </div><!-- SEARCH -->
                         <div class="page-rightheader ms-md-auto ">
-                            <div class="align-items-end  right-content breadcrumb-right d-block d-flex">
-                                <div class="btn-list">
-                                    <a href="hr-addemployee.html" class="btn btn-outline-success">Copy</a>
-                                </div>
-                                <div class="btn-list">
-                                    <a href="hr-addemployee.html" class="btn btn-outline-primary">Print</a>
-                                </div>
-                                <div class="btn-list">
-                                    <a href="hr-addemployee.html" class="btn btn-outline-secondary">PDF</a>
-                                </div>
-                            </div>
+                            <button class="btn btn-primary mt-4" onClick="javascript:window.print();"><i
+                                    class="si si-wallet"></i> Pdf </button>
+                            <button class="btn btn-secondary mt-4" onClick="javascript:window.print();"><i
+                                    class="si si-paper-plane"></i>Excel</button>
+                            <button class="btn btn-info mt-4" onClick="javascript:window.print();"><i
+                                    class="si si-printer"></i> Print</button>
                         </div>
-
                     </div>
-
                     <h1>د ډیپو مدیریت</h1>
                     <div class="mt-3">
                         <div class="table-responsive">
@@ -120,7 +113,6 @@
                                     </tr>
                                 </tbody>
                             </table>
-
                         </div>
                         <!-- END ROW -->
                     </div>
@@ -189,7 +181,6 @@
                                     </tr>
                                 </tbody>
                             </table>
-
                         </div>
                         <!-- END ROW -->
                     </div>
@@ -258,7 +249,6 @@
                                     </tr>
                                 </tbody>
                             </table>
-
                         </div>
                         <!-- END ROW -->
                     </div>

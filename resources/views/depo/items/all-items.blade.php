@@ -62,17 +62,12 @@
                             </form>
                         </div>
                         <div class="page-rightheader ms-md-auto ">
-                            <div class="align-items-end  right-content breadcrumb-right d-block d-flex">
-                                <div class="btn-list">
-                                    <a href="hr-addemployee.html" class="btn btn-outline-light">Copy</a>
-                                </div>
-                                <div class="btn-list">
-                                    <a href="hr-addemployee.html" class="btn btn-outline-light">Print</a>
-                                </div>
-                                <div class="btn-list">
-                                    <a href="hr-addemployee.html" class="btn btn-outline-light">PDF</a>
-                                </div>
-                            </div>
+                            <button class="btn btn-primary mt-4" onClick="javascript:window.print();"><i
+                                    class="si si-wallet"></i> Pdf </button>
+                            <button class="btn btn-secondary mt-4" onClick="javascript:window.print();"><i
+                                    class="si si-paper-plane"></i>Excel</button>
+                            <button class="btn btn-info mt-4" onClick="javascript:window.print();"><i
+                                    class="si si-printer"></i> Print</button>
                         </div>
                     </div>
                     <table class="table table-bordered text-center">

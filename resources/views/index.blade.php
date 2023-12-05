@@ -34,12 +34,12 @@
                             <div class="card-body">
                                 <h5 class="card-title font-weight-bold text-center text-muted">مالي او اداري آمریت<br><br>
                                     <p2 class="font-weight-bold text-dark">
-                                        د ټرمینلونو مدیریت </p2>
+                                        د املاکو عمومي مدیریت</p2>
                                 </h5>
                             </div>
                             <div class="card-image-wrapper">
                                 <img src="assets/images/brand/secretory.png" class="card-img-top img-fluid" alt="...">
-                                <h1 class="text-center"><a href="secretory.html"
+                                <h1 class="text-center"><a href="/property"
                                         class="btn btn-outline-dark it2 border-bottom  font-weight-bold border-top">کتل</a>
                                 </h1>
                             </div>
