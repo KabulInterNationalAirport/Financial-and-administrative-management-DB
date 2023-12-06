@@ -5,7 +5,7 @@
                 <div class="main-menu">
                     <div class="app-sidebar__user">
                         <div class="dropdown user-pro-body text-center">
-                            <a class="" href="/depo">
+                            <a class="" href="/property">
                                 <h2>
                                     د املاکو عمومي مدیریت  
                                 </h2>
@@ -22,7 +22,7 @@
 
                     </li>
                     <li class="slide">
-                        <a class="side-menu__item" data-bs-toggle="slide" href="/new-arrival-items">
+                        <a class="side-menu__item" data-bs-toggle="slide" href="/estilam">
                             <i class="fa-solid fa-list-ol sidemenu_icon"></i>
                             <span class="side-menu__label"> د تیلو استعلامونه</span><i class="angle fa fa-angle-right"></i></a>
 
@@ -31,6 +31,12 @@
                         <a class="side-menu__item" data-bs-toggle="slide" href="/damaged-items">
                             <i class="fa-solid fa-people-roof sidemenu_icon"></i>
                             <span class="side-menu__label">تجارتي ساحې(عواید)</span><i class="angle fa fa-angle-right"></i></a>
+
+                    </li>
+                    <li class="slide">
+                        <a class="side-menu__item" data-bs-toggle="slide" href="/oil-company">
+                            <i class="fa-solid fa-gas-pump sidemenu_icon"></i>
+                            <span class="side-menu__label">د تیلو شرکتونه</span><i class="angle fa fa-angle-right"></i></a>
 
                     </li>
             </div>

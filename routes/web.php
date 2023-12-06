@@ -85,3 +85,25 @@ Route::get("/qarardads", function () {
 Route::get("/new-qarardads", function () {
     return view("./property/qrardads/new-qarar-dad");
 });
+
+
+Route::get("/view-qarardad", function () {
+    return view("./property/qrardads/view-qarar-dad");
+});
+
+Route::get("/estilam", function () {
+    return view("./property/oil-estilams/estilam-list");
+});
+
+Route::get("/oil-company", function () {
+    return view("./property/oil-estilams/oil-company-qarar-dad/oil-qarar-dad");
+});
+
+Route::get("/view", function () {
+    return view("./property/oil-estilams/oil-company-qarar-dad/view-qarar-dad");
+});
+
+
+Route::get("/view-estilam", function () {
+    return view("./property/oil-estilams/view-estilam");
+});
