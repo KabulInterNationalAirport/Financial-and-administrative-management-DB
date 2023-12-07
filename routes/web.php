@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::get("/", function () {
     return view("index");
 });
-
+// --------------- for DEPO --------------------
 // Route::get("/report", function () {
 //     return view("report");
 // });
@@ -74,6 +74,8 @@ Route::get("/", function () {
 //     return view("./employee/view-Employee");
 // });
 
+
+// --------------- for property ------------------
 Route::get("/property", function () {
     return view("./property/index");
 });
@@ -87,9 +89,14 @@ Route::get("/new-qarardads", function () {
 });
 
 
+Route::get("/view-qarardad-details", function () {
+    return view("./property/qrardads/view-qarar-dad-details");
+});
+
 Route::get("/view-qarardad", function () {
     return view("./property/qrardads/view-qarar-dad");
 });
+
 
 Route::get("/estilam", function () {
     return view("./property/oil-estilams/estilam-list");
@@ -106,4 +113,28 @@ Route::get("/view", function () {
 
 Route::get("/view-estilam", function () {
     return view("./property/oil-estilams/view-estilam");
+});
+
+
+Route::get("/add-estilam", function () {
+    return view("./property/oil-estilams/new-estilam");
+});
+
+Route::get("/estilam-details", function () {
+    return view("./property/oil-estilams/view-estilam-details");
+});
+
+
+
+Route::get("/view-oil-company-qarar-dad", function () {
+    return view("./property/oil-estilams/oil-company-qarar-dad/view-oil-qarar-dad");
+});
+
+
+Route::get("/revenue", function () {
+    return view("./property/revenue/revenue-list");
+});
+
+Route::get("/add-revenue", function () {
+    return view("./property/revenue/add-revenue");
 });

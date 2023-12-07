@@ -25,7 +25,7 @@
 													</div>
 												</div>
 												<div class="col-4">
-													<div class="icon1 bg-danger my-auto  float-end"> <i class="feather feather-briefcase"></i> </div>
+													<div class="icon1 bg-danger my-auto  float-end"> <i class="fa-solid fa-gas-pump"></i> </div>
 												</div>
 											</div>
 										</div>

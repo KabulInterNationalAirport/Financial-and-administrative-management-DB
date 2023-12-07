@@ -7,7 +7,7 @@
                 
                 <div class="page-rightheader header ms-md-auto">
                     <div class="d-flex align-items-end flex-wrap my-auto end-content breadcrumb-end">
-                        <a href="/add-estilam"class="btn btn-primary " >نوی اضافه کړۍ</a>
+                        <a href="/add-revenue"class="btn btn-primary " >نوې تجارتي ساحه اضافه کړۍ</a>
                     </div>
                 </div>
             </div>
@@ -16,46 +16,54 @@
             <div class="main-proifle">
                 <!-- ROW -->
                 <div class="header text-center">
-                    <div class="page-title">د استلامو لیست</div>
+                    <div class="page-title">د تجارتي ساحو لیست</div>
                 </div>
                 <div class="table-responsive">
-                    <table class="table  table-vcenter text-center table-bordered border-bottom" id="project-list">
+                    <table class="table  table-vcenter text-center table-bordered" id="project-list">
                         <thead class="bg-success">
                             <tr>
-                                <th class="border-bottom-0">تاریخ</th>
-                                <th class="border-bottom-0">شرکت</th>
-                                <th class="border-bottom-0">موټرو تعداد</th>
-                                <th class="border-bottom-0">د تیلو اندازه</th>
-                                <th class="border-bottom-0">تعقیبی شخص</th>
-                                <th class="border-bottom-0">عملیې</th>
+                                <th class="">نمبر</th>
+                                <th class="">د قرار داد شهرت</th>
+                                <th class="">ماشتنۍ کرایه</th>
+                                <th class="">مساحت به مترمربع</th>
+                                <th class="">موقیعت</th>
+                                <th class=""> شروع نیټه</th>
+                                <th class=""> ختم نیټه</th>
+                                <th class="">فعالیت ډول</th>
+                                <th class="">حالت</th>
+                                <th class="">عملیې</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
+                                <td>1</td>
+                                <td>
+                                    عبدالصبور همت
+                                </td>
+                                <td>
+                                   12000  
+                                </td>
+                                <td>
+                                    ۲۲۰ 
+                                </td>
+                                <td>هوايي میدان ته څیرمه</td>
                                 <td>12-02-2021</td>
-                                <td>
-                                    ارو پطرولیم
-                                </td>
-                                <td>
-                                  7
-                                </td>
-                                <td>
-                                10 ton
-                                </td>
-                                <td>احمد</td>
+                                <td>12-02-2021</td>
+                                <td>آمریت دفتر</td>
+                                
+                                <td><span class="badge badge-success">تکمیل</span></td>
                                 <td>
                                     <div class="d-flex">
-                                        <a href="/estilam-details" class="action-btns1" data-bs-toggle="tooltip"
-                                            data-bs-placement="top" title="د استلام کتل"><i
+                                        <a href="/view-qarardad-details" class="action-btns1" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" title="د قرار داد کتل"><i
                                                 class="fa-solid fa-eye text-primary"></i></a>
                                         <a href="javascript:void(0);" class="action-btns1" data-bs-toggle="modal"
                                             data-bs-target="#editprojectmodal">
                                             <i class="fa-solid fa-pen  text-success" data-bs-toggle="tooltip"
-                                                data-bs-placement="top" title="د استلام تغیر کول"></i>
+                                                data-bs-placement="top" title="د قرار داد تغیر کول"></i>
                                         </a>
-                                        <a href="/view-estilam" class="action-btns1" data-bs-toggle="tooltip"
-                                        data-bs-placement="top" title="د استلام پرینټ"><i
-                                            class="fa-solid fa-print  text-secondary"></i></a>
+                                        <a href="/view-qarardad" class="action-btns1" data-bs-toggle="tooltip"
+                                        data-bs-placement="top" title="د قرار داد پرینټ"><i class="fa-solid fa-print  text-secondary"></i></a>
                                        
                                     </div>
                                 </td>

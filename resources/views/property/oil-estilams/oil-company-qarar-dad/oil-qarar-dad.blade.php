@@ -92,7 +92,7 @@
                                 <td>هوايي ډ‌ګر ته څېرمه</td>
                                 <td>
                                     <div class="d-flex">
-                                        <a href="/view" class="action-btns1" data-bs-toggle="tooltip"
+                                        <a href="/view-oil-company-qarar-dad" class="action-btns1" data-bs-toggle="tooltip"
                                             data-bs-placement="top" title="د قرار داد کتل"><i
                                                 class="fa-solid fa-eye text-primary"></i></a>
                                         <a href="javascript:void(0);" class="action-btns1" data-bs-toggle="modal"

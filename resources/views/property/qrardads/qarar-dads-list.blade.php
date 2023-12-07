@@ -55,7 +55,7 @@
                                 <td><span class="badge badge-success">تکمیل</span></td>
                                 <td>
                                     <div class="d-flex">
-                                        <a href="/view-qarardad" class="action-btns1" data-bs-toggle="tooltip"
+                                        <a href="/view-qarardad-details" class="action-btns1" data-bs-toggle="tooltip"
                                             data-bs-placement="top" title="د قرار داد کتل"><i
                                                 class="fa-solid fa-eye text-primary"></i></a>
                                         <a href="javascript:void(0);" class="action-btns1" data-bs-toggle="modal"
@@ -63,11 +63,8 @@
                                             <i class="fa-solid fa-pen  text-success" data-bs-toggle="tooltip"
                                                 data-bs-placement="top" title="د قرار داد تغیر کول"></i>
                                         </a>
-                                        <a href="javascript:void(0);" class="action-btns1" data-bs-toggle="modal"
-                                            data-bs-target="#editprojectmodal">
-                                            <i class="fa-solid fa-print  text-secondary" data-bs-toggle="tooltip"
-                                                data-bs-placement="top" title="قرار داد پرینټ"></i>
-                                        </a>
+                                        <a href="/view-qarardad" class="action-btns1" data-bs-toggle="tooltip"
+                                        data-bs-placement="top" title="د قرار داد پرینټ"><i class="fa-solid fa-print  text-secondary"></i></a>
                                        
                                     </div>
                                 </td>
