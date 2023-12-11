@@ -7,7 +7,7 @@
                 
                 <div class="page-rightheader header ms-md-auto">
                     <div class="d-flex align-items-end flex-wrap my-auto end-content breadcrumb-end">
-                        <a href="/add-estilam"class="btn btn-primary " >نوی اضافه کړۍ</a>
+                        <a href="/add-estilam"class="btn btn-primary " >نوی اضافه کړۍ <i class="fa-solid fa-plus"></i></a>
                     </div>
                 </div>
             </div>

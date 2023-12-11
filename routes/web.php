@@ -138,3 +138,12 @@ Route::get("/revenue", function () {
 Route::get("/add-revenue", function () {
     return view("./property/revenue/add-revenue");
 });
+
+Route::get("/print-revenue", function () {
+    return view("./property/revenue/print-revenue");
+});
+
+
+Route::get("/cars-list", function () {
+    return view("./property/oil-estilams/oil-cars/cars-list");
+});

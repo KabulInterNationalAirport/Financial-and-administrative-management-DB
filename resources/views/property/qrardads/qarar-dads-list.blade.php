@@ -7,8 +7,7 @@
                 
                 <div class="page-rightheader header ms-md-auto">
                     <div class="d-flex align-items-end flex-wrap my-auto end-content breadcrumb-end">
-                        {{-- <Button class="btn btn-primary " >نوی قرارداد اضافه کړۍ</Button> --}}
-                        <a href="/new-qarardads"class="btn btn-primary " >نوی قرارداد اضافه کړۍ</a>
+                        <a href="/new-qarardads"class="btn btn-primary " >نوی قرارداد اضافه کړۍ <i class="fa-solid fa-plus"></i></a>
                     </div>
                 </div>
             </div>

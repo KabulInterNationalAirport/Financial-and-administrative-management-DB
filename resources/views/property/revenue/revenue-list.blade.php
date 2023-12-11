@@ -7,7 +7,7 @@
                 
                 <div class="page-rightheader header ms-md-auto">
                     <div class="d-flex align-items-end flex-wrap my-auto end-content breadcrumb-end">
-                        <a href="/add-revenue"class="btn btn-primary " >نوې تجارتي ساحه اضافه کړۍ</a>
+                        <a href="/add-revenue"class="btn btn-primary " >نوې تجارتي ساحه اضافه کړۍ <i class="fa-solid fa-plus"></i></a>
                     </div>
                 </div>
             </div>
@@ -62,7 +62,7 @@
                                             <i class="fa-solid fa-pen  text-success" data-bs-toggle="tooltip"
                                                 data-bs-placement="top" title="د قرار داد تغیر کول"></i>
                                         </a>
-                                        <a href="/view-qarardad" class="action-btns1" data-bs-toggle="tooltip"
+                                        <a href="/print-revenue" class="action-btns1" data-bs-toggle="tooltip"
                                         data-bs-placement="top" title="د قرار داد پرینټ"><i class="fa-solid fa-print  text-secondary"></i></a>
                                        
                                     </div>
