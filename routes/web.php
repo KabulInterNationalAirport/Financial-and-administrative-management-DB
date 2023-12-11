@@ -76,74 +76,106 @@ Route::get("/", function () {
 
 
 // --------------- for property ------------------
-Route::get("/property", function () {
-    return view("./property/index");
+// Route::get("/property", function () {
+//     return view("./property/index");
+// });
+
+// Route::get("/qarardads", function () {
+//     return view("./property/qrardads/qarar-dads-list");
+// });
+
+// Route::get("/new-qarardads", function () {
+//     return view("./property/qrardads/new-qarar-dad");
+// });
+
+
+// Route::get("/view-qarardad-details", function () {
+//     return view("./property/qrardads/view-qarar-dad-details");
+// });
+
+// Route::get("/view-qarardad", function () {
+//     return view("./property/qrardads/view-qarar-dad");
+// });
+
+
+// Route::get("/estilam", function () {
+//     return view("./property/oil-estilams/estilam-list");
+// });
+
+// Route::get("/oil-company", function () {
+//     return view("./property/oil-estilams/oil-company-qarar-dad/oil-qarar-dad");
+// });
+
+// Route::get("/view", function () {
+//     return view("./property/oil-estilams/oil-company-qarar-dad/view-qarar-dad");
+// });
+
+
+// Route::get("/view-estilam", function () {
+//     return view("./property/oil-estilams/view-estilam");
+// });
+
+
+// Route::get("/add-estilam", function () {
+//     return view("./property/oil-estilams/new-estilam");
+// });
+
+// Route::get("/estilam-details", function () {
+//     return view("./property/oil-estilams/view-estilam-details");
+// });
+
+
+
+// Route::get("/view-oil-company-qarar-dad", function () {
+//     return view("./property/oil-estilams/oil-company-qarar-dad/view-oil-qarar-dad");
+// });
+
+
+// Route::get("/revenue", function () {
+//     return view("./property/revenue/revenue-list");
+// });
+
+// Route::get("/add-revenue", function () {
+//     return view("./property/revenue/add-revenue");
+// });
+
+// Route::get("/print-revenue", function () {
+//     return view("./property/revenue/print-revenue");
+// });
+
+
+// Route::get("/cars-list", function () {
+//     return view("./property/oil-estilams/oil-cars/cars-list");
+// });
+
+
+// -------------- for payroll management------------|
+
+
+Route::get("/payroll", function () {
+    return view("./payroll-management/index");
 });
 
-Route::get("/qarardads", function () {
-    return view("./property/qrardads/qarar-dads-list");
+Route::get("/employee-list", function () {
+    return view("./payroll-management/employees/employee-list");
 });
 
-Route::get("/new-qarardads", function () {
-    return view("./property/qrardads/new-qarar-dad");
+Route::get("/add-employee", function () {
+    return view("./payroll-management/employees/add-employee");
 });
 
-
-Route::get("/view-qarardad-details", function () {
-    return view("./property/qrardads/view-qarar-dad-details");
+Route::get("/print-doc", function () {
+    return view("./payroll-management/employees/print-doc");
 });
 
-Route::get("/view-qarardad", function () {
-    return view("./property/qrardads/view-qarar-dad");
+Route::get("/edit-employee", function () {
+    return view("./payroll-management/employees/edit-employee");
 });
 
-
-Route::get("/estilam", function () {
-    return view("./property/oil-estilams/estilam-list");
+Route::get("/extra-employees", function () {
+    return view("./payroll-management/retired-deceased-employees/employee-list");
 });
 
-Route::get("/oil-company", function () {
-    return view("./property/oil-estilams/oil-company-qarar-dad/oil-qarar-dad");
-});
-
-Route::get("/view", function () {
-    return view("./property/oil-estilams/oil-company-qarar-dad/view-qarar-dad");
-});
-
-
-Route::get("/view-estilam", function () {
-    return view("./property/oil-estilams/view-estilam");
-});
-
-
-Route::get("/add-estilam", function () {
-    return view("./property/oil-estilams/new-estilam");
-});
-
-Route::get("/estilam-details", function () {
-    return view("./property/oil-estilams/view-estilam-details");
-});
-
-
-
-Route::get("/view-oil-company-qarar-dad", function () {
-    return view("./property/oil-estilams/oil-company-qarar-dad/view-oil-qarar-dad");
-});
-
-
-Route::get("/revenue", function () {
-    return view("./property/revenue/revenue-list");
-});
-
-Route::get("/add-revenue", function () {
-    return view("./property/revenue/add-revenue");
-});
-
-Route::get("/print-revenue", function () {
-    return view("./property/revenue/print-revenue");
-});
-
-
-Route::get("/cars-list", function () {
-    return view("./property/oil-estilams/oil-cars/cars-list");
+Route::get("/print-documents", function () {
+    return view("./payroll-management/retired-deceased-employees/print-doc");
 });

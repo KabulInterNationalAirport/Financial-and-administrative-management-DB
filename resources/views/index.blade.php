@@ -17,12 +17,12 @@
                             <div class="card-body">
                                 <h5 class="card-title font-weight-bold text-center text-muted">مالي او اداري آمریت<br><br>
                                     <p2 class="font-weight-bold text-dark">
-                                        مالي او اداري مدیریت </p2>
+                                         د معاشاتو عمومي مدیریت </p2>
                                 </h5>
                             </div>
                             <div class="card-image-wrapper">
                                 <img src="assets/images/brand/ryast.png" class="card-img-top img-fluid" alt="...">
-                                <h1 class="text-center"><a href="directorate.html"
+                                <h1 class="text-center"><a href="/payroll"
                                         class="btn btn-outline-success it1 border-bottom  font-weight-bold border-top">کتل</a>
                                 </h1>
                             </div>
