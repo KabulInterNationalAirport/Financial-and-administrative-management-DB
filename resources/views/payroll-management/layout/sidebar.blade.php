@@ -28,9 +28,9 @@
 
                     </li>
                     <li class="slide">
-                        <a class="side-menu__item" data-bs-toggle="slide" href="/revenue">
-                            <i class="fa-solid fa-people-roof sidemenu_icon"></i>
-                            <span class="side-menu__label">تجارتي ساحې(عاید)</span><i class="angle fa fa-angle-right"></i></a>
+                        <a class="side-menu__item" data-bs-toggle="slide" href="/staff">
+                            <i class="fa-solid fa-building-user sidemenu_icon"></i>
+                            <span class="side-menu__label">د ریاست عمومي تشکیل</span><i class="angle fa fa-angle-right"></i></a>
 
                     </li>
                     <li class="slide">

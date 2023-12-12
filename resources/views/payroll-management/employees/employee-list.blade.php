@@ -18,6 +18,16 @@
                                     <input type="search" class="form-control header-search small" placeholder="پلټنه..."
                                         aria-label="Search" tabindex="1">
                                 </div>
+                                <div class="form-group ms-1">
+                                    <select name="" class="form-control custom-select select2"
+                                    data-placeholder="کلنی تقرر">
+                                    <option label="کلنی تقرر"></option>
+                                    <option value="1">تیره میاشت</option>
+                                    <option value="2">تیر کال</option>
+                                    <option value="3">سږ کال</option>
+                                </select>
+                                </div>
+                                <Button class="btn btn-light small ms-1">وپلټۍ</Button>
                             </form>
                         </div>
                         <div class="page-rightheader ms-md-auto">

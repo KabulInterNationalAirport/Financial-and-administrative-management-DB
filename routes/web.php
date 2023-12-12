@@ -179,3 +179,7 @@ Route::get("/extra-employees", function () {
 Route::get("/print-documents", function () {
     return view("./payroll-management/retired-deceased-employees/print-doc");
 });
+
+Route::get("/staff", function () {
+    return view("./payroll-management/general-staff-composition/staff-list");
+});
