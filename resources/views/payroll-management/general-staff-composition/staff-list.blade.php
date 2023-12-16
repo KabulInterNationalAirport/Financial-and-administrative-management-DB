@@ -8,12 +8,12 @@
                     <div class="page-title" dir="rtl"><span class="font-weight-normal text-muted ms-2"></span>
                           د هوايي ډګر عمومي تشکیل لیست</div>
                 </div>
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                <div class="modal fade" id="staffModal" tabindex="-1" aria-labelledby="staffModalLabel"
                     aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">نوی تشکیل اضافه کړۍ</h1>
+                                <h1 class="modal-title fs-5" id="staffModalLabel">نوی تشکیل اضافه کړۍ</h1>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
@@ -33,11 +33,15 @@
                                         <label for="item-name" class="col-form-label">تعداد:</label>
                                         <input type="number" class="form-control" id="quantity">
                                     </div>
+                                    <div>
+                                        <label for="item-name" class="col-form-label">معاش:</label>
+                                        <input type="number" class="form-control" id="salary">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">بند کړۍ</button>
+                                        <button type="button" class="btn btn-primary">ذخیره کړۍ</button>
+                                    </div>
                                 </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">بند کړۍ</button>
-                                <button type="button" class="btn btn-primary">ذخیره کړۍ</button>
                             </div>
                         </div>
                     </div>
@@ -54,7 +58,7 @@
                                 <div class="page-rightheader ms-md-auto">
                                     <div class="align-items-end flex-wrap my-auto right-content breadcrumb-right">
                                         <div class="btn-list">
-                                            <button class="btn btn-primary" data-bs-target="#exampleModal" data-bs-toggle="modal">تشکیل اضافه کړۍ<i
+                                            <button class="btn btn-primary" data-bs-target="#staffModal" data-bs-toggle="modal">تشکیل اضافه کړۍ<i
                                                 class="fa-solid fa-plus"></i></button>
         
                                         </div>
@@ -90,9 +94,21 @@
                                                 <td>30000</td>
                                                 <td>1234567</td>
                                             </tr>
+                                            <tr>
+                                                <th colspan="4">د معاشاتو میاشتنی مقدار</th>
+                                                <th>1500000</th>
+                                              </tr>
+                                            <tr>
+                                                <th colspan="4">د معاشاتو کلنی مقدار</th>
+                                                <th>1500000</th>
+                                              </tr>
                                         </tbody>
                                     </table>
                                 </div>
+                            </div>
+                            <div class="footer">
+                                <button class="btn btn-info " onClick="javascript:window.print();"><i
+                                        class="si si-printer"></i> Print</button>
                             </div>
                         </div>
                     </div>

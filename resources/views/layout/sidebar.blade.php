@@ -2,10 +2,10 @@
     <div class="sticky" id="app-sidebar-togglee">
         <aside class="app-sidebar ">
             <div class="app-sidebar3">
-                <div class="">
-                    <div class="app-sidebar__user pb-2">
+                <div class="mt-4">
+                    <div class="app-sidebar__user pb-2 mt-4">
                         <a class="dropdown  text-center" href="/">
-                                <img src="assets/images/brand/2.png"  alt="user-img">
+                                <h1>مالي او اداري آمریت</h1>
                         </a>
                     </div>
                 </div>
@@ -15,19 +15,15 @@
                         <a class="side-menu__item" data-bs-toggle="slide" href="/employee">
                             <i class="fa-solid fa-users-viewfinder sidemenu_icon"></i>
                             <span class="side-menu__label">کارمندان</span><i class="angle fa fa-angle-right"></i></a>
-
                     </li>
                     <li class="slide">
                         <a class="side-menu__item" data-bs-toggle="slide" href="/report">
                             <i class="fa-solid fa-list-check sidemenu_icon"></i>
-                            <span class="side-menu__label">د ورځني کارونو لیست</span><i class="angle fa fa-angle-right"></i></a>
-
-                    </li>
-                    
+                            <span class="side-menu__label">ورځنی راپور</span><i class="angle fa fa-angle-right"></i></a>
+                    </li> 
             </div>
         </aside>
     </div>
-
     <!-- APP-SIDEBAR CLOSED -->
     <div style="height: 100px">
 

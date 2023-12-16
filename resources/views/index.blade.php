@@ -70,12 +70,12 @@
                             <div class="card-body">
                                 <h5 class="card-title font-weight-bold text-center text-muted">مالي او اداري آمریت<br><br>
                                     <p2 class="font-weight-bold text-dark">
-                                        مدیریت</p2>
+                                        د اجناسو د محاسبې مدیریت</p2>
                                 </h5>
                             </div>
                             <div class="card-image-wrapper">
                                 <img src="assets/images/brand/technical.png" class="card-img-top img-fluid" alt="...">
-                                <h1 class="text-center"><a href="technical.html"
+                                <h1 class="text-center"><a href="/accounting"
                                         class="btn btn-outline-info it7 border-bottom  font-weight-bold border-top">مشاهده</a>
                                 </h1>
                             </div>

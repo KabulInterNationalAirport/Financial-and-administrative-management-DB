@@ -45,6 +45,12 @@
                             <span class="side-menu__label">د تیلو شرکتونه</span><i class="angle fa fa-angle-right"></i></a>
 
                     </li>
+                    <li class="slide">
+                        <a class="side-menu__item" data-bs-toggle="slide" href="/depo-report">
+                            <i class="fa-solid fa-newspaper sidemenu_icon"></i>
+                            <span class="side-menu__label">ورځنی ریپورټ</span><i class="angle fa fa-angle-right"></i></a>
+
+                    </li>
             </div>
         </aside>
     </div>

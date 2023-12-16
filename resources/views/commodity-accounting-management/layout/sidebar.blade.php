@@ -7,7 +7,7 @@
                         <div class="dropdown user-pro-body text-center">
                             <a class="" href="/depo">
                                 <h1>
-                                    د ډیپو مدیریت <i class="fa-solid fa-tent-arrow-down-to-line"></i>
+                                    د توکو د محاسبې مدیریت
                                 </h1>
                             </a>
                         </div>

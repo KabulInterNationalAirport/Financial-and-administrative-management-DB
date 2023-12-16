@@ -35,14 +35,20 @@
                     </li>
                     <li class="slide">
                         <a class="side-menu__item" data-bs-toggle="slide" href="/cars-list">
-                            <i class="fa-solid fa-truck-moving sidemenu_icon"></i>
-                            <span class="side-menu__label">د تیلو د موټرو لیست</span><i class="angle fa fa-angle-right"></i></a>
+                            <i class="fa-solid fa-money-bills sidemenu_icon"></i>
+                            <span class="side-menu__label">حوالې</span><i class="angle fa fa-angle-right"></i></a>
 
                     </li>
                     <li class="slide">
                         <a class="side-menu__item" data-bs-toggle="slide" href="/oil-company">
-                            <i class="fa-solid fa-gas-pump sidemenu_icon"></i>
-                            <span class="side-menu__label">د تیلو شرکتونه</span><i class="angle fa fa-angle-right"></i></a>
+                            <i class="fa-solid fa-hand-holding-dollar sidemenu_icon"></i>
+                            <span class="side-menu__label">بودیجه</span><i class="angle fa fa-angle-right"></i></a>
+
+                    </li>
+                    <li class="slide">
+                        <a class="side-menu__item" data-bs-toggle="slide" href="/depo-report">
+                            <i class="fa-solid fa-newspaper sidemenu_icon"></i>
+                            <span class="side-menu__label">ورځنی ریپورټ</span><i class="angle fa fa-angle-right"></i></a>
 
                     </li>
             </div>

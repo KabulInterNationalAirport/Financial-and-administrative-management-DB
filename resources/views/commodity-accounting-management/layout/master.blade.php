@@ -1,0 +1,5 @@
+@include('layout.head')
+@include('commodity-accounting-management.layout.sidebar')
+@include('layout.header')
+@yield('contents')
+@include('layout.footer')
