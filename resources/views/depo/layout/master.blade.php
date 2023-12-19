@@ -1,5 +1,0 @@
-@include('layout.head')
-@include('depo.layout.sidebar')
-@include('layout.header')
-@yield('contents')
-@include('layout.footer')

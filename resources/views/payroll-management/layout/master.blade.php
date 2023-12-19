@@ -1,5 +1,0 @@
-@include('layout.head')
-@include('payroll-management.layout.sidebar')
-@include('layout.header')
-@yield('contents')
-@include('layout.footer')
