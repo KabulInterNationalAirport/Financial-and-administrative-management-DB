@@ -52,6 +52,11 @@
                             <i class="fa-solid fa-microchip sidemenu_icon"></i>
                             <span class="side-menu__label">IT</span><i class="angle fa fa-angle-right"></i></a>
                     </li>
+                    <li class="slide">
+                        <a class="side-menu__item" data-bs-toggle="slide" href="/reportall">
+                            <i class="fa-regular fa-newspaper sidemenu_icon"></i>
+                            <span class="side-menu__label">daily Report</span><i class="angle fa fa-angle-right"></i></a>
+                    </li>
             </div>
         </aside>
     </div>

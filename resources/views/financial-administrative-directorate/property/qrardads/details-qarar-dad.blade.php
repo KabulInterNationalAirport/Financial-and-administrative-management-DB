@@ -4,7 +4,7 @@
         <div class="side-app main-container">
             <div class="page-header d-block">
                 <div class="text-center">
-                    <div class="page-title">د قرار داد مشخصات</div>
+                    <div class="page-title">{{__('financial/contract.specifications')}}</div>
                 </div>
             </div>
             <!-- ROW -->
@@ -12,7 +12,7 @@
                 <div class="col-xl-3 col-md-12 col-lg-12">
                     <div class="card mt-3">
                         <div class="card-header  border-0">
-                            <div class="card-title">د قرار داد مشخصات</div>
+                            <div class="card-title">{{__('financial/contract.specifications')}}</div>
                         </div>
                         <div class="card-body  ps-3 pr-3">
                             <div class="table-responsive">
@@ -20,7 +20,7 @@
                                     <tbody>
                                         <tr>
                                             <td>
-                                                <span class="w-50">د قرار داد نمبر</span>
+                                                <span class="w-50">{{__('financial/contract.contract-no')}}</span>
                                             </td>
                                             <td>:</td>
                                             <td>
@@ -29,7 +29,7 @@
                                         </tr>
                                         <tr>
                                             <td>
-                                                <span class="w-50">قرار داد</span>
+                                                <span class="w-50">{{__('financial/contract.contract')}}</span>
                                             </td>
                                             <td>:</td>
                                             <td>
@@ -38,7 +38,7 @@
                                         </tr>
                                         <tr>
                                             <td>
-                                                <span class="w-50">قرار داد وجه</span>
+                                                <span class="w-50">{{__('financial/contract.contract-reason')}}</span>
                                             </td>
                                             <td>:</td>
                                             <td>
@@ -47,7 +47,7 @@
                                         </tr>
                                         <tr>
                                             <td>
-                                                <span class="w-50">موقیعت</span>
+                                                <span class="w-50">{{__('financial/contract.location')}}</span>
                                             </td>
                                             <td>:</td>
                                             <td>
@@ -56,7 +56,7 @@
                                         </tr>
                                         <tr>
                                             <td>
-                                                <span class="w-50">د ځمکي اندازه</span>
+                                                <span class="w-50">{{__('financial/contract.area-mm')}}</span>
                                             </td>
                                             <td>:</td>
                                             <td>
@@ -65,7 +65,7 @@
                                         </tr>
                                         <tr>
                                             <td>
-                                                <span class="w-50">قرار داد کمپنۍ</span>
+                                                <span class="w-50">{{__('financial/contract.company')}}</span>
                                             </td>
                                             <td>:</td>
                                             <td>
@@ -74,7 +74,7 @@
                                         </tr>
                                         <tr>
                                             <td>
-                                                <span class="w-50">اجرأ کونکي نمبر</span>
+                                                <span class="w-50">{{__('financial/contract.executer-num')}}</span>
                                             </td>
                                             <td>:</td>
                                             <td>
@@ -83,7 +83,7 @@
                                         </tr>
                                         <tr>
                                             <td>
-                                                <span class="w-50">شروع نیټه</span>
+                                                <span class="w-50">{{__('financial/contract.start-date')}}</span>
                                             </td>
                                             <td>:</td>
                                             <td>
@@ -92,7 +92,7 @@
                                         </tr>
                                         <tr>
                                             <td>
-                                                <span class="w-50">ختم نیټه</span>
+                                                <span class="w-50">{{__('financial/contract.end-date')}}</span>
                                             </td>
                                             <td>:</td>
                                             <td>
@@ -101,7 +101,7 @@
                                         </tr>
                                         <tr>
                                             <td>
-                                                <span class="w-50">حالت</span>
+                                                <span class="w-50">{{__('financial/contract.state')}}</span>
                                             </td>
                                             <td>:</td>
                                             <td>
@@ -111,29 +111,17 @@
                                     </tbody>
                                 </table>
                             </div>
-                          
+
                         </div>
                     </div>
-                    <div class="card">
-									<div class="card-header  border-0">
-										<div class="card-title">د قرار داد انځورونه</div>
-										
-									</div>
-									<div class="card-body p-1 pt-2">
-										<ul class="list-group">
-											<li class="list-group-item"><i class="fa fa-check" aria-hidden="true"></i> Cras justo odio</li>
-											<li class="list-group-item"><i class="fa fa-check" aria-hidden="true"></i> Dapibus ac facilisis in</li>
-											<li class="list-group-item"><i class="fa fa-check" aria-hidden="true"></i> Morbi leo risus</li>
-										</ul>
-									</div>
-								</div>
+
                 </div>
-                <div class="col-xl-9 col-md-12 col-lg-12" >
+                <div class="col-xl-9 col-md-12 col-lg-12">
                     <div class="panel-body tabs-menu-body hremp-tabs1 p-0">
                         <div class="tab-content">
-                            <div class="tab-pane active" >
+                            <div class="tab-pane active">
                                 <div class="card-body" style="height: 600px">
-                                    <h5 class=" font-weight-semibold mt-3 mb-3">Description</h5>
+                                    <h5 class=" font-weight-semibold mt-3 mb-3">{{__('financial/contract.description')}}</h5>
                                     <p>At vero eos the moment, so blinded by and equal blame belongs to those who fail in
                                         their duty through weakness et accusamus et iusto odio dignissimos ducimus qui
                                         blanditiis praesentium voluptatum deleniti atcorrupti quos dolores et quas molestias
@@ -161,7 +149,7 @@
                                         <li>Praesentium voluptatum deleniti atcorrupti quos dolores</li>
                                         <li>We denounce with righteous indignation and dislike men</li>
                                     </ul>
-                                    
+
                                 </div>
                             </div>
                         </div>

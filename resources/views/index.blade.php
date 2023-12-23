@@ -38,7 +38,7 @@
                                 </h5>
                             </div>
                             <div class="card-image-wrapper">
-                                <img src="{{asset('assets/images/brand/secretory.png')}}" class="card-img-top img-fluid" alt="...">
+                                <img src="{{asset('assets/images/brand/department.png')}}" class="card-img-top img-fluid" alt="...">
                                 <h1 class="text-center"><a href="/financial"
                                         class="btn btn-outline-dark it2 border-bottom  font-weight-bold border-top">{{__('layout-Financial.enter')}}</a>
                                 </h1>
@@ -109,7 +109,7 @@
                                 </h5>
                             </div>
                             <div class="card-image-wrapper">
-                                <img src="{{asset('assets/images/brand/department.png')}}" class="card-img-top img-fluid" alt="...">
+                                <img src="{{asset('assets/images/brand/secretory.png')}}" class="card-img-top img-fluid" alt="...">
                                 <h1 class="text-center"><a href="department.html"
                                         class="btn btn-outline-dark it9 border-bottom  font-weight-bold border-top">{{__('layout-Financial.enter')}}</a>
                                 </h1>

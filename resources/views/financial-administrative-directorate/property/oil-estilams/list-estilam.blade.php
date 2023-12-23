@@ -7,7 +7,7 @@
                 
                 <div class="page-rightheader header ms-md-auto">
                     <div class="d-flex align-items-end flex-wrap my-auto end-content breadcrumb-end">
-                        <a href="/add-estilam"class="btn btn-primary " >نوی اضافه کړۍ <i class="fa-solid fa-plus"></i></a>
+                        <a href="/add-estilam"class="btn btn-primary " >{{__('financial/estilam.add-new')}}<i class="fa-solid fa-plus"></i></a>
                     </div>
                 </div>
             </div>
@@ -15,19 +15,19 @@
             <!-- ROW -->
             <div class="main-proifle">
                 <!-- ROW -->
-                <div class="header text-center">
-                    <div class="page-title">د استلامو لیست</div>
+                <div class="page-title text-center mb-4">
+                    <div class="page-title">{{__('financial/estilam.estilam-list')}}</div>
                 </div>
                 <div class="table-responsive">
                     <table class="table  table-vcenter text-center table-bordered border-bottom" id="project-list">
                         <thead class="bg-success">
                             <tr>
-                                <th class="border-bottom-0">تاریخ</th>
-                                <th class="border-bottom-0">شرکت</th>
-                                <th class="border-bottom-0">موټرو تعداد</th>
-                                <th class="border-bottom-0">د تیلو اندازه</th>
-                                <th class="border-bottom-0">تعقیبی شخص</th>
-                                <th class="border-bottom-0">عملیې</th>
+                                <th>{{__('financial/estilam.date')}}</th>
+                                <th>{{__('financial/estilam.company')}}</th>
+                                <th>{{__('financial/estilam.no-of-cars')}}</th>
+                                <th>{{__('financial/estilam.oil-valume')}}</th>
+                                <th>{{__('financial/estilam.follow-person')}}</th>
+                                <th>{{__('financial/estilam.actions')}}</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -44,12 +44,11 @@
                                 </td>
                                 <td>احمد</td>
                                 <td>
-                                    <div class="d-flex">
+                                    <div class="">
                                         <a href="/estilam-details" class="action-btns1" data-bs-toggle="tooltip"
                                             data-bs-placement="top" title="د استلام کتل"><i
                                                 class="fa-solid fa-eye text-primary"></i></a>
-                                        <a href="javascript:void(0);" class="action-btns1" data-bs-toggle="modal"
-                                            data-bs-target="#editprojectmodal">
+                                        <a href="/estilam-update" class="action-btns1" >
                                             <i class="fa-solid fa-pen  text-success" data-bs-toggle="tooltip"
                                                 data-bs-placement="top" title="د استلام تغیر کول"></i>
                                         </a>
@@ -64,12 +63,8 @@
                     </table>
                 </div>
                 <div class="footer ">
-                    <button class="btn btn-primary " onClick="javascript:window.print();"><i
-                            class="si si-wallet"></i> Pdf </button>
-                    <button class="btn btn-secondary " onClick="javascript:window.print();"><i
-                            class="si si-paper-plane"></i>Excel</button>
                     <button class="btn btn-info " onClick="javascript:window.print();"><i
-                            class="si si-printer"></i> Print</button>
+                            class="si si-printer"></i> {{__('depo/all-products.print')}}</button>
                 </div>
 
                 <!-- END  ROW -->

@@ -5,9 +5,8 @@
 
             <div class="page-header d-xl-flex d-block">
                 <div class="page-leftheader">
-                    <div class="page-title" dir="rtl"><span class="font-weight-normal text-muted ms-2">د مالي او اداري
-                            آمریت</span>
-                        د کارمندانو لیست</div>
+                    <div class="page-title" dir="rtl"><span class="font-weight-normal text-muted ms-2">{{__('layout-Financial.financial-and-administrative-management')}}</span>
+                    {{__('financial/employee-financial.list-of-employees')}}</div>
                 </div>
             </div>
 
@@ -18,7 +17,7 @@
                         <div>
                             <form class="form-inline">
                                 <div class="search-element">
-                                    <input type="search" class="form-control header-search small" placeholder="پلټنه..."
+                                    <input type="search" class="form-control header-search small" placeholder="{{__('layout-Financial.search')}}..."
                                         aria-label="Search" tabindex="1">
                                 </div>
                             </form>
@@ -26,7 +25,7 @@
                         <div class="page-rightheader ms-md-auto">
                             <div class="align-items-end flex-wrap my-auto right-content breadcrumb-right">
                                 <div class="btn-list">
-                                    <a href="/add-employee" class="btn btn-primary me-3">د کامند اضافه کول</a>
+                                    <a href="/add-employee" class="btn btn-primary me-3">{{__('depo/employees.add-employee')}} <i class="fa-solid fa-user-plus"></i></a>
 
                                 </div>
                             </div>
@@ -39,16 +38,16 @@
                             <table class="table  table-vcenter text-nowrap table-bordered border-bottom" id="hr-table">
                                 <thead>
                                     <tr>
-                                        <th class="border-bottom-0 w-5">نمبر</th>
-                                        <th class="border-bottom-0">نوم، انځور او ایمیل</th>
-                                        <th class="border-bottom-0 w-10">تخلص</th>
-                                        <th class="border-bottom-0">مربوطه مدیریت</th>
-                                        <th class="border-bottom-0">وظیفه</th>
-                                        <th class="border-bottom-0">آی ډي کارت</th>
-                                        <th class="border-bottom-0">د تحصیل درجه</th>
-                                        <th class="border-bottom-0">تلیفون نمبر</th>
-                                        <th class="border-bottom-0">د مقرری تاریخ</th>
-                                        <th class="border-bottom-0">عملیې</th>
+                                        <th class=" w-5">{{__('depo/report.id')}}</th>
+                                        <th>{{__('depo/motamid.name-image-email')}}</th>
+                                        <th class=" w-10">{{__('financial/employee-financial.last-name')}}</th>
+                                        <th>{{__('financial/employee-financial.related-office')}}</th>
+                                        <th>{{__('financial/employee-financial.job-title')}}</th>
+                                        <th>{{__('financial/employee-financial.id-card')}}</th>
+                                        <th>{{__('financial/employee-financial.degree')}}</th>
+                                        <th>{{__('financial/employee-financial.mobile')}}</th>
+                                        <th>{{__('financial/employee-financial.appointment-date')}}</th>
+                                        <th>{{__('depo/employees.actions')}}</th>
                                     </tr>
                                 </thead>
                                 <tbody>

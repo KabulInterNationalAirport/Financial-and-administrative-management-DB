@@ -7,7 +7,7 @@
                 
                 <div class="page-rightheader header ms-md-auto">
                     <div class="d-flex align-items-end flex-wrap my-auto end-content breadcrumb-end">
-                        <a href="/new-qarardads"class="btn btn-primary " >نوی قرارداد اضافه کړۍ <i class="fa-solid fa-plus"></i></a>
+                        <a href="/new-qarardads"class="btn btn-primary " >{{__('financial/contract.add-new-contract')}}<i class="fa-solid fa-plus"></i></a>
                     </div>
                 </div>
             </div>
@@ -16,22 +16,22 @@
             <div class="main-proifle">
                 <!-- ROW -->
                 <div class="header text-center">
-                    <div class="page-title">د قراردادو لیست</div>
+                    <div class="page-title">{{__('financial/contract.contract-list')}}</div>
                 </div>
                 <div class="table-responsive">
                     <table class="table  table-vcenter text-center table-bordered border-bottom" id="project-list">
                         <thead class="bg-success">
                             <tr>
-                                <th class="border-bottom-0">نمبر</th>
-                                <th class="border-bottom-0"> قرارداد نمبر</th>
-                                <th class="border-bottom-0">قرار داد</th>
-                                <th class="border-bottom-0">قرار داد وجه</th>
-                                <th class="border-bottom-0">کمپنۍ/شرکت</th>
-                                <th class="border-bottom-0">اجرأ کونکي نمبر</th>
-                                <th class="border-bottom-0">شروع نیټه</th>
-                                <th class="border-bottom-0">ختم نیټه</th>
-                                <th class="border-bottom-0">حالت</th>
-                                <th class="border-bottom-0">عملیې</th>
+                                <th>{{__('financial/contract.id')}}</th>
+                                <th>{{__('financial/contract.contract-no')}}</th>
+                                <th>{{__('financial/contract.contract')}}</th>
+                                <th>{{__('financial/contract.contract-reason')}}</th>
+                                <th>{{__('financial/contract.company')}}</th>
+                                <th>{{__('financial/contract.executer-num')}}</th>
+                                <th>{{__('financial/contract.start-date')}}</th>
+                                <th>{{__('financial/contract.end-date')}}</th>
+                                <th>{{__('financial/contract.state')}}</th>
+                                <th>{{__('financial/contract.actions')}}</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -54,16 +54,12 @@
                                 <td><span class="badge badge-success">تکمیل</span></td>
                                 <td>
                                     <div class="d-flex">
-                                        <a href="/view-qarardad-details" class="action-btns1" data-bs-toggle="tooltip"
-                                            data-bs-placement="top" title="د قرار داد کتل"><i
+                                        <a href="/view-qarardad-details" class="action-btns1"  title="د قرار داد کتل"><i
                                                 class="fa-solid fa-eye text-primary"></i></a>
-                                        <a href="javascript:void(0);" class="action-btns1" data-bs-toggle="modal"
-                                            data-bs-target="#editprojectmodal">
-                                            <i class="fa-solid fa-pen  text-success" data-bs-toggle="tooltip"
-                                                data-bs-placement="top" title="د قرار داد تغیر کول"></i>
+                                        <a href="/update-qarardad" class="action-btns1">
+                                            <i class="fa-solid fa-pen  text-success" title="د قرار داد تغیر کول"></i>
                                         </a>
-                                        <a href="/view-qarardad" class="action-btns1" data-bs-toggle="tooltip"
-                                        data-bs-placement="top" title="د قرار داد پرینټ"><i class="fa-solid fa-print  text-secondary"></i></a>
+                                        <a href="/view-qarardad" class="action-btns1"  title="د قرار داد پرینټ"><i class="fa-solid fa-print  text-secondary"></i></a>
                                        
                                     </div>
                                 </td>
@@ -71,13 +67,9 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="footer ">
-                    <button class="btn btn-primary " onClick="javascript:window.print();"><i
-                            class="si si-wallet"></i> Pdf </button>
-                    <button class="btn btn-secondary " onClick="javascript:window.print();"><i
-                            class="si si-paper-plane"></i>Excel</button>
+                <div class="footer d-flex flex-end">
                     <button class="btn btn-info " onClick="javascript:window.print();"><i
-                            class="si si-printer"></i> Print</button>
+                            class="si si-printer"></i> {{__('depo/all-products.print')}}</button>
                 </div>
 
                 <!-- END  ROW -->

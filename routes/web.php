@@ -3,40 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
-
-// Route::get("/", function () {
-//     return view("index");
-// });
-
 
 Route::get("/accounting", function () {
     return view("./commodity-accounting-management/index");
 });
-
-
-
-
-// Route::group(['prefix' => LaravelLocalization::setLocale()], function()
-// {
-// 	/** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
-// 	Route::get("/", function () {
-//         return view("index");
-//     });
-//     Route::get("/depo", function () {
-//         return view("./depo/index");
-//     });
-// });
 
 
 Route::group(
@@ -46,6 +16,14 @@ Route::group(
     ], function(){ 
         Route::get("/", function () {
             return view("index");
+        });
+
+        Route::get("/reportall", function () {
+            return view("report");
+        });
+
+        Route::get("/print-report", function () {
+            return view("print-report");
         });
         Route::get("/financial", function () {
             return view("./financial-administrative-directorate/index");
@@ -120,25 +98,29 @@ Route::group(
         });
         
         Route::get("/qarardads", function () {
-            return view("./financial-administrative-directorate/property/qrardads/qarar-dads-list");
+            return view("./financial-administrative-directorate/property/qrardads/list-qarar-dads");
         });
         
         Route::get("/new-qarardads", function () {
-            return view("./financial-administrative-directorate/property/qrardads/new-qarar-dad");
+            return view("./financial-administrative-directorate/property/qrardads/add-qarar-dad");
         });
         
         
         Route::get("/view-qarardad-details", function () {
-            return view("./property/qrardads/view-qarar-dad-details");
+            return view("./financial-administrative-directorate/property/qrardads/details-qarar-dad");
+        });
+
+        Route::get("/update-qarardad", function () {
+            return view("./financial-administrative-directorate/property/qrardads/update-qarar-dad");
         });
         
         Route::get("/view-qarardad", function () {
-            return view("./financial-administrative-directorate/property/qrardads/view-qarar-dad");
+            return view("./financial-administrative-directorate/property/qrardads/print-qarar-dad");
         });
         
         
         Route::get("/estilam", function () {
-            return view("./financial-administrative-directorate/property/oil-estilams/estilam-list");
+            return view("./financial-administrative-directorate/property/oil-estilams/list-estilam");
         });
         
         Route::get("/oil-company", function () {
@@ -151,18 +133,21 @@ Route::group(
         
         
         Route::get("/view-estilam", function () {
-            return view("./financial-administrative-directorate/property/oil-estilams/view-estilam");
+            return view("./financial-administrative-directorate/property/oil-estilams/print-estilam");
         });
         
         
         Route::get("/add-estilam", function () {
-            return view("./financial-administrative-directorate/property/oil-estilams/new-estilam");
+            return view("./financial-administrative-directorate/property/oil-estilams/add-estilam");
         });
         
         Route::get("/estilam-details", function () {
-            return view("./financial-administrative-directorate/property/oil-estilams/view-estilam-details");
+            return view("./financial-administrative-directorate/property/oil-estilams/details-estilam");
         });
         
+        Route::get("/estilam-update", function () {
+            return view("./financial-administrative-directorate/property/oil-estilams/update-estilam");
+        });
         
         
         Route::get("/view-oil-company-qarar-dad", function () {

@@ -4,7 +4,7 @@
         <div class="side-app main-container">
             <div class="page-header d-block">
                 <div class="text-center">
-                    <div class="page-title">د استعلام مشخصات</div>
+                    <div class="page-title">{{__('financial/estilam.estilam-specifications')}}</div>
                 </div>
             </div>
             <!-- ROW -->
@@ -12,7 +12,7 @@
                 <div class="col-xl-3 col-md-12 col-lg-12">
                     <div class="card mt-3">
                         <div class="card-header  border-0">
-                            <div class="card-title">د استعلام مشخصات</div>
+                            <div class="card-title">{{__('financial/estilam.estilam-specifications')}}</div>
                         </div>
                         <div class="card-body  ps-3 pr-3">
                             <div class="table-responsive">
@@ -20,7 +20,7 @@
                                     <tbody>
                                         <tr>
                                             <td>
-                                                <span class="w-50">د تیلو شرکت</span>
+                                                <span class="w-50">{{__('financial/estilam.company')}}</span>
                                             </td>
                                             <td>:</td>
                                             <td>
@@ -29,7 +29,7 @@
                                         </tr>
                                         <tr>
                                             <td>
-                                                <span class="w-50">تاریخ</span>
+                                                <span class="w-50">{{__('financial/estilam.date')}}</span>
                                             </td>
                                             <td>:</td>
                                             <td>
@@ -38,7 +38,7 @@
                                         </tr>
                                         <tr>
                                             <td>
-                                                <span class="w-50">د موټرو تعداد</span>
+                                                <span class="w-50">{{__('financial/estilam.no-of-cars')}}</span>
                                             </td>
                                             <td>:</td>
                                             <td>
@@ -47,7 +47,7 @@
                                         </tr>
                                         <tr>
                                             <td>
-                                                <span class="w-50">د تیلو اندازه</span>
+                                                <span class="w-50">{{__('financial/estilam.oil-valume')}}</span>
                                             </td>
                                             <td>:</td>
                                             <td>
@@ -56,7 +56,7 @@
                                         </tr>
                                         <tr>
                                             <td>
-                                                <span class="w-50">تعقیبي شخص</span>
+                                                <span class="w-50">{{__('financial/estilam.follow-person')}}</span>
                                             </td>
                                             <td>:</td>
                                             <td>
@@ -70,26 +70,13 @@
                           
                         </div>
                     </div>
-                    <div class="card">
-									<div class="card-header  border-0">
-										<div class="card-title">د  استعلام انځورونه</div>
-										
-									</div>
-									<div class="card-body p-1 pt-2">
-										<ul class="list-group">
-											<li class="list-group-item"><i class="fa fa-check" aria-hidden="true"></i> Cras justo odio</li>
-											<li class="list-group-item"><i class="fa fa-check" aria-hidden="true"></i> Dapibus ac facilisis in</li>
-											<li class="list-group-item"><i class="fa fa-check" aria-hidden="true"></i> Morbi leo risus</li>
-										</ul>
-									</div>
-								</div>
                 </div>
                 <div class="col-xl-9 col-md-12 col-lg-12" >
                     <div class="panel-body tabs-menu-body hremp-tabs1 p-0">
                         <div class="tab-content">
                             <div class="tab-pane active" >
                                 <div class="card-body" style="height: 400px">
-                                    <h5 class=" font-weight-semibold mt-3 mb-3">Description</h5>
+                                    <h5 class=" font-weight-semibold mt-3 mb-3">{{__('financial/estilam.estilam-specifications')}}</h5>
                                     <p>At vero eos the moment, so blinded by and equal blame belongs to those who fail in
                                         their duty through weakness et accusamus et iusto odio dignissimos ducimus qui
                                         blanditiis praesentium voluptatum deleniti atcorrupti quos dolores et quas molestias
