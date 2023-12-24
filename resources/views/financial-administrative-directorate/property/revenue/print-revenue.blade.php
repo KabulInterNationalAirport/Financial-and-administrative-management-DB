@@ -3,10 +3,6 @@
     <div class="app-content main-content">
         <div class="side-app main-container">
             <div class="header mt-4">
-                <button class="btn btn-primary " onClick="javascript:window.print();"><i
-                        class="si si-wallet"></i> Pdf </button>
-                <button class="btn btn-secondary " onClick="javascript:window.print();"><i
-                        class="si si-paper-plane"></i>Excel</button>
                 <button class="btn btn-info " onClick="javascript:window.print();"><i
                         class="si si-printer"></i> Print</button>
             </div>

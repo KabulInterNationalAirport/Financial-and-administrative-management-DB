@@ -4,9 +4,6 @@ use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 
-Route::get("/accounting", function () {
-    return view("./commodity-accounting-management/index");
-});
 
 
 Route::group(
@@ -14,6 +11,10 @@ Route::group(
         'prefix' => LaravelLocalization::setLocale(),
         'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
     ], function(){ 
+        Route::get("/accounting", function () {
+            return view("./financial-administrative-directorate/commodity-accounting-management/index");
+        });
+        
         Route::get("/", function () {
             return view("index");
         });
@@ -104,6 +105,9 @@ Route::group(
         Route::get("/new-qarardads", function () {
             return view("./financial-administrative-directorate/property/qrardads/add-qarar-dad");
         });
+        Route::get("/property-report", function () {
+            return view("./financial-administrative-directorate/property/report");
+        });
         
         
         Route::get("/view-qarardad-details", function () {
@@ -124,11 +128,11 @@ Route::group(
         });
         
         Route::get("/oil-company", function () {
-            return view("./financial-administrative-directorate/property/oil-estilams/oil-company-qarar-dad/oil-qarar-dad");
+            return view("./financial-administrative-directorate/property/oil-estilams/oil-company-qarar-dad/list-oil-qarar-dad");
         });
         
         Route::get("/view", function () {
-            return view("./financial-administrative-directorate/property/oil-estilams/oil-company-qarar-dad/view-qarar-dad");
+            return view("./financial-administrative-directorate/property/oil-estilams/oil-company-qarar-dad/print-oil-qarar-dad");
         });
         
         
@@ -150,10 +154,7 @@ Route::group(
         });
         
         
-        Route::get("/view-oil-company-qarar-dad", function () {
-            return view("./financial-administrative-directorate/property/oil-estilams/oil-company-qarar-dad/view-oil-qarar-dad");
-        });
-        
+     
         
         Route::get("/revenue", function () {
             return view("./financial-administrative-directorate/property/revenue/revenue-list");

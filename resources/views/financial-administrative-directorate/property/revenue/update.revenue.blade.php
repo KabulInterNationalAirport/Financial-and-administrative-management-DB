@@ -6,7 +6,7 @@
             <!-- PAGE HEADER -->
             <div class="page-header d-block">
                 <div class="text-center">
-                    <div class="page-title">{{__('financial/commercial-areas.adding-new-commercial-area')}}</div>
+                    <div class="page-title">{{__()}}</div>
                 </div>
             </div>
             <!-- END PAGE HEADER -->
@@ -24,12 +24,12 @@
                                             <div class="form-group">
                                                 <label class="form-label ">{{__('financial/commercial-areas.contract-person')}}</label>
                                                 <input type="text" class="form-control mb-md-0 mb-5"
-                                                    placeholder="د قرار داد شهرت">
+                                                    placeholder="{{__('financial/commercial-areas.contract-person')}}">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <label class="form-label ">{{__('financial/commercial-areas.monthly-rent')}}</label>
-                                            <input type="number" class="form-control" placeholder="میاشتنۍ کرایه">
+                                            <input type="number" class="form-control" placeholder="{{__('financial/commercial-areas.monthly-rent')}}">
                                         </div>
                                     </div>
                                 </div>
@@ -37,11 +37,11 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <label class="form-label ">{{__('financial/commercial-areas.activity-form')}}</label>
-                                            <input type="text" class="form-control" placeholder="د فعالیت ډول">
+                                            <input type="text" class="form-control" placeholder="{{__('financial/commercial-areas.activity-form')}}">
                                         </div>
                                         <div class="col-md-6">
                                             <label class="form-label">{{__('financial/contract.location')}}</label>
-                                            <input type="text" class="form-control" placeholder="موقیعت">
+                                            <input type="text" class="form-control" placeholder="{{__('financial/contract.location')}}">
                                         </div>
                                     </div>
                                 </div>
@@ -49,7 +49,7 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <label class="form-label ">{{__('financial/contract.area-mm')}}</label>
-                                            <input type="text" class="form-control" placeholder="مساحت">
+                                            <input type="text" class="form-control" placeholder="{{__('financial/contract.area-mm')}}">
                                         </div>
                                     </div>
                                 </div>
@@ -71,7 +71,7 @@
                                                 <div class="row">
                                                     <div class="col-md-12">
                                                         <label class="form-label ">{{__('financial/contract.contract-details')}}</label>
-                                                        <textarea rows="3" class="form-control" placeholder="اضافي معلومات"></textarea>
+                                                        <textarea rows="3" class="form-control" placeholder="{{__('financial/contract.contract-details')}}"></textarea>
                                                     </div>
                                                 </div>
                                             </div>

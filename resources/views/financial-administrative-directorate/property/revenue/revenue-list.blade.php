@@ -7,7 +7,7 @@
                 
                 <div class="page-rightheader header ms-md-auto">
                     <div class="d-flex align-items-end flex-wrap my-auto end-content breadcrumb-end">
-                        <a href="/add-revenue"class="btn btn-primary " >نوې تجارتي ساحه اضافه کړۍ <i class="fa-solid fa-plus"></i></a>
+                        <a href="/add-revenue"class="btn btn-primary " >{{__('financial/commercial-areas.add-new')}}<i class="fa-solid fa-plus"></i></a>
                     </div>
                 </div>
             </div>
@@ -16,22 +16,22 @@
             <div class="main-proifle">
                 <!-- ROW -->
                 <div class="header text-center">
-                    <div class="page-title">د تجارتي ساحو لیست</div>
+                    <div class="page-title">{{__('financial/commercial-areas.commercial-areas-list')}}</div>
                 </div>
                 <div class="table-responsive">
                     <table class="table  table-vcenter text-center table-bordered" id="project-list">
                         <thead class="bg-success">
                             <tr>
-                                <th class="">نمبر</th>
-                                <th class="">د قرار داد شهرت</th>
-                                <th class="">ماشتنۍ کرایه</th>
-                                <th class="">مساحت به مترمربع</th>
-                                <th class="">موقیعت</th>
-                                <th class=""> شروع نیټه</th>
-                                <th class=""> ختم نیټه</th>
-                                <th class="">فعالیت ډول</th>
-                                <th class="">حالت</th>
-                                <th class="">عملیې</th>
+                                <th>{{__('depo/report.id')}}</th>
+                                <th>{{__('financial/commercial-areas.contract-person')}}</th>
+                                <th>{{__('financial/commercial-areas.monthly-rent')}}</th>
+                                <th>{{__('financial/contract.area-mm')}}</th>
+                                <th>{{__('financial/contract.location')}}</th>
+                                <th>{{__('financial/contract.start-date')}}</th>
+                                <th>{{__('financial/contract.end-date')}}</th>
+                                <th>{{__('financial/commercial-areas.activity-form')}}</th>
+                                <th>{{__('financial/contract.state')}}</th>
+                                <th>{{__('financial/contract.actions')}}</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -53,7 +53,7 @@
                                 
                                 <td><span class="badge badge-success">تکمیل</span></td>
                                 <td>
-                                    <div class="d-flex">
+                                    <div>
                                         <a href="/view-qarardad-details" class="action-btns1" data-bs-toggle="tooltip"
                                             data-bs-placement="top" title="د قرار داد کتل"><i
                                                 class="fa-solid fa-eye text-primary"></i></a>
@@ -72,12 +72,8 @@
                     </table>
                 </div>
                 <div class="footer ">
-                    <button class="btn btn-primary " onClick="javascript:window.print();"><i
-                            class="si si-wallet"></i> Pdf </button>
-                    <button class="btn btn-secondary " onClick="javascript:window.print();"><i
-                            class="si si-paper-plane"></i>Excel</button>
                     <button class="btn btn-info " onClick="javascript:window.print();"><i
-                            class="si si-printer"></i> Print</button>
+                            class="si si-printer"></i> {{__('depo/all-products.print')}}</button>
                 </div>
 
                 <!-- END  ROW -->
