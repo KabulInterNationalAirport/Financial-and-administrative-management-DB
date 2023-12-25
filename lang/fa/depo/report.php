@@ -15,6 +15,15 @@ return [
     'new' => 'نو',
     'complete' => 'تکمیل',
     'related-images' => 'تصاویر مربوطه',
-    'update-task' => 'تغیر کار'
+    'update-task' => 'تغیر کار' ,
+    'today' => 'امروز' ,
+    'yesterday' => 'دیروز' ,
+    'past-week' => 'هفته ګذشته' ,
+    'this-month' => 'ماه جاري' ,
+    'past-month' => 'ماه ګذشته' ,
+    'this-year' => 'سال جاري' ,
+    'past-year' => 'سال ګذشته',
+    'kabul-airport' => 'میدان هوايي بین المللی کابل',
+    'day-month' => 'روز-ماه'
      
 ];

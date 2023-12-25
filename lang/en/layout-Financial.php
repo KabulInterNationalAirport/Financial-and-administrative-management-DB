@@ -26,5 +26,7 @@ return [
     'general-staff' => 'General Staff',
     'references' => 'References',
     'badget' => 'Budget',
+    'code' => 'Codes' ,
+    'management-of-terminals' => 'Management of terminals'
     
 ];

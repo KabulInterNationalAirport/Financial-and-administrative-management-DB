@@ -46,6 +46,12 @@
 
                     </li>
                     <li class="slide">
+                        <a class="side-menu__item" data-bs-toggle="slide" href="/oil-company">
+                            <i class="fa-solid fa-list-ol sidemenu_icon"></i>
+                            <span class="side-menu__label">{{__('layout-Financial.code')}}</span><i class="angle fa fa-angle-right"></i></a>
+
+                    </li>
+                    <li class="slide">
                         <a class="side-menu__item" data-bs-toggle="slide" href="/depo-report">
                             <i class="fa-solid fa-newspaper sidemenu_icon"></i>
                             <span class="side-menu__label">{{__('layout-Financial.daily-report')}}</span><i class="angle fa fa-angle-right"></i></a>

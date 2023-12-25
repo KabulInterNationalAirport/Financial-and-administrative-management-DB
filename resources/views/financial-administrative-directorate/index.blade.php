@@ -38,7 +38,7 @@
                                 </h5>
                             </div>
                             <div class="card-image-wrapper">
-                                <img src="{{asset('assets/images/brand/secretory.png')}}" class="card-img-top img-fluid" alt="...">
+                                <img src="{{asset('assets/images/brand/financail.png')}}" class="card-img-top img-fluid" alt="...">
                                 <h1 class="text-center"><a href="/property"
                                         class="btn btn-outline-dark it2 border-bottom  font-weight-bold border-top">{{__('layout-Financial.enter')}}</a>
                                 </h1>
@@ -87,11 +87,11 @@
                             <div class="card-body">
                                 <h5 class="card-title font-weight-bold text-center text-muted">{{__('layout-Financial.financial-and-administrative-management')}}<br><br>
                                     <p2 class="font-weight-bold text-dark">
-                                        مدیریت </p2>
+                                        {{__('layout-Financial.management-of-terminals')}} </p2>
                                 </h5>
                             </div>
                             <div class="card-image-wrapper">
-                                <img src="{{asset('assets/images/brand/operational.png')}}" class="card-img-top img-fluid"
+                                <img src="{{asset('assets/images/brand/hard.png')}}" class="card-img-top img-fluid"
                                     alt="...">
                                 <h1 class="text-center"><a href="operational.html"
                                         class="btn btn-outline-success it8 border-bottom  font-weight-bold border-top">{{__('layout-Financial.enter')}}</a>

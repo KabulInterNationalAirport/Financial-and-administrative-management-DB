@@ -15,6 +15,15 @@ return [
     'new' => 'نوی',
     'complete' => 'بشپړ',
     'related-images' => 'مربوطه انځورونه',
-    'update-task' => 'د کار تغیر'
+    'update-task' => 'د کار تغیر' ,
+    'today' => 'نن ورځ' ,
+    'yesterday' => 'تیره ورځ' ,
+    'past-week' => 'تیره هفته' ,
+    'this-month' => 'روانه میاشت' ,
+    'past-month' => 'تیره میاشت' ,
+    'this-year' => 'روان کال' ,
+    'past-year' => 'تیر کال',
+    'kabul-airport' => 'د کابل نړېوال هوايي ډګر',
+    'day-month' => 'ورځ-میاشت'
      
 ];

@@ -26,5 +26,7 @@ return [
     'general-staff' => 'عمومي تشکیل',
     'references' => 'حوالې',
     'badget' => 'بودیجه',
+    'code' => 'کوډونه',
+    'management-of-terminals' => 'د ټرمینلونو مدیریت'
     
 ];

@@ -26,5 +26,6 @@ return [
     'general-staff' => 'تشکیل عمومي ریاست',
     'references' => 'حواله جات',
     'badget' => 'بودیجه',
-    
+    'code' => 'کودها',
+    'management-of-terminals' => 'مدیریت ترمینل ها'
 ];
