@@ -13,14 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('tarminal_reports', function (Blueprint $table) {
+        Schema::create('trustee_dps', function (Blueprint $table) {
             $table->id();
-            $table->string('task'); 
-            $table->string('task_details');
+            $table->string('name');
+            $table->string('last_name')->nullable();
+            $table->string('email')->nullable();
             $table->string("related_office");
-            $table->string('date');               
-            $table->string('state');
-            $table->string("file");
+            $table->string('job_title');
+            $table->string('id_card');
+            $table->string("phone");
+            $table->string("address")->nullable();
             $table->timestamps();
         });
     }
@@ -32,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tarminal_reports');
+        Schema::dropIfExists('trustee_dps');
     }
 };

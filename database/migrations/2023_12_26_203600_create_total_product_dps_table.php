@@ -13,14 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('tarminal_reports', function (Blueprint $table) {
+        Schema::create('total_product_dps', function (Blueprint $table) {
             $table->id();
-            $table->string('task'); 
-            $table->string('task_details');
-            $table->string("related_office");
-            $table->string('date');               
-            $table->string('state');
-            $table->string("file");
+            $table->string('name');
+            $table->string('category');
+            $table->string("quantity");
+            $table->string('unit');
             $table->timestamps();
         });
     }
@@ -32,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tarminal_reports');
+        Schema::dropIfExists('total_product_dps');
     }
 };
