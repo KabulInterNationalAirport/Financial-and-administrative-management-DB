@@ -18,5 +18,13 @@ class TrusteeDp extends Model
     {
         return $this->hasMany(DpDamagedProducts::class);
     }
+    public function DpItProducts()
+    {
+        return $this->hasMany(DpItProducts::class);
+    }
+    public function DpCars()
+    {
+        return $this->hasMany(DpCars::class);
+    }
     
 }

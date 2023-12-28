@@ -13,20 +13,21 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('dp_new_arrivals', function (Blueprint $table) {
+        Schema::create('cam_cars_delivereds', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('category');
-            $table->string('quantity');
+            $table->string('model');
+            $table->string('engine_no');
             $table->string("unit");
             $table->string('price');
-            $table->string('m_7')->nullable();
-            $table->string("order_no");
-            $table->string("date");           
-            $table->string('related_office');
-            $table->string("taken_from")->nullable();
-            $table->unsignedBigInteger("trustee_id");
-            $table->foreign("trustee_id")->references("id")->on("trustee_dps")->onDelete("cascade");
+            $table->string("quantity");
+            $table->string("color");           
+            $table->string('no_palet');
+            $table->string('based_on');
+            $table->string('number');
+            $table->string('file');
+            $table->unsignedBigInteger("cam_org_stuff_id");
+            $table->foreign("cam_org_stuff_id")->references("id")->on("cam_org_stuffs")->onDelete("cascade");
             $table->unsignedBigInteger("total_products_id");
             $table->foreign("total_products_id")->references("id")->on("total_product_dps")->onDelete("cascade");
             $table->timestamps();
@@ -40,6 +41,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('dp_new_arrivals');
+        Schema::dropIfExists('cam_cars_delivereds');
     }
 };

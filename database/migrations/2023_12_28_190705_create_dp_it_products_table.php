@@ -13,18 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('dp_new_arrivals', function (Blueprint $table) {
+        Schema::create('dp_it_products', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('category');
             $table->string('quantity');
             $table->string("unit");
             $table->string('price');
-            $table->string('m_7')->nullable();
-            $table->string("order_no");
-            $table->string("date");           
-            $table->string('related_office');
-            $table->string("taken_from")->nullable();
+            $table->string("serial_no");
+            $table->string("ram");           
+            $table->string('hd');
             $table->unsignedBigInteger("trustee_id");
             $table->foreign("trustee_id")->references("id")->on("trustee_dps")->onDelete("cascade");
             $table->unsignedBigInteger("total_products_id");
@@ -40,6 +38,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('dp_new_arrivals');
+        Schema::dropIfExists('dp_it_products');
     }
 };

@@ -7,25 +7,17 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 
-class TotalProductDp extends Model
+class CamOrgStuff extends Model
 {
     use HasFactory;
 
-    public function DpNewArrivals()
+    public function DpDamagedProducts()
     {
-        return $this->hasMany(DpNewArrivals::class);
+        return $this->hasMany(DpDamagedProducts::class);
     }
     public function CamDeliveredProducts()
     {
         return $this->hasMany(CamDeliveredProducts::class);
-    }
-    public function DpItProducts()
-    {
-        return $this->hasMany(DpItProducts::class);
-    }
-    public function DpCars()
-    {
-        return $this->hasMany(DpCars::class);
     }
     public function CamItProDelivered()
     {
@@ -35,5 +27,4 @@ class TotalProductDp extends Model
     {
         return $this->hasMany(CamCarsDelivered::class);
     }
-   
 }

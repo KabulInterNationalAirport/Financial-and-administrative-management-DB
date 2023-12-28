@@ -13,21 +13,23 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('dp_delivered_products', function (Blueprint $table) {
+        Schema::create('cam_it_pro_delivereds', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('category');
             $table->string('quantity');
             $table->string("unit");
             $table->string('price');
-            $table->string("order_no");
-            $table->string("order_date");
-            $table->string("order_office");
-            $table->string("delivered_date");
+            $table->string("serial_no");
+            $table->string("ram");           
+            $table->string('hd');
+            $table->string('based_on');
+            $table->string('file');
+            $table->string('number');
+            $table->unsignedBigInteger("cam_org_stuff_id");
+            $table->foreign("cam_org_stuff_id")->references("id")->on("cam_org_stuffs")->onDelete("cascade");
             $table->unsignedBigInteger("total_products_id");
             $table->foreign("total_products_id")->references("id")->on("total_product_dps")->onDelete("cascade");
-            $table->unsignedBigInteger("org_stuff_dp_id");
-            $table->foreign("org_stuff_dp_id")->references("id")->on("org_stuff_dps")->onDelete("cascade");
             $table->timestamps();
         });
     }
@@ -39,6 +41,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('dp_delivered_products');
+        Schema::dropIfExists('cam_it_pro_delivereds');
     }
 };
