@@ -22,5 +22,6 @@ return [
     
     'update-contract' => 'آپدیټ قرارداد', 
     'description' => 'توضیحات',
-    'specifications' => 'مشخصات'
+    'specifications' => 'مشخصات',
+    'get-mony' => 'اخذ پیسه' 
 ];

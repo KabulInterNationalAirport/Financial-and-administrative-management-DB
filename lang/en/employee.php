@@ -1,0 +1,37 @@
+<?php
+
+return [
+    'name-email' => 'Name and Email' ,
+    'email' => 'Email',
+    'name' => 'Name',
+    'last-name' => 'Last Name' ,
+    'related-office' => 'Related Office',
+    'job-title' => 'Job Title',
+    'id-card' => 'ID Card',
+    'mobile' => 'Mobile',
+    'actions' => 'Actions',
+    'add-employee' => 'Add Employee',
+    'list-of-registered-employees' => 'List of Registered Employees',
+    'list-of-items-registered-to-the-employee' => 'List of items registered to the employee',
+    'employee-information' => 'Employee Information', 
+    'date-of-birth' => 'Date of Birth',
+    'bank-card' => 'Band Card' ,
+    'employee-profile' => 'Employee Profile' ,
+    'personal-informaions' => 'Personal Informations',
+    'details' => 'Details' ,
+    'contact' => 'Contact',
+    'edit-profile' => 'Edit Profile',
+    'kabul-airport' => 'Kabul International Airport',
+    'address' => 'Address',
+    'gender' => 'Gender' ,
+    'material-state' => 'Material State',
+    'appointment-date' => 'Appointment Date' ,
+    'degree' => 'Degree' ,
+    'profile-pic' => 'Profile Picture',
+    'doc-pics' => 'documents pics',
+    'male' => 'Male',
+    'famale' => 'Famale',
+    'single' => 'Single' ,
+    'married' => 'Married'
+    
+];

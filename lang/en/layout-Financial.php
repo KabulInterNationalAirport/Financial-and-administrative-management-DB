@@ -27,6 +27,21 @@ return [
     'references' => 'References',
     'badget' => 'Budget',
     'code' => 'Codes' ,
-    'management-of-terminals' => 'Management of terminals'
+    'management-of-terminals' => 'Management of terminals',
+    'car' => 'Cars',
+    'kabul-airport' => 'Kabul International Airport',
+    'it' => 'Information Technology' ,
+    'department-office' => 'Department Office' ,
+    'financial-add' => 'Financial-Administrative',
+    'ground-handling' => 'Ground Handling' ,
+    'security-aviation' => 'Security Aviation',
+    'operational-m'=> 'Operational M' ,
+    'technical m' => 'Technical Mang',
+    'vip' => 'VIP' ,
+    'kabul-airport1' => 'Kabul Airport',
+    'financial-and-administrative' => 'Financial-Admin',
+    'general-real-estate' => 'Real-Estate',
+    'commodity-accounting' => 'Commodity Acc',
+    
     
 ];

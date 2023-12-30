@@ -5,7 +5,7 @@ return [
     'list-of-companies'=> 'لیست کمپنی' ,
     'id' => 'نمبر' ,
     'company-name' => 'نام کمپنی' ,
-    'owner-name' => 'ریئس کمپنی' , 
+    'area-mm' => 'مساحت زمین' , 
     'start-date' => 'تاریخ شروع' ,
     'end-date' => 'ختم تاریخ' ,
     'address' => 'آدرس' ,

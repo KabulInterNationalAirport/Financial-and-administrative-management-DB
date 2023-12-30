@@ -7,12 +7,12 @@
             <div class="page-header d-xl-flex d-block">
                 <div class="page-leftheader">
                     <div class="page-title" dir="rtl"><span class="font-weight-normal text-muted ms-2">{{__('layout-Financial.dashboard')}}</span>
-                        {{__('layout-Financial.general-real-estate-management')}}</div>
+                        {{__('layout-Financial.management-of-terminals')}}</div>
                 </div>
             </div>
             <div class="custom-container">
                 <!-- ROW -->
-						<div class="row">
+						{{-- <div class="row">
 							<div class="col-xxl-3 col-xl-6 col-lg-6 col-md-12">
 								<div class="card">
 									<a  href="javascript:void(0);">
@@ -89,8 +89,9 @@
 									</div>
 								</a>
 							</div>
-						</div>
+						</div> --}}
 						<!-- END ROW -->
+						<h1>thier is no data for showing</h1>
             </div>
 
         </div>

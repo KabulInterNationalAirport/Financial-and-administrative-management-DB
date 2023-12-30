@@ -19,16 +19,48 @@ Route::group(
             return view("index");
         });
 
-        Route::get("/reportall", function () {
-            return view("report");
-        });
+        // Route::get("/reportall", function () {
+        //     return view("report");
+        // });
 
-        Route::get("/print-report", function () {
-            return view("print-report");
-        });
+        // Route::get("/print-report", function () {
+        //     return view("print-report");
+        // });
         Route::get("/financial", function () {
             return view("./financial-administrative-directorate/index");
         });
+
+        Route::get("/acc-emp", function () {
+            return view("./financial-administrative-directorate/commodity-accounting-management/org-stuff/org-stuff-list");
+        });
+
+        Route::get("/acc-add-emp", function () {
+            return view("./financial-administrative-directorate/commodity-accounting-management/org-stuff/add-org-stuff");
+        });
+
+        Route::get("/acc-update-emp", function () {
+            return view("./financial-administrative-directorate/commodity-accounting-management/org-stuff/update-org-stuff");
+        });
+
+        Route::get("/acc-emp-items", function () {
+            return view("./financial-administrative-directorate/commodity-accounting-management/org-stuff/view-org-stuff-items");
+        });
+
+        Route::get("/acc-emp-item-reg", function () {
+            return view("./financial-administrative-directorate/commodity-accounting-management/products/reg-product-org-stuff");
+        });
+        Route::get("/acc-emp-car-reg", function () {
+            return view("./financial-administrative-directorate/commodity-accounting-management/products/reg-car");
+        });
+        Route::get("/uuu", function () {
+            return view("./financial-administrative-directorate/commodity-accounting-management/org-stuff/update-product");
+        });
+
+
+
+
+
+
         Route::get("/depo", function () {
             return view("./financial-administrative-directorate/depo/index");
         });
@@ -48,26 +80,38 @@ Route::group(
             return view("./financial-administrative-directorate/depo/items/all-items");
         });
         Route::get("/new-arrival-items", function () {
-            return view("./financial-administrative-directorate/depo/items/new-items");
+            return view("./financial-administrative-directorate/depo/items/new-arrival-list");
+        });
+        Route::get("/add-arrival-items", function () {
+            return view("./financial-administrative-directorate/depo/items/add-new-arrivals");
+        });
+        Route::get("/add-it-arrival-items", function () {
+            return view("./financial-administrative-directorate/depo/items/add-it-new-arrivals");
         });
         
         Route::get("/delivered-items", function () {
-            return view("./financial-administrative-directorate/depo/items/delivered-item");
+            return view("./financial-administrative-directorate/commodity-accounting-management/products/delivered-products");
         });
         Route::get("/damaged-items", function () {
             return view("./financial-administrative-directorate/depo/items/damaged-items");
         });
         
-        Route::get("/depo-emp", function () {
-            return view("./financial-administrative-directorate/depo/employee/employee-list");
+        Route::get("/depo-car", function () {
+            return view("./financial-administrative-directorate/depo/cars/add-car");
+        });
+        Route::get("/update-car", function () {
+            return view("./financial-administrative-directorate/depo/cars/update-car");
+        });
+        Route::get("/depo-car-list", function () {
+            return view("./financial-administrative-directorate/depo/cars/cars-list");
         });
         
         Route::get("/depo-emp-add", function () {
             return view("./financial-administrative-directorate/depo/employee/add-employee");
         });
         
-        Route::get("/depo-emp-items", function () {
-            return view("./financial-administrative-directorate/depo/employee/view-employee-items");
+        Route::get("/terminals", function () {
+            return view("./financial-administrative-directorate/terminals/index");
         });
         
         Route::get("/motamid", function () {
@@ -167,7 +211,9 @@ Route::group(
         Route::get("/print-revenue", function () {
             return view("./financial-administrative-directorate/property/revenue/print-revenue");
         });
-        
+        Route::get("/view-revenue", function () {
+            return view("./financial-administrative-directorate/property/revenue/view-revenue-details");
+        });
         
         Route::get("/cars-list", function () {
             return view("./financial-administrative-directorate/property/oil-estilams/oil-cars/cars-list");
@@ -185,9 +231,9 @@ Route::group(
             return view("./financial-administrative-directorate/payroll-management/employees/employee-list");
         });
         
-        Route::get("/add-employee", function () {
-            return view("./financial-administrative-directorate/payroll-management/employees/add-employee");
-        });
+        // Route::get("/add-employee", function () {
+        //     return view("./financial-administrative-directorate/payroll-management/employees/add-employee");
+        // });
         
         Route::get("/print-doc", function () {
             return view("./financial-administrative-directorate/payroll-management/employees/print-doc");

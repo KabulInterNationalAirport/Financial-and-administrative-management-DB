@@ -2,15 +2,11 @@
     <div class="sticky" id="app-sidebar-togglee">
         <aside class="app-sidebar ">
             <div class="app-sidebar3 mt-4">
-                <div class="main-menu">
-                    <div class="app-sidebar__user">
-                        <div class="dropdown user-pro-body text-center">
-                            <a class="" href="/depo">
-                                <h1>
-                                    {{__('layout-Financial.depot-management')}}
-                                </h1>
+                <div class="">
+                    <div class="app-sidebar__user mt-2">
+                            <a class="dropdown  text-center text-white " href="/">
+                                <h2 class="">{{__('layout-Financial.depot-management')}}<i class="fa-solid fa-comments-dollar"></i></h2>
                             </a>
-                        </div>
                     </div>
                 </div>
                 <ul class="side-menu">
@@ -34,21 +30,21 @@
 
                     </li>
                     <li class="slide">
-                        <a class="side-menu__item" data-bs-toggle="slide" href="/delivered-items">
-                            <i class="fa-regular fa-address-book sidemenu_icon"></i>
-                            <span class="side-menu__label">{{__('layout-Financial.distributed-commodities')}}</span><i class="angle fa fa-angle-right"></i></a>
-
-                    </li>
-                    <li class="slide">
-                        <a class="side-menu__item" data-bs-toggle="slide" href="/depo-emp">
-                            <i class="fa-solid fa-users sidemenu_icon"></i>
-                            <span class="side-menu__label">{{__('layout-Financial.registered-employees')}}</span><i class="angle fa fa-angle-right"></i></a>
+                        <a class="side-menu__item" data-bs-toggle="slide" href="/depo-car-list">
+                            <i class="fa-solid fa-car-side sidemenu_icon"></i>
+                            <span class="side-menu__label">{{__('layout-Financial.car')}}</span><i class="angle fa fa-angle-right"></i></a>
 
                     </li>
                     <li class="slide">
                         <a class="side-menu__item" data-bs-toggle="slide" href="/motamid">
                             <i class="fa-solid fa-user-pen sidemenu_icon"></i>
                             <span class="side-menu__label">{{__('layout-Financial.list-of-trustees')}}</span><i class="angle fa fa-angle-right"></i></a>
+
+                    </li>
+                    <li class="slide">
+                        <a class="side-menu__item" data-bs-toggle="slide" href="/motamid">
+                            <i class="fa-solid fa-user-tie sidemenu_icon"></i>
+                            <span class="side-menu__label">{{__('layout-Financial.employees')}}</span><i class="angle fa fa-angle-right"></i></a>
 
                     </li>
                     <li class="slide">

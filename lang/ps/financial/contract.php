@@ -22,6 +22,7 @@ return [
     
     'update-contract' => 'د قرارداد آپډېټ کول', 
     'description' => 'توضیحات',
-    'specifications' => 'مشخصات'
+    'specifications' => 'مشخصات',
+    'get-mony' => 'د پیسو اخیستل' 
      
 ];

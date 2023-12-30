@@ -78,7 +78,7 @@
                             </div>
                     </div>
                     <table class="table table-bordered text-center">
-                        <thead>
+                        <thead class="bg-info">
                             <tr>
                                 <th>{{__('depo/damaged-products.id')}}</th>
                                 <th>{{__('depo/damaged-products.category')}}</th>

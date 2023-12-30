@@ -2,15 +2,11 @@
     <div class="sticky" id="app-sidebar-togglee">
         <aside class="app-sidebar ">
             <div class="app-sidebar3 mt-4">
-                <div class="main-menu">
-                    <div class="app-sidebar__user">
-                        <div class="dropdown user-pro-body text-center">
-                            <a class="" href="/property">
-                                <h3>
-                                    {{__('layout-Financial.general-real-estate-management')}}
-                                </h3>
+                <div class="">
+                    <div class="app-sidebar__user mt-2">
+                            <a class="dropdown  text-center text-white " href="/">
+                                <h2 class="">{{__('layout-Financial.general-real-estate')}}<i class="fa-brands fa-fort-awesome-alt"></i></h2>
                             </a>
-                        </div>
                     </div>
                 </div>
                 <ul class="side-menu">
@@ -42,6 +38,12 @@
                         <a class="side-menu__item" data-bs-toggle="slide" href="/oil-company">
                             <i class="fa-solid fa-gas-pump sidemenu_icon"></i>
                             <span class="side-menu__label">{{__('layout-Financial.oil-companies')}}</span><i class="angle fa fa-angle-right"></i></a>
+
+                    </li>
+                    <li class="slide">
+                        <a class="side-menu__item" data-bs-toggle="slide" href="/motamid">
+                            <i class="fa-solid fa-user-tie sidemenu_icon"></i>
+                            <span class="side-menu__label">{{__('layout-Financial.employees')}}</span><i class="angle fa fa-angle-right"></i></a>
 
                     </li>
                     <li class="slide">

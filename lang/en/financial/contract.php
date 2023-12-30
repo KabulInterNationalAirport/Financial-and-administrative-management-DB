@@ -21,6 +21,7 @@ return [
     'onprogress' => 'On Progress',
     'update-contract' => 'Update Contract',
     'description' => 'Description',
-    'specifications' => 'Specifications'
+    'specifications' => 'Specifications',
+    'get-mony' => 'Get Mony' 
      
 ];

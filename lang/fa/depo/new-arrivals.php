@@ -16,6 +16,11 @@ return [
     'date' => 'تاریخ',
     'office' => 'اداره',
     'taken-from' => 'اخذ ګیرنده',
-    'details' => 'تشریحات'
+    'details' => 'تشریحات',
+    'new-arrival-it-products' => 'اجناس نو تخنیکی', 
+    'serial-no' => 'سیریال نمبر',
+    'ram' => 'رم' , 
+    'hd' => 'هارډ ډیسک' ,
+    'color' => 'رنګ'
     
 ];

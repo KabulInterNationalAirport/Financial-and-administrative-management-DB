@@ -16,6 +16,11 @@ return [
     'date' => 'Date',
     'office' => 'Office',
     'taken-from' => 'Taken From',
-    'details' => 'Details'
+    'details' => 'Details',
+    'new-arrival-it-products' => 'New Arrival IT Products', 
+    'serial-no' => 'Serial Number',
+    'ram' => 'RAM' , 
+    'hd' => 'Hard Disk' ,
+    'color' => 'Color'
     
 ];

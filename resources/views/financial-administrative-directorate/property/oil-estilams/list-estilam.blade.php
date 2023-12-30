@@ -4,7 +4,7 @@
         <div class="side-app main-container">
             <!-- PAGE HEADER -->
             <div class="page-header d-xl-flex d-block">
-                
+                <div class="page-title">{{__('financial/estilam.estilam-list')}}</div>
                 <div class="page-rightheader header ms-md-auto">
                     <div class="d-flex align-items-end flex-wrap my-auto end-content breadcrumb-end">
                         <a href="/add-estilam"class="btn btn-primary " >{{__('financial/estilam.add-new')}}<i class="fa-solid fa-plus"></i></a>
@@ -12,12 +12,16 @@
                 </div>
             </div>
             <!-- END PAGE HEADER -->
-            <!-- ROW -->
             <div class="main-proifle">
-                <!-- ROW -->
-                <div class="page-title text-center mb-4">
-                    <div class="page-title">{{__('financial/estilam.estilam-list')}}</div>
-                </div>
+                <div class="page-header">
+                    <form class="form-inline">
+                        <div class="search-element">
+                            <input type="search" class="form-control header-search small"
+                                placeholder="{{ __('layout-Financial.search') }}..." aria-label="Search"
+                                tabindex="1">
+                        </div>
+                    </form>
+            </div>
                 <div class="table-responsive">
                     <table class="table  table-vcenter text-center table-bordered border-bottom" id="project-list">
                         <thead class="bg-success">

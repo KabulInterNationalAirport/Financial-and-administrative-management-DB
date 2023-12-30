@@ -3,8 +3,6 @@
 <div class="app-content main-content">
     <div class="side-app main-container">
         <!-- PAGE HEADER -->
-        <div class="page-header ">
-
             {{-- د نوي تیلو د شرکت د اضافه کولو لپاره ماډل --}}
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
@@ -55,19 +53,27 @@
                 </div>
             </div>
             {{-- د ماډل پای --}}
-            <div class="header">
-                <button class="btn btn-primary" data-bs-target="#exampleModal" data-bs-toggle="modal">
-                    {{__('financial/oil-cars.add-new')}}<i class="fa-solid fa-plus"></i></button>
+            <div class="page-header d-xl-flex d-block">
+                <div class="page-title">{{__('financial/oil-cars.list-of-cars')}}</div>
+                <div class="page-rightheader header ms-md-auto">
+                    <div class="d-flex align-items-end flex-wrap my-auto end-content breadcrumb-end">
+                        <button class="btn btn-primary" data-bs-target="#exampleModal" data-bs-toggle="modal">
+                            {{__('financial/oil-cars.add-new')}}<i class="fa-solid fa-plus"></i></button>
+                    </div>
+                </div>
             </div>
-
-        </div>
         <!-- END PAGE HEADER -->
         <!-- ROW -->
         <div class="main-proifle">
-            <!-- ROW -->
-            <div class="header text-center">
-                <div class="page-title">{{__('financial/oil-cars.list-of-cars')}}</div>
-            </div>
+            <div class="page-header">
+                <form class="form-inline">
+                    <div class="search-element">
+                        <input type="search" class="form-control header-search small"
+                            placeholder="{{ __('layout-Financial.search') }}..." aria-label="Search"
+                            tabindex="1">
+                    </div>
+                </form>
+        </div>
             <div class="table-responsive">
                 <table class="table  table-vcenter text-center table-bordered border-bottom" id="project-list">
                     <thead class="bg-success">

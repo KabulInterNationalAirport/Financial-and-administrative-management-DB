@@ -1,4 +1,4 @@
-@extends('financial-administrative-directorate.depo.layout.master')
+@extends('financial-administrative-directorate.commodity-accounting-management.layout.master')
 @section('contents')
     <div class="app-content main-content">
         <div class="side-app main-container">

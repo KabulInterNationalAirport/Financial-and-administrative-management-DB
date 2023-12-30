@@ -1,0 +1,37 @@
+<?php
+
+return [
+    'name-email' => 'نوم او ایمیل' ,
+    'email' => 'ایمیل',
+    'name' => 'نوم',
+    'last-name' => 'تخلص' ,
+    'related-office' => 'مربوطه اداره',
+    'job-title' => 'وظیفه',
+    'id-card' => 'آی ډي کارټ',
+    'mobile' => 'ټلیفون',
+    'actions' => 'عملیې',
+    'add-employee' => 'اضافه کول',
+    'list-of-registered-employees' => 'د ثبت شویو کارمندانو لیست',
+    'list-of-items-registered-to-the-employee' => 'په کارمند پسي د ثبت شویو اجناسو لیست',
+    'employee-information' => 'د کارمند معلومات', 
+    'date-of-birth' => 'د زوکړي نیټه',
+    'bank-card' => 'د بانک کارت' ,
+    'employee-profile' => 'د کارمند پروفایل' ,
+    'personal-informaions' => 'شخصي معلومات',
+    'details' => 'اضافي معلومات' ,
+    'contact' => 'اړیکی',
+    'edit-profile' => 'د پروفایل تغیر',
+    'kabul-airport' => 'کابل نړېوال هوايي ډګر',
+    'address' => 'آدرس',
+    'gender' => 'جنسیت' ,
+    'material-state' => 'بدني حالت',
+    'appointment-date' => 'د مقررۍ نیټه' ,
+    'degree' => 'د تحصیل درجه' ,
+    'profile-pic' => 'د پروفایل انځور',
+    'doc-pics' => 'د اسنادو انځورونه',
+    'male' => 'نارینه',
+    'famale' => 'ښځه',
+    'single' => 'مجرد' ,
+    'married' => 'متحیل'
+    
+];

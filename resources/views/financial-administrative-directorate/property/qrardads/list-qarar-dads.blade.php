@@ -4,19 +4,26 @@
         <div class="side-app main-container">
             <!-- PAGE HEADER -->
             <div class="page-header d-xl-flex d-block">
-                
+                <div class="page-title page-leftheader">{{__('financial/contract.contract-list')}}</div>
                 <div class="page-rightheader header ms-md-auto">
                     <div class="d-flex align-items-end flex-wrap my-auto end-content breadcrumb-end">
                         <a href="/new-qarardads"class="btn btn-primary " >{{__('financial/contract.add-new-contract')}}<i class="fa-solid fa-plus"></i></a>
                     </div>
                 </div>
+                
             </div>
             <!-- END PAGE HEADER -->
             <!-- ROW -->
             <div class="main-proifle">
                 <!-- ROW -->
-                <div class="header text-center">
-                    <div class="page-title">{{__('financial/contract.contract-list')}}</div>
+                <div class="page-header">
+                        <form class="form-inline ">
+                            <div class="search-element">
+                                <input type="search" class="form-control header-search small"
+                                    placeholder="{{ __('layout-Financial.search') }}..." aria-label="Search"
+                                    tabindex="1">
+                            </div>
+                        </form>
                 </div>
                 <div class="table-responsive">
                     <table class="table  table-vcenter text-center table-bordered border-bottom" id="project-list">

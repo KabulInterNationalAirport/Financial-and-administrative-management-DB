@@ -5,7 +5,7 @@
                 <div class="mt-4">
                     <div class="app-sidebar__user pb-2 mt-4">
                         <a class="dropdown  text-center" href="/">
-                                <h4>{{__('layout-Financial.financial-and-administrative-management')}}</h4>
+                                <h2>{{__('layout-Financial.management-of-terminals')}}</h2>
                         </a>
                     </div>
                 </div>

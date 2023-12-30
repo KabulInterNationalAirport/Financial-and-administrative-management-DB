@@ -5,7 +5,7 @@ return [
     'list-of-companies'=> 'د شرکتونو لیست' ,
     'id' => 'نمبر' ,
     'company-name' => 'د کمپنۍ نوم' ,
-    'owner-name' => 'د کمپنۍ ریئس' , 
+    'area-mm' => 'د ځمکي مساحت' , 
     'start-date' => 'د شروع نیټه' ,
     'end-date' => 'د ختم نیټه' ,
     'address' => 'آدرس' ,

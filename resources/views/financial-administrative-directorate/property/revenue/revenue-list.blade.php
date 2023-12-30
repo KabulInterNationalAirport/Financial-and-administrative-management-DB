@@ -2,9 +2,62 @@
 @section('contents')
     <div class="app-content main-content">
         <div class="side-app main-container">
+            
+            {{-- modal for editing task and adding image to a task --}}
+            <div class="modal fade" id="addImage" tabindex="-1" aria-labelledby="addImage" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="addImage">{{__('financial/contract.get-mony')}}</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="">
+                                    <select name="projects"
+                                        class="form-control custom-select select2"
+                                        data-placeholder="Select">
+                                        <option label="Select"></option>
+                                        <option value="حمل">حمل</option>
+                                        <option value="ثور">ثور</option>
+                                        <option value="جوزا">جوزا</option>
+                                        <option value="سرطان">سرطان</option>
+                                        <option value="اسد">اسد</option>
+                                        <option value="سنبله">سنبله</option>
+                                        <option value="میزان">میزان</option>
+                                        <option value="عقرب">عقرب</option>
+                                        <option value="قوس">قوس</option>
+                                        <option value="جدې">جدې</option>
+                                        <option value="دلوه">دلوه</option>
+                                        <option value="حوت">حوت</option>
+                                    </select>
+                                </div>
+                                <div class="custom-controls-stacked d-md-flex my-3">
+                                    <label class="form-label me-5">{{__('depo/report.state')}}:</label>
+                                    <label class="custom-control custom-radio success me-4">
+                                        <input type="radio" class="custom-control-input" name="example-radios1"
+                                            value="option1">
+                                        <span class="custom-control-label">{{__('depo/report.complete')}}</span>
+                                    </label>
+                                    <label class="custom-control custom-radio success">
+                                        <input type="radio" class="custom-control-input" name="example-radios1"
+                                            value="option3">
+                                        <span class="custom-control-label">{{__('depo/report.new')}}</span>
+                                    </label>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{__('depo/all-products.cancel')}}</button>
+                                    <button type="button" class="btn btn-primary">{{__('depo/all-products.submit')}}</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{-- end of the modal editing --}}
             <!-- PAGE HEADER -->
             <div class="page-header d-xl-flex d-block">
-                
+                <div class="page-title">{{__('financial/commercial-areas.commercial-areas-list')}}</div>
                 <div class="page-rightheader header ms-md-auto">
                     <div class="d-flex align-items-end flex-wrap my-auto end-content breadcrumb-end">
                         <a href="/add-revenue"class="btn btn-primary " >{{__('financial/commercial-areas.add-new')}}<i class="fa-solid fa-plus"></i></a>
@@ -12,12 +65,16 @@
                 </div>
             </div>
             <!-- END PAGE HEADER -->
-            <!-- ROW -->
             <div class="main-proifle">
-                <!-- ROW -->
-                <div class="header text-center">
-                    <div class="page-title">{{__('financial/commercial-areas.commercial-areas-list')}}</div>
-                </div>
+                <div class="page-header">
+                    <form class="form-inline ">
+                        <div class="search-element">
+                            <input type="search" class="form-control header-search small"
+                                placeholder="{{ __('layout-Financial.search') }}..." aria-label="Search"
+                                tabindex="1">
+                        </div>
+                    </form>
+            </div>
                 <div class="table-responsive">
                     <table class="table  table-vcenter text-center table-bordered" id="project-list">
                         <thead class="bg-success">
@@ -54,16 +111,14 @@
                                 <td><span class="badge badge-success">تکمیل</span></td>
                                 <td>
                                     <div>
-                                        <a href="/view-qarardad-details" class="action-btns1" data-bs-toggle="tooltip"
-                                            data-bs-placement="top" title="د قرار داد کتل"><i
+                                        <a href="/view-revenue" class="action-btns1"  title="د قرار داد کتل"><i
                                                 class="fa-solid fa-eye text-primary"></i></a>
-                                        <a href="javascript:void(0);" class="action-btns1" data-bs-toggle="modal"
-                                            data-bs-target="#editprojectmodal">
-                                            <i class="fa-solid fa-pen  text-success" data-bs-toggle="tooltip"
-                                                data-bs-placement="top" title="د قرار داد تغیر کول"></i>
+                                        <a href="javascript:void(0);" class="action-btns1" >
+                                            <i class="fa-solid fa-pen  text-success" title="د قرار داد تغیر کول"></i>
                                         </a>
-                                        <a href="/print-revenue" class="action-btns1" data-bs-toggle="tooltip"
-                                        data-bs-placement="top" title="د قرار داد پرینټ"><i class="fa-solid fa-print  text-secondary"></i></a>
+                                        <a href="/print-revenue" class="action-btns1" title="د قرار داد پرینټ"><i class="fa-solid fa-print  text-secondary"></i></a>
+                                        <a href="/print-revenue" class="action-btns1" data-bs-target="#addImage"
+                                        data-bs-toggle="modal" title="د کرایه ورکړه"><i class="fa-regular fa-calendar-check text-info"></i></a>
                                        
                                     </div>
                                 </td>

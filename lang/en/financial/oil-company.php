@@ -5,7 +5,7 @@ return [
     'list-of-companies'=> 'List of Companies' ,
     'id' => 'ID' ,
     'company-name' => 'Company Name' ,
-    'owner-name' => 'Owner Name' , 
+    'area-mm' => 'Area MM' , 
     'start-date' => 'Start Date' ,
     'end-date' => 'End Date' ,
     'address' => 'Address' ,

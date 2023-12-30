@@ -27,6 +27,20 @@ return [
     'references' => 'حوالې',
     'badget' => 'بودیجه',
     'code' => 'کوډونه',
-    'management-of-terminals' => 'د ټرمینلونو مدیریت'
+    'management-of-terminals' => 'د ټرمینلونو مدیریت',
+    'car' => 'موټرونه',
+    'kabul-airport' => 'کابل نړېوال هوايي ډګر',
+    'it' => 'آي ټي' ,
+    'department-office' => 'آمریت دفتر' ,
+    'financial-add' => 'مالي او اداري',
+    'ground-handling' => 'ګرونډ هنډلینګ' ,
+    'security-aviation' => 'امنیت او هوايي چلند',
+    'operational-m'=> 'عملیاتي' ,
+    'technical m' => 'تخیکي',
+    'vip' => 'وي آي پي' ,
+    'kabul-airport1' => 'کابل نړېوال هوايي ډګر',
+    'financial-and-administrative' => 'مالي او اداري آمریت',
+    'general-real-estate' => 'د املاکو عمومي مدیریت',
+    'commodity-accounting' => 'د توکو د محاسبې ',
     
 ];

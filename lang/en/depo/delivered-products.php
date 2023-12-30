@@ -10,10 +10,11 @@ return [
     'unit' => 'Unit',
     'price' => 'Price',
     'total-price' => 'Total Price',
-    'offer-no' => 'Offer no',
+    'number' => 'number',
     'offer-date' => 'Offer Date',
     'offer-office' => 'Offer Office',
     'employee-name' => 'Employee Name',
     'details' => 'Details',
-    'delivered-data'=> 'Delivered Date'
+    'delivered-data'=> 'Delivered Date',
+    'based-on' => 'Based On'
 ];

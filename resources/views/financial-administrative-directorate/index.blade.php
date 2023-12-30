@@ -93,7 +93,7 @@
                             <div class="card-image-wrapper">
                                 <img src="{{asset('assets/images/brand/hard.png')}}" class="card-img-top img-fluid"
                                     alt="...">
-                                <h1 class="text-center"><a href="operational.html"
+                                <h1 class="text-center"><a href="/terminals"
                                         class="btn btn-outline-success it8 border-bottom  font-weight-bold border-top">{{__('layout-Financial.enter')}}</a>
                                 </h1>
                             </div>
@@ -105,7 +105,7 @@
                             <div class="card-body">
                                 <h5 class="card-title font-weight-bold text-center text-muted">{{__('layout-Financial.financial-and-administrative-management')}}<br><br>
                                     <p2 class="font-weight-bold text-dark">
-                                        مدیریت </p2>
+                                        د تدارکاتو مدیریت </p2>
                                 </h5>
                             </div>
                             <div class="card-image-wrapper">

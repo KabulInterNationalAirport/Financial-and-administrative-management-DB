@@ -2,11 +2,10 @@
 @section('contents')
     <div class="app-content main-content">
         <div class="side-app main-container">
-
             <div class="page-header d-xl-flex d-block">
                 <div class="page-leftheader">
-                    <div class="page-title" dir="rtl"><span class="font-weight-normal text-muted ms-2">{{__('layout-Financial.financial-and-administrative-management')}}</span>
-                    {{__('financial/employee-financial.list-of-employees')}}</div>
+                    <div class="page-title" dir="rtl"><span class="font-weight-normal text-muted ms-2">{{__('financial/employee-financial.list-of-employees')}}</span>
+                    {{__('layout-Financial.financial-and-administrative-management')}}</div>
                 </div>
             </div>
 

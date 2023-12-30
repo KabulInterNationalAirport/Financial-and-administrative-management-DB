@@ -14,5 +14,12 @@ return [
     'list-of-registered-employees' => 'د ثبت شویو کارمندانو لیست',
     'list-of-items-registered-to-the-employee' => 'په کارمند پسي د ثبت شویو اجناسو لیست',
     'employee-information' => 'د کارمند معلومات', 
+    'reg-product' => 'جنس ثبت' ,
+    'edit' => 'تصحیح' ,
+    'view-details' => 'مشخصات',
+    'father-name' => 'د پلار نوم',
+    'reg-car' => 'مرټر ثبت',
+    'update-product' => 'په جنس کي تغیرات',
+    'reg-it-product' => 'د آی ټي اجناسو ثبت'
     
 ];

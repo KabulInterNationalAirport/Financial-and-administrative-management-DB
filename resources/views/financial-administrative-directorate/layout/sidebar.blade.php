@@ -1,12 +1,12 @@
     <!-- APP-SIDEBAR -->
     <div class="sticky" id="app-sidebar-togglee">
         <aside class="app-sidebar ">
-            <div class="app-sidebar3">
-                <div class="mt-4">
-                    <div class="app-sidebar__user pb-2 mt-4">
-                        <a class="dropdown  text-center" href="/">
-                                <h4>{{__('layout-Financial.financial-and-administrative-management')}}</h4>
-                        </a>
+            <div class="app-sidebar3 mt-4">
+                <div class="">
+                    <div class="app-sidebar__user mt-2">
+                            <a class="dropdown  text-center text-white " href="/">
+                                <h2 class="">{{__('layout-Financial.financial-and-administrative')}}<i class="fa-solid fa-comments-dollar"></i></h2>
+                            </a>
                     </div>
                 </div>
                 <ul class="side-menu">

@@ -53,7 +53,6 @@
                         <button class="btn btn-primary" data-bs-target="#exampleModal" data-bs-toggle="modal">
                             {{ __('depo/all-products.add-product') }} <i class="fa-solid fa-plus"></i></button>
                     </div>
-
                 </div>
             </div>
             <div class="">
@@ -74,7 +73,7 @@
                         </div>
                     </div>
                     <table class="table table-bordered text-center">
-                        <thead>
+                        <thead class="bg-info">
                             <tr>
                                 <th>{{ __('depo/all-products.id') }}</th>
                                 <th>{{ __('depo/all-products.category') }}</th>
@@ -82,45 +81,9 @@
                                 <th>{{ __('depo/all-products.total-number-of-products') }}</th>
                                 <th>{{ __('depo/all-products.unit') }}</th>
                                 <th>{{ __('depo/all-products.remaining-products') }}</th>
-                                <th>{{ __('depo/all-products.details') }}</th>
                             </tr>
                         </thead>
                         <tbody>
-                            {{-- د یوه جنس مشخصاتو د لیدلو لپاره ماډل --}}
-                            <div class="modal fade" id="details" tabindex="-1" aria-labelledby="exampleModalLabel"
-                                aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h1 class="modal-title fs-5" id="exampleModalLabel">
-                                                {{ __('depo/all-products.product-details') }}</h1>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <form>
-                                                <div>
-                                                    <label for="cagegory-name" class="col-form-label">کټګوري:</label>
-                                                    <input type="text" class="form-control" id="cagegory-name">
-                                                </div>
-                                                <div>
-                                                    <label for="item-name" class="col-form-label">نوم:</label>
-                                                    <input type="text" class="form-control" id="item-name">
-                                                </div>
-                                                <div>
-                                                    <label for="item-name" class="col-form-label">واحد:</label>
-                                                    <input type="text" class="form-control" id="item-name">
-                                                </div>
-                                            </form>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button class="btn btn-info mt-4" onClick=""><i
-                                                    class="si si-printer"></i>{{ __('depo/all-products.print') }}</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            {{-- د ماډل پای --}}
                             <tr>
                                 <th scope="row">1</th>
                                 <td>کمپیوټر</td>
@@ -128,10 +91,6 @@
                                 <td>۱۲۱</td>
                                 <td>عدد</td>
                                 <td> ۱۲۰</td>
-                                <td>
-                                    <Button class="action-btns1 bg-success" data-bs-target="#details"
-                                        data-bs-toggle="modal"><i class="fa-regular fa-pen-to-square"></i></Button>
-                                </td>
                             </tr>
                             <tr>
                                 <th scope="row">1</th>
@@ -140,10 +99,6 @@
                                 <td>۱۲۱</td>
                                 <td>عدد</td>
                                 <td> ۱۲۰</td>
-                                <td>
-                                    <Button class="action-btns1 bg-success" data-bs-target="#details"
-                                        data-bs-toggle="modal"><i class="fa-regular fa-pen-to-square"></i></Button>
-                                </td>
                             </tr>
                             <tr>
                                 <th scope="row">1</th>
@@ -152,10 +107,6 @@
                                 <td>۱۲۱</td>
                                 <td>عدد</td>
                                 <td> ۱۲۰</td>
-                                <td>
-                                    <Button class="action-btns1 bg-success" data-bs-target="#details"
-                                        data-bs-toggle="modal"><i class="fa-regular fa-pen-to-square"></i></Button>
-                                </td>
                             </tr>
                             <tr>
                                 <th scope="row">1</th>
@@ -164,10 +115,6 @@
                                 <td>۱۲۱</td>
                                 <td>عدد</td>
                                 <td> ۱۲۰</td>
-                                <td>
-                                    <Button class="action-btns1 bg-success" data-bs-target="#details"
-                                        data-bs-toggle="modal"><i class="fa-regular fa-pen-to-square"></i></Button>
-                                </td>
                             </tr>
                             <tr>
                                 <th scope="row">1</th>
@@ -176,10 +123,6 @@
                                 <td>۱۲۱</td>
                                 <td>عدد</td>
                                 <td> ۱۲۰</td>
-                                <td>
-                                    <Button class="action-btns1 bg-success" data-bs-target="#details"
-                                        data-bs-toggle="modal"><i class="fa-regular fa-pen-to-square"></i></Button>
-                                </td>
                             </tr>
                             <tr>
                                 <th scope="row">1</th>
@@ -188,15 +131,11 @@
                                 <td>۱۲۱</td>
                                 <td>عدد</td>
                                 <td> ۱۲۰</td>
-                                <td>
-                                    <Button class="action-btns1 bg-success" data-bs-target="#details"
-                                        data-bs-toggle="modal"><i class="fa-regular fa-pen-to-square"></i></Button>
-                                </td>
                             </tr>
                         </tbody>
                     </table>
                     {{-- ----------- pagination-links ---------------- --}}
-                    <div class="card-body ">
+                    <div class="card-body footer">
                         <ul class="pagination mg-b-0 page-0 ">
                             <li class="page-item">
                                 <a aria-label="Last" class="page-link" href="javascript:void(0);"><i
