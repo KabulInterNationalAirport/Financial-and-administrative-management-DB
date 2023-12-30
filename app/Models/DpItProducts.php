@@ -7,13 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 
-class DpDeliveredProducts extends Model
+class DpItProducts extends Model
 {
     use HasFactory;
 
-    public function OrgStuffDp(): BelongsTo  
+    public function TrusteeDp(): BelongsTo  
     {
-        return $this->belongsTo(OrgStuffDp::class);
+        return $this->belongsTo(TrusteeDp::class);
     }
 
     public function TotalProductDp(): BelongsTo

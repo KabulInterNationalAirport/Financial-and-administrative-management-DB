@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('org_stuff_dps', function (Blueprint $table) {
+        Schema::create('cam_emps', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('last_name')->nullable();
@@ -22,7 +22,12 @@ return new class extends Migration
             $table->string('job_title');
             $table->string('id_card');
             $table->string("appointment_date");
+            $table->string("profil_pic")->nullable();
+            $table->string('degree');
+            $table->string("degree_pics")->nullable();
             $table->string("phone");
+            $table->string('material_state')->nullable();
+            $table->string("gender");
             $table->string("address")->nullable();
             $table->timestamps();
         });
@@ -35,6 +40,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('org_stuff_dps');
+        Schema::dropIfExists('cam_emps');
     }
 };

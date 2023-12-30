@@ -186,7 +186,7 @@
                                             <a href="javascript:void(0);" class="nav-link pe-1 ps-0 leading-none"
                                                 data-bs-toggle="dropdown">
                                                 <span>
-                                                    <img src="assets/images/users/16.jpg" alt="img"
+                                                    <img src="{{asset('assets/images/users/16.jpg')}}" alt="img"
                                                         class="avatar avatar-md bradius">
                                                 </span>
                                             </a>
@@ -198,19 +198,18 @@
                                                     <p class="text-center user-semi-title">Manager of system developmet
                                                     </p>
                                                 </div>
-                                                <a class="dropdown-item d-flex" href="profile.html">
+                                                <a class="dropdown-item d-flex" href="/profile">
                                                     <i class="feather feather-user me-3 fs-16 my-auto"></i>
                                                     <div class="mt-1">Profile</div>
                                                 </a>
-                                                <a class="dropdown-item d-flex" href="javascript:void(0);"
-                                                    data-bs-toggle="modal" data-bs-target="#changepasswordnmodal">
-                                                    <i class="feather feather-edit-2 me-3 fs-16 my-auto"></i>
-                                                    <div class="mt-1">Change Password</div>
-                                                </a>
-                                                <a class="dropdown-item d-flex" href="login.html">
-                                                    <i class="feather feather-power me-3 fs-16 my-auto"></i>
-                                                    <div class="mt-1">Sign Out</div>
-                                                </a>
+                                                <form action="{{route('profile.destroy')}}" method="POST" enctype="multipart/form-data">
+                                                    @method('Delete')
+                                                    @csrf
+                                                    <a class="dropdown-item d-flex" href="{{ Auth::logout();}}">
+                                                        <i class="feather feather-power me-3 fs-16 my-auto"></i>
+                                                        <div class="mt-1">Sign Out </div>
+                                                    </a>
+                                                </form>
                                             </div>
                                         </div>
                                     </div>

@@ -15,9 +15,25 @@ class TotalProductDp extends Model
     {
         return $this->hasMany(DpNewArrivals::class);
     }
-    public function DpDeliveredProducts()
+    public function CamDeliveredProducts()
     {
-        return $this->hasMany(DpDeliveredProducts::class);
+        return $this->hasMany(CamDeliveredProducts::class);
+    }
+    public function DpItProducts()
+    {
+        return $this->hasMany(DpItProducts::class);
+    }
+    public function DpCars()
+    {
+        return $this->hasMany(DpCars::class);
+    }
+    public function CamItProDelivered()
+    {
+        return $this->hasMany(CamItProDelivered::class);
+    }
+    public function CamCarsDelivered()
+    {
+        return $this->hasMany(CamCarsDelivered::class);
     }
    
 }
