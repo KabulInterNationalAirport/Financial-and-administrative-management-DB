@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class CamCarsDelivered extends Model
 {
+    
     use HasFactory;
 
     public function CamOrgStuff(): BelongsTo  

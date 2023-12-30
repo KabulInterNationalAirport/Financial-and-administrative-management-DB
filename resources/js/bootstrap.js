@@ -33,3 +33,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     forceTLS: (import.meta.env.VITE_PUSHER_SCHEME ?? 'https') === 'https',
 //     enabledTransports: ['ws', 'wss'],
 // });
+mix.sass('resources/scss/app.scss', 'public/css')
+    .options({
+        processCssUrls: false,
+        postCss: [require('tailwindcss')],
+    });

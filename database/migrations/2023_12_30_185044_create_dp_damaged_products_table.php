@@ -24,8 +24,8 @@ return new class extends Migration
             $table->string('related_office');
             $table->unsignedBigInteger("trustee_id");
             $table->foreign("trustee_id")->references("id")->on("trustee_dps")->onDelete("cascade");
-            $table->unsignedBigInteger("org_stuff_dp_id");
-            $table->foreign("org_stuff_dp_id")->references("id")->on("org_stuff_dps")->onDelete("cascade");
+            $table->unsignedBigInteger("cam_org_stuff_id");
+            $table->foreign("cam_org_stuff_id")->references("id")->on("cam_org_stuffs")->onDelete("cascade");
             $table->timestamps();
         });
     }
