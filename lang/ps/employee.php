@@ -32,6 +32,7 @@ return [
     'male' => 'نارینه',
     'famale' => 'ښځه',
     'single' => 'مجرد' ,
-    'married' => 'متحیل'
+    'married' => 'متحیل',
+    'update-employee' => 'د کارمند تغیرات'
     
 ];

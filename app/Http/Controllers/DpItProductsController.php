@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\TotalProductDp;
 
 class DpItProductsController extends Controller
 {
@@ -13,7 +14,8 @@ class DpItProductsController extends Controller
      */
     public function index()
     {
-        //
+        $items = TotalProductDp::all();
+        return view('financial-administrative-directorate.depo.items.all-items', compact('items'));
     }
 
     /**
@@ -23,7 +25,7 @@ class DpItProductsController extends Controller
      */
     public function create()
     {
-        //
+        return view('financial-administrative-directorate.depo.items.add-new-arrivals');
     }
 
     /**
@@ -34,7 +36,14 @@ class DpItProductsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $item = new TotalProductDp;
+        $item->name= $request->name;
+        $item->category = $request->category;
+        $item->quantity = 0;
+        $item->unit = $request->unit;
+        $item->save();
+        return redirect()->back();
+
     }
 
     /**

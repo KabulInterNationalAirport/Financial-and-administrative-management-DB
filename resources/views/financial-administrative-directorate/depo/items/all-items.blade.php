@@ -20,31 +20,33 @@
                                         aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <form>
+                                    <form action="{{route('depo-all-products.store')}}" method="POST" enctype="multipart/form-data">
+                                        @csrf
                                         <div>
                                             <label for="cagegory-name"
                                                 class="col-form-label">{{ __('depo/all-products.category') }}:</label>
-                                            <input type="text" class="form-control" id="cagegory-name">
+                                            <input type="text" name="category" class="form-control" id="cagegory-name">
                                         </div>
                                         <div>
                                             <label for="item-name"
                                                 class="col-form-label">{{ __('depo/all-products.name') }}:</label>
-                                            <input type="text" class="form-control" id="item-name">
+                                            <input type="text" name="name" class="form-control" id="item-name">
                                         </div>
                                         <div>
                                             <label for="item-name"
                                                 class="col-form-label">{{ __('depo/all-products.unit') }}:</label>
-                                            <input type="text" class="form-control" id="item-name">
+                                            <input type="text" name="unit" class="form-control" id="item-name">
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">{{ __('depo/all-products.cancel') }}
+                                            </button>
+                                            <button type="submit"
+                                                class="btn btn-primary">{{ __('depo/all-products.submit') }}</button>
                                         </div>
                                     </form>
                                 </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary"
-                                        data-bs-dismiss="modal">{{ __('depo/all-products.cancel') }}
-                                    </button>
-                                    <button type="button"
-                                        class="btn btn-primary">{{ __('depo/all-products.submit') }}</button>
-                                </div>
+                               
                             </div>
                         </div>
                     </div>
@@ -84,54 +86,17 @@
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach ($items as $item)
+                                
                             <tr>
-                                <th scope="row">1</th>
-                                <td>کمپیوټر</td>
-                                <td>ډیل ۳۳۳۴ ماډل</td>
-                                <td>۱۲۱</td>
-                                <td>عدد</td>
-                                <td> ۱۲۰</td>
+                                <th scope="row">{{$item->id}}</th>
+                                <td>{{$item->category}}</td>
+                                <td>{{$item->name}}</td>
+                                <td>{{$item->quantity}}</td>
+                                <td>{{$item->unit}}</td>
+                                <td>{{$item->quantity}}</td>
                             </tr>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>کمپیوټر</td>
-                                <td>ډیل ۳۳۳۴ ماډل</td>
-                                <td>۱۲۱</td>
-                                <td>عدد</td>
-                                <td> ۱۲۰</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>کمپیوټر</td>
-                                <td>ډیل ۳۳۳۴ ماډل</td>
-                                <td>۱۲۱</td>
-                                <td>عدد</td>
-                                <td> ۱۲۰</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>کمپیوټر</td>
-                                <td>ډیل ۳۳۳۴ ماډل</td>
-                                <td>۱۲۱</td>
-                                <td>عدد</td>
-                                <td> ۱۲۰</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>کمپیوټر</td>
-                                <td>ډیل ۳۳۳۴ ماډل</td>
-                                <td>۱۲۱</td>
-                                <td>عدد</td>
-                                <td> ۱۲۰</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>کمپیوټر</td>
-                                <td>ډیل ۳۳۳۴ ماډل</td>
-                                <td>۱۲۱</td>
-                                <td>عدد</td>
-                                <td> ۱۲۰</td>
-                            </tr>
+                            @endforeach
                         </tbody>
                     </table>
                     {{-- ----------- pagination-links ---------------- --}}

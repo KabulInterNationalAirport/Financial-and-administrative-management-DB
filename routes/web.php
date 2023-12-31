@@ -3,15 +3,18 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
+use App\Http\Controllers\FinancialAdmReportController;
+use App\Http\Controllers\FinancialAdmEmpController;
+use App\Http\Controllers\DpItProductsController;
+use App\Http\Controllers\DpNewArrivalsController;
+use App\Http\Controllers\TrusteeDpController;
 
 Route::group(
     [
         'prefix' => LaravelLocalization::setLocale(),
         'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
-    ], function(){
-// Route::get('/', function () {
-//     return view('index');
-// })->middleware(['auth', 'verified'])->name('dashboard');
+    ], function(){ 
+
 // routs of breaze
 Route::get('/dashboard', function () {
     return view('index');
@@ -21,18 +24,37 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-    // Route::get('/', function () {
-    //     return view('index');
-    // });
 });
 
-        // Route::get("/reportall", function () {
-        //     return view("report");
-        // });
 
-        // Route::get("/print-report", function () {
-        //     return view("print-report");
-        // });
+
+        Route::resource('fin-adm-report' , FinancialAdmReportController::class);
+
+        Route::resource('fin-adm-employee' , FinancialAdmEmpController::class);
+        Route::get('/depo' , function(){
+            return view('./financial-administrative-directorate/depo/index');
+        });
+
+        Route::resource('depo-all-products' , DpItProductsController::class);
+        Route::resource('depo-new-arrivals', DpNewArrivalsController::class);
+        Route::resource('trustee' , TrusteeDpController::class);
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+        
+        
         Route::get("/financial", function () {
             return view("./financial-administrative-directorate/index");
         });

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\FinancialAdmReport;
 
 class FinancialAdmReportController extends Controller
 {
@@ -13,7 +14,8 @@ class FinancialAdmReportController extends Controller
      */
     public function index()
     {
-        //
+        $reports = FinancialAdmReport::All();
+        return view('financial-administrative-directorate.report' , compact('reports'));
     }
 
     /**
@@ -34,8 +36,18 @@ class FinancialAdmReportController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+        // return $request;
+        $reprot = new FinancialAdmReport;
+        $reprot->task = $request->task;
+        $reprot->related_office = $request->office;
+        $reprot->task_details = $request->taskdetails;
+        $reprot->state = $request->state;
+        $reprot->date = $request->input('date');
+        $reprot->file = 'hi.png';
+        $reprot->save();
+        return redirect()->back();
+        
+        }
 
     /**
      * Display the specified resource.
@@ -56,7 +68,8 @@ class FinancialAdmReportController extends Controller
      */
     public function edit($id)
     {
-        //
+        $report = FinancialAdmReport::find($id);
+        return view('financial-administrative-directorate.update-report' ,compact('report'));
     }
 
     /**
@@ -68,7 +81,30 @@ class FinancialAdmReportController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $report = FinancialAdmReport::find($id);
+        $report->task = $request->task;
+        $report->related_office = $request->office;
+        $report->task_details = $request->taskdetails;
+        $report->state = $request->state;
+        $report->date = $request->input('date');
+
+        $this->validate($request, [
+            'image' => 'file|image|required'
+        ]);
+        if($request->hasFile('image')){
+            $fileNameWithEx = $request->file('image')->getClientOriginalName();
+            $fielName = pathinfo($fileNameWithEx, PATHINFO_FILENAME);
+            $extesion = $request->file('image')->getClientOriginalExtension();
+            $uploadName = 'fin_adm'. time() .'_report'.'.'.$extesion;
+            $image = $request->file('image')->storeAs('public/report',$uploadName);
+            $filetoUpload = 'storage/report/'.$uploadName;
+        }
+        else{
+            $filetoUpload = 'storage/report/def.jpg';
+        }
+        $report->file = $filetoUpload;
+        $report->save();
+        return redirect()->back();
     }
 
     /**

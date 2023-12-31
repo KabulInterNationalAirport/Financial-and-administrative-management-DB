@@ -21,6 +21,7 @@ return [
     'serial-no' => 'Serial Number',
     'ram' => 'RAM' , 
     'hd' => 'Hard Disk' ,
-    'color' => 'Color'
+    'color' => 'Color',
+    'product-name' => 'Product Name'
     
 ];

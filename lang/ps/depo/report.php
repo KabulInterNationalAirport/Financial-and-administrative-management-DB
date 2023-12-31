@@ -24,6 +24,7 @@ return [
     'this-year' => 'روان کال' ,
     'past-year' => 'تیر کال',
     'kabul-airport' => 'د کابل نړېوال هوايي ډګر',
-    'day-month' => 'ورځ-میاشت'
+    'day-month' => 'ورځ-میاشت',
+    'update-report' => 'د ریپورټ تغیر'
      
 ];

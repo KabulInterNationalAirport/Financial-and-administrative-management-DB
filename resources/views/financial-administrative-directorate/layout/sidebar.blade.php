@@ -12,12 +12,12 @@
                 <ul class="side-menu">
                     <li class="side-item side-item-category mt-4"></li>
                     <li class="slide">
-                        <a class="side-menu__item" data-bs-toggle="slide" href="/employee">
+                        <a class="side-menu__item" data-bs-toggle="slide" href="/fin-adm-employee">
                             <i class="fa-solid fa-users-viewfinder sidemenu_icon"></i>
                             <span class="side-menu__label">{{__("layout-Financial.employees")}}</span><i class="angle fa fa-angle-right"></i></a>
                     </li>
                     <li class="slide">
-                        <a class="side-menu__item" data-bs-toggle="slide" href="/report">
+                        <a class="side-menu__item" data-bs-toggle="slide" href="/fin-adm-report">
                             <i class="fa-solid fa-list-check sidemenu_icon"></i>
                             <span class="side-menu__label">{{__('layout-Financial.daily-report')}}</span><i class="angle fa fa-angle-right"></i></a>
                     </li> 

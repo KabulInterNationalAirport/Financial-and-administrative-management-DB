@@ -32,6 +32,7 @@ return [
     'male' => 'Male',
     'famale' => 'Famale',
     'single' => 'Single' ,
-    'married' => 'Married'
+    'married' => 'Married',
+    'update-employee' => 'Update Employee'
     
 ];

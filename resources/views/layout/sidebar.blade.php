@@ -15,7 +15,7 @@
                         <a class="side-menu__item" data-bs-toggle="slide" href="/financial">
                             <i class="fa-solid fa-house-laptop sidemenu_icon"></i>
                             <span
-                                class="side-menu__label">{{ __('layout-Financial.financial-and-administrative-management') }}</span><i
+                                class="side-menu__label">{{ __('layout-Financial.financial-and-administrative') }}</span><i
                                 class="angle fa fa-angle-right"></i></a>
                     </li>
                     <li class="slide">

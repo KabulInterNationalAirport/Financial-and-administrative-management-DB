@@ -25,6 +25,7 @@ return [
     'this-year' => 'This Year' ,
     'past-year' => 'Past Year',
     'kabul-airport' => 'Kabul International Airport',
-    'day-month' => 'day-month'
+    'day-month' => 'day-month',
+    'update-report' => 'Update Report'
      
 ];

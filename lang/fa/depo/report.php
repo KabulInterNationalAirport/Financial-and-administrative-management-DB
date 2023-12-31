@@ -24,6 +24,7 @@ return [
     'this-year' => 'سال جاري' ,
     'past-year' => 'سال ګذشته',
     'kabul-airport' => 'میدان هوايي بین المللی کابل',
-    'day-month' => 'روز-ماه'
+    'day-month' => 'روز-ماه',
+    'update-report' => 'تغیر ریپورټ'
      
 ];

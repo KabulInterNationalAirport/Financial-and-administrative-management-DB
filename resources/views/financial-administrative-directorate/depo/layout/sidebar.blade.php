@@ -12,13 +12,13 @@
                 <ul class="side-menu">
                     <li class="side-item side-item-category mt-4"></li>
                     <li class="slide">
-                        <a class="side-menu__item" data-bs-toggle="slide" href="/all-items">
+                        <a class="side-menu__item" data-bs-toggle="slide" href="/depo-all-products">
                             <i class="fa-solid fa-list-ul sidemenu_icon"></i>
                             <span class="side-menu__label">{{__('layout-Financial.list-of-all-products')}}</span><i class="angle fa fa-angle-right"></i></a>
 
                     </li>
                     <li class="slide">
-                        <a class="side-menu__item" data-bs-toggle="slide" href="/new-arrival-items">
+                        <a class="side-menu__item" data-bs-toggle="slide" href="/depo-new-arrivals">
                             <i class="fa-solid fa-list-ol sidemenu_icon"></i>
                             <span class="side-menu__label">{{__('layout-Financial.list-of-new-arrivals')}}</span><i class="angle fa fa-angle-right"></i></a>
 
@@ -36,7 +36,7 @@
 
                     </li>
                     <li class="slide">
-                        <a class="side-menu__item" data-bs-toggle="slide" href="/motamid">
+                        <a class="side-menu__item" data-bs-toggle="slide" href="/trustee">
                             <i class="fa-solid fa-user-pen sidemenu_icon"></i>
                             <span class="side-menu__label">{{__('layout-Financial.list-of-trustees')}}</span><i class="angle fa fa-angle-right"></i></a>
 

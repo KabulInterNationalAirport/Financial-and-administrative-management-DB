@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\FinancialAdmEmp;
+use App\Models\TrusteeDp;
+use App\Models\DpNewArrivals;
 
 class TrusteeDpController extends Controller
 {
@@ -13,7 +16,8 @@ class TrusteeDpController extends Controller
      */
     public function index()
     {
-        //
+        $employees = FinancialAdmEmp::all();
+        return view('financial-administrative-directorate.depo.motamid.motamid-list' , compact('employees'));
     }
 
     /**
@@ -45,7 +49,11 @@ class TrusteeDpController extends Controller
      */
     public function show($id)
     {
-        //
+        $trustee = FinancialAdmEmp::find($id);
+        $items = DpNewArrivals::all();
+        $newId = intval($id);
+        return view('financial-administrative-directorate.depo.motamid.view-motamid-items', compact('trustee' , 'items', 'newId'));
+
     }
 
     /**

@@ -9,14 +9,14 @@
 									<div class="card-body">
 										<div class="invoice-header text-end d-block mb-5">
 											<h1 class="invoice-title font-weight-semibold text-uppercase text-center mb-1">{{__('depo/motamid.registered-products-to-trustee')}}</h1>
-										</div><!-- invoice-header -->
+										</div>
 										<div class="row mt-4">
 											<div class="col-md">
                                                 <h4>{{ __('depo/motamid.trustee-information') }}</h4>
-                                                <h5>{{ __('depo/delivered-products.name') }}: Abdul Saboor hemat</h5>
-                                                <h5> {{ __('depo/employees.mobile') }}: 0790161600</h5>
-                                                <h5>{{ __('depo/employees.email') }}: saboorhemat@gmail.com</h5>
-                                                <h5>{{ __('depo/employees.id-card') }}: 123456</h5>
+                                                <h5>{{ __('depo/delivered-products.name') }}: {{$trustee->name}}</h5>
+                                                <h5> {{ __('depo/employees.mobile') }}: {{$trustee->phone}}</h5>
+                                                <h5>{{ __('depo/employees.email') }}: {{$trustee->email}}</h5>
+                                                <h5>{{ __('depo/employees.id-card') }}: {{$trustee->id_card}}</h5>
                                             </div>
 										</div>
                                             <div class="table-responsive mt-4">
@@ -33,15 +33,19 @@
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        <tr>
-                                                            <th scope="row">1</th>
-                                                            <td>کمپیوټر</td>
-                                                            <td>ډیل ۳۳۳۴</td>
-                                                            <td>۳</td>
-                                                            <td>عدد</td>
-                                                            <td>۱۰۰۰۰</td>
-                                                            <td>۳۰۰۰۰</td>
-                                                        </tr>
+                                                        @foreach ($items as $item)
+                                                            @if ($item->trustee_id == 1)
+                                                            <tr>
+                                                                <th scope="row">{{$item->id}}</th>
+                                                                <td>{{$item->category}}</td>
+                                                                <td>{{$item->name}}</td>
+                                                                <td>{{$item->quantity}}</td>
+                                                                <td>{{$item->unit}}</td>
+                                                                <td>{{$item->price}}</td>
+                                                                <td>{{$item->price * $item->quantity}}</td>
+                                                            </tr>
+                                                            @endif
+                                                        @endforeach
                                                     </tbody>
                                                 </table>
                                             </div>

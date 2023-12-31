@@ -82,7 +82,7 @@
                     </div>
                     {{-- -------------- end of modal for showing details of the product--------------- --}}
                     <div class="page-rightheader header">
-                        <a href="/add-arrival-items" class="btn btn-primary">{{ __('depo/new-arrivals.add-product') }}<i
+                        <a href="{{route('depo-new-arrivals.create')}}" class="btn btn-primary">{{ __('depo/new-arrivals.add-product') }}<i
                                 class="fa-solid fa-plus"></i></a>
                     </div>
                 </div>
@@ -124,25 +124,28 @@
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach ($products as $product)
+                                
                             <tr>
-                                <th scope="row">1</th>
-                                <td>کمپیوټر</td>
-                                <td>ډیل ۳۳۳۴</td>
-                                <td>۳</td>
-                                <td>عدد</td>
-                                <td>۱۰۰۰۰</td>
-                                <td>۳۰۰۰۰</td>
-                                <td>شبیر احمد</td>
-                                <td>۶</td>
-                                <td>۸</td>
-                                <td>۱۴۰۲/۹/۱۲</td>
-                                <td>آی ټي</td>
-                                <td>نه</td>
+                                <th scope="row">{{$product->id}}</th>
+                                <td>{{$product->category}}</td>
+                                <td>{{$product->name}}</td>
+                                <td>{{$product->quantity}}</td>
+                                <td>{{$product->unit}}</td>
+                                <td>{{$product->price}}</td>
+                                <td>{{$product->price * $product->quantity}}</td>
+                                <td>{{$product->trustee_id}}</td>
+                                <td>{{$product->m_7}}</td>
+                                <td>{{$product->order_no}}</td>
+                                <td>{{$product->date}}</td>
+                                <td>{{$product->related_office}}</td>
+                                <td>{{$product->taken_from}}</td>
                                 <td>
                                     <Button class="action-btns1 bg-success" data-bs-target="#showingProduct"
                                         data-bs-toggle="modal"><i class="fa-regular fa-pen-to-square"></i></Button>
                                 </td>
                             </tr>
+                            @endforeach
                         </tbody>
                     </table>
                     {{-- -----------pagination links here------------ --}}
