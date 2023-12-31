@@ -98,7 +98,7 @@ class FinancialAdmEmpController extends Controller
         $employee->degree_pics = $filetoUpload1;
 
         $employee->save();
-        return redirect()->back();
+        return redirect('fin-adm-employee');
 
     }
 

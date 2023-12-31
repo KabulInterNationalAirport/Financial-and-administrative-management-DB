@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\DpCars;
+use App\Models\TrusteeDp;
+use App\Models\TotalProductDp;
 
 class DpCarsController extends Controller
 {
@@ -13,7 +16,8 @@ class DpCarsController extends Controller
      */
     public function index()
     {
-        //
+        $cars = DpCars::all();
+        return view('financial-administrative-directorate.depo.cars.cars-list', compact('cars' ));
     }
 
     /**
@@ -23,7 +27,9 @@ class DpCarsController extends Controller
      */
     public function create()
     {
-        //
+        $products = TotalProductDp::all();
+        $employees = TrusteeDp::all();
+        return view('financial-administrative-directorate.depo.cars.add-car' , compact('employees', 'products'));
     }
 
     /**
@@ -34,7 +40,22 @@ class DpCarsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $car = new DpCars;
+        $pro = TotalProductDp::find($request->t_product);
+        $pro->quantity =$pro->quantity+ $request->quantity;
+        $car->name = $request->name;
+        $car->model = $request->model;
+        $car->engine_no = $request->engine_no;
+        $car->unit = $request->unit;
+        $car->price = $request->price;
+        $car->quantity = $request->quantity;
+        $car->color = $request->color;
+        $car->no_palet = $request->no_palet;
+        $car->trustee_id = $request->trustee;
+        $car->total_products_id = $request->t_product;
+        $car->save();
+        $pro->save();
+        return redirect('depo-car');
     }
 
     /**
@@ -56,7 +77,10 @@ class DpCarsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $trustees = TrusteeDp::all();
+        $products = TotalProductDp::all();
+        $car = DpCars::find($id);
+        return view('financial-administrative-directorate.depo.cars.update-car', compact('car' , 'trustees' , 'products'));
     }
 
     /**
@@ -68,7 +92,19 @@ class DpCarsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $car = DpCars::find($id);
+        $car->name = $request->name;
+        $car->model = $request->model;
+        $car->engine_no = $request->engine_no;
+        $car->unit = $request->unit;
+        $car->price = $request->price;
+        $car->quantity = $request->quantity;
+        $car->color = $request->color;
+        $car->no_palet = $request->no_palet;
+        $car->trustee_id = $request->trustee;
+        $car->total_products_id = $request->t_product;
+        $car->save();
+        return redirect('depo-car');
     }
 
     /**

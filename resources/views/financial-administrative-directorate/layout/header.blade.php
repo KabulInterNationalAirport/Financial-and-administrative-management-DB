@@ -175,7 +175,7 @@
                                         </div>
                                         &nbsp;&nbsp;
                                         <div class="dropdown header-fullscreen">
-                                            <a class="nav-link icon full-screen-link">
+                                            <a class="nav-link icon full-screen-link" href="/financial">
                                                 <i
                                                     class="feather feather-maximize fullscreen-button fullscreen header-icons"></i>
                                                 <i

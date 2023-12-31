@@ -42,5 +42,6 @@ return [
     'financial-and-administrative' => 'مالي او اداري آمریت',
     'general-real-estate' => 'د املاکو عمومي مدیریت',
     'commodity-accounting' => 'د توکو د محاسبې ',
+    'tech' => 'تخنیکي اجناس'
     
 ];

@@ -37,7 +37,7 @@
                                                             <label class="form-label mb-0 mt-2">{{__('employee.name')}}</label>
                                                         </div>
                                                         <div class="col-md-9">
-                                                            <input type="text" class="form-control mb-md-0 mb-5"
+                                                            <input type="text" value="{{$employee->name}}" class="form-control mb-md-0 mb-5"
                                                                 placeholder="{{__('employee.name')}}">
                                                             <span class="text-muted"></span>
                                                         </div>
@@ -49,7 +49,7 @@
                                                             <label class="form-label mb-0 mt-2">{{__('employee.last-name')}}</label>
                                                         </div>
                                                         <div class="col-md-9">
-                                                            <input type="text" class="form-control" placeholder="{{__('employee.last-name')}}">
+                                                            <input type="text" value="{{$employee->last_name}}" class="form-control" placeholder="{{__('employee.last-name')}}">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -59,7 +59,7 @@
                                                             <label class="form-label mb-0 mt-2"> {{__('employee.related-office')}}</label>
                                                         </div>
                                                         <div class="col-md-9">
-                                                            <input type="text" class="form-control" placeholder=" {{__('employee.related-office')}}">
+                                                            <input type="text" value="{{$employee->related_office}}" class="form-control" placeholder=" {{__('employee.related-office')}}">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -69,7 +69,7 @@
                                                             <label class="form-label mb-0 mt-2">{{__('employee.job-title')}}</label>
                                                         </div>
                                                         <div class="col-md-9">
-                                                            <input type="text" class="form-control" placeholder="{{__('employee.job-title')}}">
+                                                            <input type="text" value="{{$employee->job_title}}" class="form-control" placeholder="{{__('employee.job-title')}}">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -79,7 +79,7 @@
                                                             <label class="form-label mb-0 mt-2">{{__('employee.id-card')}}</label>
                                                         </div>
                                                         <div class="col-md-9">
-                                                            <input type="text" class="form-control" placeholder="{{__('employee.id-card')}}">
+                                                            <input type="text" value="{{$employee->id_card}}" class="form-control" placeholder="{{__('employee.id-card')}}">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -92,7 +92,7 @@
                                                             <select name="projects"
                                                                 class="form-control custom-select select2"
                                                                 data-placeholder="Select">
-                                                                <option label="Select"></option>
+                                                                <option label="{{$employee->degree}}"></option>
                                                                 <option value="1">undergraduate</option>
                                                                 <option value="2">master</option>
                                                             </select>
@@ -105,7 +105,7 @@
                                                             <label class="form-label mb-0 mt-2">{{__('employee.mobile')}}</label>
                                                         </div>
                                                         <div class="col-md-9">
-                                                            <input type="text" class="form-control"
+                                                            <input value="{{$employee->phone}}" type="text" class="form-control"
                                                                 placeholder="{{__('employee.mobile')}}  ">
                                                         </div>
                                                     </div>
@@ -116,7 +116,7 @@
                                                             <label class="form-label mb-0 mt-2">{{__('employee.appointment-date')}}</label>
                                                         </div>
                                                         <div class="col-md-9">
-                                                            <input type="text" class="form-control fc-datepicker"
+                                                            <input type="text" value="{{$employee->date}}" class="form-control fc-datepicker"
                                                                 placeholder="DD-MM-YYY">
                                                         </div>
                                                     </div>
@@ -151,7 +151,7 @@
                                                             <select name="projects"
                                                                 class="form-control custom-select select2"
                                                                 data-placeholder="Select">
-                                                                <option label="Select"></option>
+                                                                <option label="{{$employee->material_state}}"></option>
                                                                 <option value="1">{{__('employee.single')}}</option>
                                                                 <option value="2">{{__('employee.married')}}</option>
                                                             </select>
@@ -164,7 +164,7 @@
                                                             <label class="form-label mb-0 mt-2">{{__('employee.email')}}</label>
                                                         </div>
                                                         <div class="col-md-9">
-                                                            <input type="text" class="form-control" placeholder="{{__('employee.email')}}">
+                                                            <input type="email" value="{{$employee->email}}" class="form-control" placeholder="{{__('employee.email')}}">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -174,7 +174,7 @@
                                                             <label class="form-label mb-0 mt-2">{{__('employee.address')}}</label>
                                                         </div>
                                                         <div class="col-md-9">
-                                                            <input type="text" class="form-control" placeholder="آدرس">
+                                                            <input type="text" value="{{$employee->address}}" class="form-control" placeholder="آدرس">
                                                         </div>
                                                     </div>
                                                 </div>

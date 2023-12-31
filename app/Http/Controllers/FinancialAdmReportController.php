@@ -104,7 +104,7 @@ class FinancialAdmReportController extends Controller
         }
         $report->file = $filetoUpload;
         $report->save();
-        return redirect()->back();
+        return redirect('fin-adm-report');
     }
 
     /**

@@ -9,7 +9,7 @@
                 </div>
                 <div class="page-rightheader">
                     <div class="page-rightheader header">
-                        <a href="/depo-car" class="btn btn-primary">
+                        <a href="{{route('depo-car.create')}}" class="btn btn-primary">
                             {{ __('depo/car.add-car') }} <i class="fa-solid fa-plus"></i></a>
                     </div>
 
@@ -51,113 +51,26 @@
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach ($cars as $car)
+                                
                             <tr>
-                                <th scope="row">1</th>
-                                <td>corola</td>
-                                <td>2005</td>
-                                <td>2354</td>
-                                <td>red</td>
-                                <td>kbl12345</td>
-                                <td>2</td>
-                                <td>unit</td>
-                                <td>122222</td>
-                                <td>2333333</td>
-                                <td>abdul saboor</td>
-                                <td>2022-2-2</td>
+                                <th scope="row">{{$car->id}}</th>
+                                <td>{{$car->name}}</td>
+                                <td>{{$car->model}}</td>
+                                <td>{{$car->engine_no}}</td>
+                                <td>{{$car->color}}</td>
+                                <td>{{$car->no_palet}}</td>
+                                <td>{{$car->quantity}}</td>
+                                <td>{{$car->unit}}</td>
+                                <td>{{$car->price}}</td>
+                                <td>{{$car->price * $car->quantity}}</td>
+                                <td>{{$car->trustee_id}}</td>
+                                <td>{{$car->created_at}}</td>
                                 <td>
-                                    <a href="/update-car" class="btn bg-success btn-sm" ><i class="fa-regular fa-pen-to-square"></i></a>
+                                    <a href="{{url('depo-car/'.$car->id.'/edit')}}" class="btn bg-success btn-sm" ><i class="fa-regular fa-pen-to-square"></i></a>
                                 </td>
                             </tr>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>corola</td>
-                                <td>2005</td>
-                                <td>2354</td>
-                                <td>red</td>
-                                <td>kbl12345</td>
-                                <td>2</td>
-                                <td>unit</td>
-                                <td>122222</td>
-                                <td>2333333</td>
-                                <td>abdul saboor</td>
-                                <td>2022-2-2</td>
-                                <td>
-                                    <a href="" class="btn btn-sm bg-success" 
-                                        ><i class="fa-regular fa-pen-to-square"></i></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>corola</td>
-                                <td>2005</td>
-                                <td>2354</td>
-                                <td>red</td>
-                                <td>kbl12345</td>
-                                <td>2</td>
-                                <td>unit</td>
-                                <td>122222</td>
-                                <td>2333333</td>
-                                <td>abdul saboor</td>
-                                <td>2022-2-2</td>
-                                <td>
-                                    <a href="" class="btn btn-sm bg-success" 
-                                        ><i class="fa-regular fa-pen-to-square"></i></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>corola</td>
-                                <td>2005</td>
-                                <td>2354</td>
-                                <td>red</td>
-                                <td>kbl12345</td>
-                                <td>2</td>
-                                <td>unit</td>
-                                <td>122222</td>
-                                <td>2333333</td>
-                                <td>abdul saboor</td>
-                                <td>2022-2-2</td>
-                                <td>
-                                    <a href="" class="btn btn-sm bg-success" 
-                                        ><i class="fa-regular fa-pen-to-square"></i></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>corola</td>
-                                <td>2005</td>
-                                <td>2354</td>
-                                <td>red</td>
-                                <td>kbl12345</td>
-                                <td>2</td>
-                                <td>unit</td>
-                                <td>122222</td>
-                                <td>2333333</td>
-                                <td>abdul saboor</td>
-                                <td>2022-2-2</td>
-                                <td>
-                                    <a href="" class="btn btn-sm bg-success" 
-                                        ><i class="fa-regular fa-pen-to-square"></i></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>corola</td>
-                                <td>2005</td>
-                                <td>2354</td>
-                                <td>red</td>
-                                <td>kbl12345</td>
-                                <td>2</td>
-                                <td>unit</td>
-                                <td>122222</td>
-                                <td>2333333</td>
-                                <td>abdul saboor</td>
-                                <td>2022-2-2</td>
-                                <td>
-                                    <a href="" class="btn btn-sm bg-success" 
-                                        ><i class="fa-regular fa-pen-to-square"></i></a>
-                                </td>
-                            </tr>
+                            @endforeach
                         </tbody>
                     </table>
                     {{-- ----------- pagination-links ---------------- --}}

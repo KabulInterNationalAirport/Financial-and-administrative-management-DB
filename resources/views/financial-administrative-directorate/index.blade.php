@@ -75,7 +75,7 @@
                             </div>
                             <div class="card-image-wrapper">
                                 <img src="{{asset('assets/images/brand/technical.png')}}" class="card-img-top img-fluid" alt="...">
-                                <h1 class="text-center"><a href="/accounting"
+                                <h1 class="text-center"><a href="/commodity"
                                         class="btn btn-outline-info it7 border-bottom  font-weight-bold border-top">{{__('layout-Financial.enter')}}</a>
                                 </h1>
                             </div>

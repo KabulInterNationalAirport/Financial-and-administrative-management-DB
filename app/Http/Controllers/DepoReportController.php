@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\DepoReport;
 use Illuminate\Http\Request;
 
 class DepoReportController extends Controller
@@ -13,7 +14,8 @@ class DepoReportController extends Controller
      */
     public function index()
     {
-        //
+        $reports = DepoReport::all();
+        return view('financial-administrative-directorate.depo.report' , compact('reports'));
     }
 
     /**
@@ -34,7 +36,15 @@ class DepoReportController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $reprot = new DepoReport;
+        $reprot->task = $request->task;
+        $reprot->related_office = $request->office;
+        $reprot->task_details = $request->taskdetails;
+        $reprot->state = $request->state;
+        $reprot->date = $request->input('date');
+        $reprot->file = 'hi.png';
+        $reprot->save();
+        return redirect()->back();
     }
 
     /**
@@ -56,7 +66,8 @@ class DepoReportController extends Controller
      */
     public function edit($id)
     {
-        //
+        $report = DepoReport::find($id);
+        return view('financial-administrative-directorate.depo.update-report', compact('report'));
     }
 
     /**
@@ -68,7 +79,30 @@ class DepoReportController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $report = DepoReport::find($id);
+        $report->task = $request->task;
+        $report->related_office = $request->office;
+        $report->task_details = $request->taskdetails;
+        $report->state = $request->state;
+        $report->date = $request->input('date');
+
+        $this->validate($request, [
+            'image' => 'file|image|required'
+        ]);
+        if($request->hasFile('image')){
+            $fileNameWithEx = $request->file('image')->getClientOriginalName();
+            $fielName = pathinfo($fileNameWithEx, PATHINFO_FILENAME);
+            $extesion = $request->file('image')->getClientOriginalExtension();
+            $uploadName = 'fin_adm'. time() .'_report'.'.'.$extesion;
+            $image = $request->file('image')->storeAs('public/report',$uploadName);
+            $filetoUpload = 'storage/report/'.$uploadName;
+        }
+        else{
+            $filetoUpload = 'storage/report/def.jpg';
+        }
+        $report->file = $filetoUpload;
+        $report->save();
+        return redirect('depo-report');
     }
 
     /**

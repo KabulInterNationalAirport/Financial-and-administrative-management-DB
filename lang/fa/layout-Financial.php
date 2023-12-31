@@ -42,4 +42,5 @@ return [
     'financial-and-administrative' => 'آمریت مالي و اداري',
     'general-real-estate' => 'مدیریت عمومي املاک',
     'commodity-accounting' => 'محاسبی جنسی',
+    'tech' => 'اجناس تخنیکي'
 ];

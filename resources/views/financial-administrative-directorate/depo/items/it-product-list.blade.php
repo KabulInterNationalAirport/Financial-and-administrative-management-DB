@@ -2,19 +2,20 @@
 @section('contents')
     <div class="app-content main-content">
         <div class="side-app main-container">
+            
             <div class="page-header d-xl-flex d-block">
                 <div class="page-leftheader">
                     <div class="page-title" dir="rtl"><span class="font-weight-normal text-muted ms-2"></span>
-                        {{ __('depo/new-arrivals.new-arrival-products') }}</div>
+                        {{ __('depo/new-arrivals.new-arrival-it-products') }}</div>
                 </div>
                 <div class="page-rightheader">
                     {{-- ------------------ modal for showing details of the product ------------- --}}
-                    {{-- <div class="modal fade" id="showingProduct" tabindex="-1" aria-labelledby="showingProductLabel"
+                    <div class="modal fade" id="showingItProduct" tabindex="-1" aria-labelledby="showingItProductLabel"
                         aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="showingProductLabel">
+                                    <h1 class="modal-title fs-5" id="showingItProductLabel">
                                         {{ __('depo/all-products.product-details') }}</h1>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                         aria-label="Close"></button>
@@ -29,6 +30,22 @@
                                             <tr>
                                                 <th>{{ __('depo/new-arrivals.name') }}</th>
                                                 <td>Dell 3985</td>
+                                            </tr>
+                                            <tr>
+                                                <th>{{ __('depo/new-arrivals.serial-no') }}</th>
+                                                <td>k34hs934</td>
+                                            </tr>
+                                            <tr>
+                                                <th>{{ __('depo/new-arrivals.ram') }}</th>
+                                                <td>16GB</td>
+                                            </tr>
+                                            <tr>
+                                                <th>{{ __('depo/new-arrivals.hd') }}</th>
+                                                <td>512GB</td>
+                                            </tr>
+                                            <tr>
+                                                <th>{{ __('depo/new-arrivals.color') }}</th>
+                                                <td>red</td>
                                             </tr>
                                             <tr>
                                                 <th>{{ __('depo/new-arrivals.quantity') }}</th>
@@ -79,10 +96,11 @@
                                 </div>
                             </div>
                         </div>
-                    </div> --}}
+                    </div>
                     {{-- -------------- end of modal for showing details of the product--------------- --}}
                     <div class="page-rightheader header">
-                        <a href="{{route('depo-new-arrivals.create')}}" class="btn btn-primary">{{ __('depo/new-arrivals.add-product') }}<i
+                        <a href="{{route('depo-it-product.create')}}"
+                            class="btn btn-primary">{{ __('depo/new-arrivals.add-product') }}<i
                                 class="fa-solid fa-plus"></i></a>
                     </div>
                 </div>
@@ -105,11 +123,15 @@
                         </div>
                     </div>
                     <table class="table table-bordered text-center">
-                        <thead>
+                        <thead class="bg-info">
                             <tr>
                                 <th>{{ __('depo/new-arrivals.id') }}</th>
                                 <th>{{ __('depo/new-arrivals.category') }}</th>
                                 <th>{{ __('depo/new-arrivals.name') }}</th>
+                                <th>{{ __('depo/new-arrivals.serial-no') }}</th>
+                                <th>{{ __('depo/new-arrivals.ram') }}</th>
+                                <th>{{ __('depo/new-arrivals.hd') }}</th>
+                                <th>{{ __('depo/new-arrivals.color') }}</th>
                                 <th>{{ __('depo/new-arrivals.quantity') }}</th>
                                 <th>{{ __('depo/new-arrivals.unit') }}</th>
                                 <th>{{ __('depo/new-arrivals.price') }}</th>
@@ -120,32 +142,33 @@
                                 <th>{{ __('depo/new-arrivals.date') }}</th>
                                 <th>{{ __('depo/new-arrivals.office') }}</th>
                                 <th>{{ __('depo/new-arrivals.taken-from') }}</th>
-                                {{-- <th>{{ __('depo/new-arrivals.details') }}</th> --}}
+                                <th>{{ __('depo/new-arrivals.details') }}</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($products as $product)
-                                
                             <tr>
-                                <th scope="row">{{$product->id}}</th>
-                                <td>{{$product->category}}</td>
-                                <td>{{$product->name}}</td>
-                                <td>{{$product->quantity}}</td>
-                                <td>{{$product->unit}}</td>
-                                <td>{{$product->price}}</td>
-                                <td>{{$product->price * $product->quantity}}</td>
-                                <td>{{$product->trustee_id}}</td>
-                                <td>{{$product->m_7}}</td>
-                                <td>{{$product->order_no}}</td>
-                                <td>{{$product->date}}</td>
-                                <td>{{$product->related_office}}</td>
-                                <td>{{$product->taken_from}}</td>
-                                {{-- <td>
-                                    <Button class="action-btns1 bg-success" data-bs-target="#showingProduct"
+                                <th scope="row">1</th>
+                                <td>کمپیوټر</td>
+                                <td>ډیل ۳۳۳۴</td>
+                                <td>ks3kfj453</td>
+                                <td>16GB</td>
+                                <td>512SSD</td>
+                                <td>Red</td>
+                                <td>۳</td>
+                                <td>عدد</td>
+                                <td>۱۰۰۰۰</td>
+                                <td>۳۰۰۰۰</td>
+                                <td>شبیر احمد</td>
+                                <td>۶</td>
+                                <td>۸</td>
+                                <td>۱۴۰۲/۹/۱۲</td>
+                                <td>آی ټي</td>
+                                <td>نه</td>
+                                <td>
+                                    <Button class="action-btns1 bg-success" data-bs-target="#showingItProduct"
                                         data-bs-toggle="modal"><i class="fa-regular fa-pen-to-square"></i></Button>
-                                </td> --}}
+                                </td>
                             </tr>
-                            @endforeach
                         </tbody>
                     </table>
                     {{-- -----------pagination links here------------ --}}

@@ -8,7 +8,7 @@
             </div>
             <div class="main-proifle">
                 <div class="row col-md-12">
-                    <h1>this place is for images</h1>
+                    <img src="{{asset('storage\employee-doc\def.jpg')}}" alt="sfdg">
                 </div>
             </div>
            

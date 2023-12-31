@@ -4,7 +4,7 @@
             <div class="app-sidebar3 mt-4">
                 <div class="">
                     <div class="app-sidebar__user mt-2">
-                            <a class="dropdown  text-center text-white " href="/">
+                            <a class="dropdown  text-center text-white " href="/depo">
                                 <h2 class="">{{__('layout-Financial.depot-management')}}<i class="fa-solid fa-comments-dollar"></i></h2>
                             </a>
                     </div>
@@ -24,15 +24,21 @@
 
                     </li>
                     <li class="slide">
-                        <a class="side-menu__item" data-bs-toggle="slide" href="/damaged-items">
+                        <a class="side-menu__item" data-bs-toggle="slide" href="/damage-product">
                             <i class="fa-solid fa-triangle-exclamation sidemenu_icon"></i>
                             <span class="side-menu__label">{{__('layout-Financial.damaged-items')}}</span><i class="angle fa fa-angle-right"></i></a>
 
                     </li>
                     <li class="slide">
-                        <a class="side-menu__item" data-bs-toggle="slide" href="/depo-car-list">
+                        <a class="side-menu__item" data-bs-toggle="slide" href="/depo-car">
                             <i class="fa-solid fa-car-side sidemenu_icon"></i>
                             <span class="side-menu__label">{{__('layout-Financial.car')}}</span><i class="angle fa fa-angle-right"></i></a>
+
+                    </li>
+                    <li class="slide">
+                        <a class="side-menu__item" data-bs-toggle="slide" href="/depo-it-product">
+                            <i class="fa-solid fa-sitemap sidemenu_icon"></i>
+                            <span class="side-menu__label">{{__('layout-Financial.tech')}}</span><i class="angle fa fa-angle-right"></i></a>
 
                     </li>
                     <li class="slide">
@@ -42,7 +48,7 @@
 
                     </li>
                     <li class="slide">
-                        <a class="side-menu__item" data-bs-toggle="slide" href="/motamid">
+                        <a class="side-menu__item" data-bs-toggle="slide" href="/depo-employee">
                             <i class="fa-solid fa-user-tie sidemenu_icon"></i>
                             <span class="side-menu__label">{{__('layout-Financial.employees')}}</span><i class="angle fa fa-angle-right"></i></a>
 

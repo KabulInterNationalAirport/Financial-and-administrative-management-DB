@@ -1,5 +1,10 @@
 <?php
 
+use App\Http\Controllers\CamDeliveredProductsController;
+use App\Http\Controllers\CamOrgStuffController;
+use App\Http\Controllers\DepoEmpController;
+use App\Http\Controllers\DepoReportController;
+use App\Http\Controllers\DpCarsController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -8,6 +13,9 @@ use App\Http\Controllers\FinancialAdmEmpController;
 use App\Http\Controllers\DpItProductsController;
 use App\Http\Controllers\DpNewArrivalsController;
 use App\Http\Controllers\TrusteeDpController;
+use App\Http\Controllers\DpDamagedProductsController;
+use App\Http\Controllers\MainReportController;
+use App\Http\Controllers\TotalProductDpController;
 
 Route::group(
     [
@@ -16,9 +24,9 @@ Route::group(
     ], function(){ 
 
 // routs of breaze
-Route::get('/dashboard', function () {
+Route::get('/', function () {
     return view('index');
-})->middleware(['auth', 'verified'])->name('dashboard');
+})->middleware(['auth', 'verified'])->name('/');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -27,23 +35,55 @@ Route::middleware('auth')->group(function () {
 });
 
 
-
+        // financial adm mang. report routes
         Route::resource('fin-adm-report' , FinancialAdmReportController::class);
 
+        // financial adm mang. employee routes
         Route::resource('fin-adm-employee' , FinancialAdmEmpController::class);
+
+        // main routes of the project
         Route::get('/depo' , function(){
             return view('./financial-administrative-directorate/depo/index');
         });
+        Route::get('/commodity' , function(){
+            return view('./financial-administrative-directorate/commodity-accounting-management/index');
+        });
+        Route::get('/terminals' , function(){
+            return view('./financial-administrative-directorate/terminals/index');
+        });
 
+
+        // depo routes
+        // depo All products routes
         Route::resource('depo-all-products' , DpItProductsController::class);
+        // Depo new arrivals routes
         Route::resource('depo-new-arrivals', DpNewArrivalsController::class);
+        // depo Trustees routes
         Route::resource('trustee' , TrusteeDpController::class);
+        // depo Damaged products routes
+        Route::resource('damage-product', DpDamagedProductsController::class);
+        // depo cars routes
+        Route::resource('depo-car' , DpCarsController::class);
+        // depo employees routes
+        Route::resource('depo-employee' , DepoEmpController::class);
+        // depo reports routes
+        Route::resource('depo-report' , DepoReportController::class);
+        // depo IT new arrival products
+        Route::resource('depo-it-product', TotalProductDpController::class);
+
+        // commodity accounting man routes
+        // delivered products route
+        Route::resource('delivered-product' , CamDeliveredProductsController::class);
+        // commodity employees routes
+        Route::resource('commodity-org-stuff', CamOrgStuffController::class);
 
 
 
 
 
 
+        // this route is for main reports
+        Route::resource('main-report' , MainReportController::class);
 
 
 
@@ -90,82 +130,6 @@ Route::middleware('auth')->group(function () {
 
 
 
-        Route::get("/depo", function () {
-            return view("./financial-administrative-directorate/depo/index");
-        });
-
-        Route::get("/report", function () {
-            return view("./financial-administrative-directorate/report");
-        });
-        
-        Route::get("/depo-report", function () {
-            return view("./financial-administrative-directorate/depo/report");
-        });
-        
-        Route::get("/report-print", function () {
-            return view("./financial-administrative-directorate/print-report");
-        });
-        Route::get("/all-items", function () {
-            return view("./financial-administrative-directorate/depo/items/all-items");
-        });
-        Route::get("/new-arrival-items", function () {
-            return view("./financial-administrative-directorate/depo/items/new-arrival-list");
-        });
-        Route::get("/add-arrival-items", function () {
-            return view("./financial-administrative-directorate/depo/items/add-new-arrivals");
-        });
-        Route::get("/add-it-arrival-items", function () {
-            return view("./financial-administrative-directorate/depo/items/add-it-new-arrivals");
-        });
-        
-        Route::get("/delivered-items", function () {
-            return view("./financial-administrative-directorate/commodity-accounting-management/products/delivered-products");
-        });
-        Route::get("/damaged-items", function () {
-            return view("./financial-administrative-directorate/depo/items/damaged-items");
-        });
-        
-        Route::get("/depo-car", function () {
-            return view("./financial-administrative-directorate/depo/cars/add-car");
-        });
-        Route::get("/update-car", function () {
-            return view("./financial-administrative-directorate/depo/cars/update-car");
-        });
-        Route::get("/depo-car-list", function () {
-            return view("./financial-administrative-directorate/depo/cars/cars-list");
-        });
-        
-        Route::get("/depo-emp-add", function () {
-            return view("./financial-administrative-directorate/depo/employee/add-employee");
-        });
-        
-        Route::get("/terminals", function () {
-            return view("./financial-administrative-directorate/terminals/index");
-        });
-        
-        Route::get("/motamid", function () {
-            return view("./financial-administrative-directorate/depo/motamid/motamid-list");
-        });
-        
-        Route::get("/motamid-items", function () {
-            return view("./financial-administrative-directorate/depo/motamid/view-motamid-items");
-        });
-        
-        
-        Route::get("/employee", function () {
-            return view("./financial-administrative-directorate/employee/Employee-list");
-        });
-        
-        
-        Route::get("/add-employee", function () {
-            return view("./financial-administrative-directorate/employee/add-Employee");
-        });
-        
-        Route::get("/view-employee", function () {
-            return view("./financial-administrative-directorate/employee/view-Employee");
-        });
-        
-        
         // --------------- for property ------------------
         Route::get("/property", function () {
             return view("./financial-administrative-directorate/property/index");
@@ -260,9 +224,6 @@ Route::middleware('auth')->group(function () {
             return view("./financial-administrative-directorate/payroll-management/employees/employee-list");
         });
         
-        // Route::get("/add-employee", function () {
-        //     return view("./financial-administrative-directorate/payroll-management/employees/add-employee");
-        // });
         
         Route::get("/print-doc", function () {
             return view("./financial-administrative-directorate/payroll-management/employees/print-doc");

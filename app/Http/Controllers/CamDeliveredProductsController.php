@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\CamDeliveredProducts;
 use Illuminate\Http\Request;
 
 class CamDeliveredProductsController extends Controller
@@ -13,7 +14,8 @@ class CamDeliveredProductsController extends Controller
      */
     public function index()
     {
-        //
+        $products = CamDeliveredProducts::all();
+        return view('financial-administrative-directorate.commodity-accounting-management.products.delivered-products' , compact('products'));
     }
 
     /**
@@ -23,7 +25,6 @@ class CamDeliveredProductsController extends Controller
      */
     public function create()
     {
-        //
     }
 
     /**
@@ -45,7 +46,7 @@ class CamDeliveredProductsController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('financial-administrative-directorate.commodity-accounting-management.products.reg-product-org-stuff' ,compact('id'));
     }
 
     /**

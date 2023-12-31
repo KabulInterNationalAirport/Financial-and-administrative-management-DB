@@ -6,7 +6,7 @@
             <div class="page-header d-xl-flex d-block">
                 <div class="page-leftheader">
                     <div class="page-title" dir="rtl"><span class="font-weight-normal text-muted ms-2">{{__('financial/employee-financial.list-of-employees')}}</span>
-                    {{__('layout-Financial.financial-and-administrative-management')}}</div>
+                    {{__('layout-Financial.depot-management')}}</div>
                 </div>
             </div>
 
@@ -25,7 +25,7 @@
                         <div class="page-rightheader ms-md-auto">
                             <div class="align-items-end flex-wrap my-auto right-content breadcrumb-right">
                                 <div class="btn-list">
-                                    <a href="/add-employee" class="btn btn-primary me-3">{{__('depo/employees.add-employee')}} <i class="fa-solid fa-user-plus"></i></a>
+                                    <a href="{{route('depo-employee.create')}}" class="btn btn-primary me-3">{{__('depo/employees.add-employee')}} <i class="fa-solid fa-user-plus"></i></a>
 
                                 </div>
                             </div>
@@ -51,27 +51,28 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach ($employees as $employee)
                                     <tr>
-                                        <td>01</td>
+                                        <td>{{$employee->id}}</td>
                                         <td>
                                             <div class="d-flex">
                                                 <span class="avatar avatar-sm brround me-3"
-                                                    style="background-image: url(assets/images/users/16.jpg)"></span>
+                                                    style="background-image: url({{asset('storage/employee/def.png')}})"></span>
                                                 <div class="me-3 mt-0 mt-sm-1 d-block">
-                                                    <h6 class="mb-1 fs-14">Abdul Saboor</h6>
-                                                    <p class="text-muted mb-0 fs-12">saboorhemat@gmail.com</p>
+                                                    <h6 class="mb-1 fs-14">{{$employee->name}}</h6>
+                                                    <p class="text-muted mb-0 fs-12">{{$employee->email}}</p>
                                                 </div>
                                             </div>
                                         </td>
-                                        <td>Hemat</td>
-                                        <td>System Development</td>
-                                        <td>manager</td>
-                                        <td>433434</td>
-                                        <td>lisans</td>
-                                        <td>161600</td>
-                                        <td><span>2023/9/9</span></td>
+                                        <td>{{$employee->last_name}}</td>
+                                        <td>{{$employee->related_office}}</td>
+                                        <td>{{$employee->job_title}}</td>
+                                        <td>{{$employee->id_card}}</td>
+                                        <td>{{$employee->degree}}</td>
+                                        <td>{{$employee->phone}}</td>
+                                        <td><span>{{$employee->appointment_date}}</span></td>
                                         <td>
-                                            <a class="btn btn-primary btn-icon btn-sm" href="/view-employee">
+                                            <a class="btn btn-primary btn-icon btn-sm" href="{{url('depo-employee/'.$employee->id)}}">
                                                 <i class="feather feather-edit" data-bs-toggle="tooltip"
                                                     data-original-title="View/Edit"></i>
                                             </a>
@@ -79,6 +80,7 @@
                                                 data-original-title="Delete"><i class="feather feather-trash-2"></i></a>
                                         </td>
                                     </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>

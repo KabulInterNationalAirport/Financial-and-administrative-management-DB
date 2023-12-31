@@ -11,13 +11,13 @@
                 </div>
                 <ul class="side-menu">
                     <li class="slide">
-                        <a class="side-menu__item" data-bs-toggle="slide" href="/delivered-items">
+                        <a class="side-menu__item" data-bs-toggle="slide" href="/delivered-product">
                             <i class="fa-regular fa-address-book sidemenu_icon"></i>
                             <span class="side-menu__label">{{ __('layout-Financial.distributed-commodities') }}</span><i
                                 class="angle fa fa-angle-right"></i></a>
                     </li>
                     <li class="slide">
-                        <a class="side-menu__item" data-bs-toggle="slide" href="/acc-emp">
+                        <a class="side-menu__item" data-bs-toggle="slide" href="/commodity-org-stuff">
                             <i class="fa-solid fa-users sidemenu_icon"></i>
                             <span class="side-menu__label">{{ __('layout-Financial.registered-employees') }}</span><i
                                 class="angle fa fa-angle-right"></i></a>
