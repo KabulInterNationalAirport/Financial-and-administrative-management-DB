@@ -20,12 +20,12 @@
 											<div class="row">
 												<div class="col-8">
 													<div class=" text-start">
-														<span class="fs-16 font-weight-semibold">د تیلو اندازه</span>
+														<span class="fs-16 font-weight-semibold">بودیجه</span>
 														<h5 class=" text-danger  fs-20">1254</h5>
 													</div>
 												</div>
 												<div class="col-4">
-													<div class="icon1 bg-danger my-auto  float-end"> <i class="fa-solid fa-gas-pump"></i> </div>
+													<div class="icon1 bg-danger my-auto  float-end"><i class="fa-solid fa-sack-dollar"></i> </div>
 												</div>
 											</div>
 										</div>
@@ -39,12 +39,12 @@
 											<div class="row">
 												<div class="col-8">
 													<div class=" text-start">
-														<span class="fs-16 font-weight-semibold">مجموعه لیست</span>
+														<span class="fs-16 font-weight-semibold">میاشتنی معاش</span>
 														<h5 class=" text-primary  fs-20">42</h5>
 													</div>
 												</div>
 												<div class="col-4">
-													<div class="icon1 bg-primary float-end"> <i class="feather feather-briefcase"></i> </div>
+													<div class="icon1 bg-primary float-end"> <i class="fa-solid fa-hand-holding-dollar"></i> </div>
 												</div>
 											</div>
 										</div>
@@ -77,12 +77,12 @@
 											<div class="row">
 												<div class="col-8">
 													<div class=" text-start">
-														<span class="fs-16 font-weight-semibold">تکمیل شوي </span>
+														<span class="fs-16 font-weight-semibold">کلنی معاش</span>
 														<h4 class=" text-success fs-20">38</h4>
 													</div>
 												</div>
 												<div class="col-4">
-													<div class="icon1 bg-success my-auto  float-end"> <i class="feather feather-check"></i> </div>
+													<div class="icon1 bg-success my-auto  float-end"> <i class="fa-solid fa-coins"></i> </div>
 												</div>
 											</div>
 										</div>
