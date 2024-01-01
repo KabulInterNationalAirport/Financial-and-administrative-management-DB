@@ -22,6 +22,10 @@ return new class extends Migration
             $table->string('price');
             $table->string("serial_no");
             $table->string("ram");           
+            $table->string('related_office');
+            $table->string('no_m7');
+            $table->string('number');
+            $table->string('taken_from');
             $table->string('hd');
             $table->unsignedBigInteger("trustee_id");
             $table->foreign("trustee_id")->references("id")->on("trustee_dps")->onDelete("cascade");
