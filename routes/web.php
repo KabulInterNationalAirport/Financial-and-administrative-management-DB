@@ -51,6 +51,9 @@ Route::middleware('auth')->group(function () {
         Route::get('/terminals' , function(){
             return view('./financial-administrative-directorate/terminals/index');
         });
+        Route::get('/report-index' , function(){
+            return view('./report-index');
+        });
 
 
         // depo routes
