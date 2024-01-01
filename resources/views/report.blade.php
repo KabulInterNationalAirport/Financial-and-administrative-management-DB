@@ -60,18 +60,40 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            @foreach ($fin_adm_reports as $report)
+                                            @if ($report->state == 'نو')
                                             <tr>
-                                                <td>1</td>
-                                                <td>جنس توزیع</td>
-                                                <td>آمریتونو ډیتابیس</td>
-                                                <td>زه نن ډېر ستړی یم زه نه شم کولای چې درس ته درشم اوس مصروفه یم تاسي ولاړ شي زه به
-                                                    ستا سو له شا درشم تاسي په ارامه سره خپل کارونه وکړي</td>
-                                                <th>1304/34/34</th>
+                                                <td>{{$report->id}}</td>
+                                                <td>{{$report->related_office}}</td>
+                                                <td>{{$report->task}}</td>
+                                                <td>{{$report->task_details}}</td>
+                                                <th>{{$report->date}}</th>
                                                 <td>
                                                     <span class="badge badge-primary">نا تکمله</span>
                                                 </td>
-                                                
                                             </tr>
+                                            @else
+                                            @endif
+                                           
+                                            @endforeach
+                                            @foreach ($depo_reports as $report)
+                                            @if ($report->state == 'نو')
+                                            <tr>
+                                                <td>{{$report->id}}</td>
+                                                <td>{{$report->related_office}}</td>
+                                                <td>{{$report->task}}</td>
+                                                <td>{{$report->task_details}}</td>
+                                                <th>{{$report->date}}</th>
+                                                <td>
+                                                    <span class="badge badge-primary">نا تکمله</span>
+                                                </td>
+                                            </tr>
+                                            @else
+                                            @endif
+                                           
+                                            @endforeach
+
+                                           
             
                                         </tbody>
                                     </table>
@@ -121,20 +143,45 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            
+                                            @foreach ($fin_adm_reports as $report)
+                                            @if ($report->state == 'تکمیل')
                                             <tr>
-                                                <td>1</td>
-                                                <td>جنس توزیع</td>
-                                                <td>آمریتونو ډیتابیس</td>
-                                                <td>زه نن ډېر ستړی یم زه نه شم کولای چې درس ته درشم اوس مصروفه یم تاسي ولاړ شي زه به
-                                                    ستا سو له شا درشم تاسي په ارامه سره خپل کارونه وکړي</td>
-                                                <th>1304/34/34</th>
+                                                <td>{{$report->id}}</td>
+                                                <td>{{$report->related_office}}</td>
+                                                <td>{{$report->task}}</td>
+                                                <td>{{$report->task_details}}</td>
+                                                <th>{{$report->date}}</th>
                                                 <td>
                                                     <span class="badge badge-success">تکمله</span>
                                                 </td>
                                                 <td class="">
-                                                    <a href="/print-report" class="action-btns1 bg-success"><i class="fa-solid fa-chalkboard-user"></i></a>
+                                                    <a href="{{url('main-report/'.$report->id)}}" class="btn btn-sm bg-success"><i class="fa-solid fa-square-check"></i></a>
                                                 </td>
                                             </tr>
+                                            @else
+                                            @endif
+                                           
+                                            @endforeach
+                                            @foreach ($depo_reports as $report)
+                                            @if ($report->state == 'تکمیل')
+                                            <tr>
+                                                <td>{{$report->id}}</td>
+                                                <td>{{$report->related_office}}</td>
+                                                <td>{{$report->task}}</td>
+                                                <td>{{$report->task_details}}</td>
+                                                <th>{{$report->date}}</th>
+                                                <td>
+                                                    <span class="badge badge-success">تکمله</span>
+                                                </td>
+                                                <td class="">
+                                                    <a href="{{url('main-report/'.$report->id)}}" class="btn btn-sm bg-success"><i class="fa-solid fa-square-check"></i></a>
+                                                </td>
+                                            </tr>
+                                            @else
+                                            @endif
+                                           
+                                            @endforeach
                                         </tbody>
                                     </table>
                                 </div>

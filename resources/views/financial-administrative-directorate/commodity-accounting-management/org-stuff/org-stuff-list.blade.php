@@ -23,7 +23,7 @@
                         <div class="page-rightheader ms-md-auto">
                             <div class="align-items-end flex-wrap my-auto right-content breadcrumb-right">
                                 <div class="btn-list">
-                                    <a href="/acc-add-emp"
+                                    <a href="{{route('commodity-org-stuff.create')}}"
                                         class="btn btn-primary me-3">{{ __('depo/employees.add-employee') }}<i
                                             class="fa-solid fa-user-plus"></i></a>
                                 </div>
@@ -44,21 +44,22 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach ($employees as $employee)
                                     <tr>
-                                        <td>01</td>
+                                        <td>{{$employee->id}}</td>
                                         <td>
                                             <div>
-                                                    <h6 class="mb-1 fs-14">Abdul Saboor Hemat</h6> 
+                                                    <h6 class="mb-1 fs-14">{{$employee->name}}</h6> 
                                             </div>
                                         </td>
-                                        <td>Gulam Farooq</td>
-                                        <td>System Development</td>
-                                        <td>manager</td>
+                                        <td>{{$employee->father_name}}</td>
+                                        <td>{{$employee->related_office}}</td>
+                                        <td>{{$employee->job_title}}</td>
                                         <td>
                                             <a class="btn btn-outline-primary  btn-sm" href="/acc-emp-car-reg">
                                                 {{ __('depo/employees.reg-car') }}
                                             </a>
-                                            <a class="btn btn-outline-success  btn-sm" href="/acc-emp-item-reg">
+                                            <a class="btn btn-outline-success  btn-sm" href="{{url('delivered-product/'.$employee->id)}}">
                                                 {{ __('depo/employees.reg-product') }}
                                             </a>
                                             <a class="btn btn-outline-info  btn-sm" href="/acc-update-emp">
@@ -68,6 +69,8 @@
                                                 href="/acc-emp-items">{{ __('depo/employees.view-details') }}</a>
                                         </td>
                                     </tr>
+                                        
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>

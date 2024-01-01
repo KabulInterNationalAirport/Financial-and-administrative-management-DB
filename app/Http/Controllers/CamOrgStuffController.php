@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\DpItProducts;
-use App\Models\TotalProductDp;
+use App\Models\CamOrgStuff;
 use Illuminate\Http\Request;
 
-class TotalProductDpController extends Controller
+class CamOrgStuffController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +14,8 @@ class TotalProductDpController extends Controller
      */
     public function index()
     {
-        $items = DpItProducts::all();
-        return view('financial-administrative-directorate.depo.items.it-product-list' , compact('items'));
+        $employees = CamOrgStuff::all();
+        return view('financial-administrative-directorate.commodity-accounting-management.org-stuff.org-stuff-list' , compact('employees'));
     }
 
     /**
@@ -26,7 +25,7 @@ class TotalProductDpController extends Controller
      */
     public function create()
     {
-        return view('financial-administrative-directorate.depo.items.add-it-new-arrivals');
+        return view('financial-administrative-directorate.commodity-accounting-management.org-stuff.add-org-stuff');
     }
 
     /**
@@ -37,7 +36,14 @@ class TotalProductDpController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $stuff = new CamOrgStuff;
+        $stuff->name = $request->name;
+        $stuff->father_name = $request->father_name;
+        $stuff->job_title = $request->job_title;
+        $stuff->related_office = $request->related_office;
+        $stuff->appointment_date = $request->input('date');
+        $stuff->save();
+        return redirect('commodity-org-stuff');
     }
 
     /**

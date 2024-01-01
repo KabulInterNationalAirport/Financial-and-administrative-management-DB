@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\DpItProducts;
-use App\Models\TotalProductDp;
+use App\Models\DepoReport;
+use App\Models\FinancialAdmReport;
 use Illuminate\Http\Request;
 
-class TotalProductDpController extends Controller
+class MainReportController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,9 @@ class TotalProductDpController extends Controller
      */
     public function index()
     {
-        $items = DpItProducts::all();
-        return view('financial-administrative-directorate.depo.items.it-product-list' , compact('items'));
+        $depo_reports = DepoReport::all();
+        $fin_adm_reports = FinancialAdmReport::all();
+        return view('report' , compact('depo_reports' , 'fin_adm_reports'));
     }
 
     /**
@@ -26,7 +27,7 @@ class TotalProductDpController extends Controller
      */
     public function create()
     {
-        return view('financial-administrative-directorate.depo.items.add-it-new-arrivals');
+        //
     }
 
     /**
@@ -48,7 +49,10 @@ class TotalProductDpController extends Controller
      */
     public function show($id)
     {
-        //
+        $depo_report = DepoReport::find($id);
+        $fin_adm_report = FinancialAdmReport::find($id);
+
+        return view('print-report' , compact('depo_report'));
     }
 
     /**

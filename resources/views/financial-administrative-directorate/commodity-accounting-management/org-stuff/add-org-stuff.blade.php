@@ -12,7 +12,7 @@
                                     <!-- Tabs -->
                                     <ul class="nav panel-tabs">
                                         <li class="ms-4"><a href="#tab5" class="active" data-bs-toggle="tab">
-                                            {{__('depo/employees.employee-information')}}</a></li>
+                                                {{ __('depo/employees.employee-information') }}</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -20,88 +20,83 @@
                                 <div class="tab-content">
                                     <div class="tab-pane active" id="tab5">
                                         <div class="card-body">
-                                            <form action="">
+                                            <form action="{{ route('commodity-org-stuff.store') }}" method="POST"
+                                                enctype="multipart/form-data">
+                                                @csrf
                                                 <div class="card-header">
-                                                    <h4 class="mb-4 font-weight-bold">{{__('depo/employees.employee-information')}}</h4>
+                                                    <h4 class="mb-4 font-weight-bold">
+                                                        {{ __('depo/employees.employee-information') }}</h4>
                                                 </div>
                                                 <div class="form-group ">
                                                     <div class="row">
                                                         <div class="col-md-3">
-                                                            <label class="form-label mb-0 mt-2">{{__('depo/employees.name')}}</label>
+                                                            <label
+                                                                class="form-label mb-0 mt-2">{{ __('depo/employees.name') }}</label>
                                                         </div>
                                                         <div class="col-md-9">
-                                                            <input type="text" class="form-control mb-md-0 mb-5"
-                                                                placeholder="{{__('depo/employees.name')}}">
-                                                            <span class="text-muted"></span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group ">
-                                                    <div class="row">
-                                                        <div class="col-md-3">
-                                                            <label class="form-label mb-0 mt-2">{{__('depo/employees.last-name')}}</label>
-                                                        </div>
-                                                        <div class="col-md-9">
-                                                            <input type="text" class="form-control" placeholder="{{__('depo/employees.last-name')}}">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <div class="row">
-                                                        <div class="col-md-3">
-                                                            <label class="form-label mb-0 mt-2">{{__('depo/employees.mobile')}}</label>
-                                                        </div>
-                                                        <div class="col-md-9">
-                                                            <input type="text" class="form-control"
-                                                                placeholder="{{__('depo/employees.mobile')}}">
+                                                            <input type="text" name="name"
+                                                                class="form-control mb-md-0 mb-5"
+                                                                placeholder="{{ __('depo/employees.name') }}">
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="form-group ">
                                                     <div class="row">
                                                         <div class="col-md-3">
-                                                            <label class="form-label mb-0 mt-2">{{__('depo/employees.email')}}</label>
+                                                            <label
+                                                                class="form-label mb-0 mt-2">{{ __('depo/employees.last-name') }}</label>
                                                         </div>
                                                         <div class="col-md-9">
-                                                            <input type="text" class="form-control" placeholder="{{__('depo/employees.email')}}">
+                                                            <input type="text" name="father_name" class="form-control"
+                                                                placeholder="{{ __('depo/employees.father-name') }}">
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="form-group ">
                                                     <div class="row">
                                                         <div class="col-md-3">
-                                                            <label class="form-label mb-0 mt-2">{{__('depo/employees.job-title')}}</label>
+                                                            <label
+                                                                class="form-label mb-0 mt-2">{{ __('depo/employees.job-title') }}</label>
                                                         </div>
                                                         <div class="col-md-9">
-                                                            <input type="text" class="form-control" placeholder="{{__('depo/employees.job-title')}}">
+                                                            <input type="text" name="job_title" class="form-control"
+                                                                placeholder="{{ __('depo/employees.job-title') }}">
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="form-group ">
                                                     <div class="row">
                                                         <div class="col-md-3">
-                                                            <label class="form-label mb-0 mt-2">{{__('depo/employees.id-card')}}</label>
+                                                            <label
+                                                                class="form-label mb-0 mt-2">{{ __('depo/employees.related-office') }}</label>
                                                         </div>
                                                         <div class="col-md-9">
-                                                            <input type="text" class="form-control"
-                                                                placeholder="{{__('depo/employees.id-card')}}">
+                                                            <input type="text" name="related_office" class="form-control"
+                                                                placeholder="{{ __('depo/employees.related-office') }}">
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="form-group ">
                                                     <div class="row">
                                                         <div class="col-md-3">
-                                                            <label class="form-label mb-0 mt-2">{{__('depo/employees.related-office')}}</label>
+                                                            <label for="order-number"
+                                                                class="col-form-label">{{ __('depo/delivered-products.offer-date') }}:</label>
                                                         </div>
                                                         <div class="col-md-9">
-                                                            <input type="text" class="form-control"
-                                                                placeholder="{{__('depo/employees.related-office')}}">
+                                                            <input type="date" name="date" placeholder="YYYY-_MM-DD"
+                                                                class="form-control" id="order-number">
                                                         </div>
                                                     </div>
                                                 </div>
+
+
+
+
                                                 <div class="card-footer text-end">
-                                                    <a href="" class="btn btn-primary">{{__('depo/all-products.submit')}}</a>
-                                                    <a href="" class="btn btn-danger">{{__('depo/all-products.cancel')}}</a>
+                                                    <button
+                                                        class="btn btn-primary">{{ __('depo/all-products.submit') }}</button>
+                                                    <button type="submit"
+                                                        class="btn btn-danger">{{ __('depo/all-products.cancel') }}</button>
                                                 </div>
                                             </form>
                                         </div>

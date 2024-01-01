@@ -37,16 +37,16 @@ class FinancialAdmEmpController extends Controller
      */
     public function store(Request $request)
     {
-        if($request->job == 'trustee' || $request->job == 'معتمید')
+        if($request->job_title == 'trustee' || $request->job_title == 'معتمید')
         {
             $trustee = new TrusteeDp;
             $trustee->name = $request->name;
             $trustee->last_name = $request->last_name;
             $trustee->email = $request->email;
-            $trustee->related_office = $request->related_office;
-            $trustee->job_title = $request->job;
+            $trustee->related_office = $request->office;
+            $trustee->job_title = $request->job_title;
             $trustee->id_card = $request->id_card;
-            $trustee->phone = $request->mobile;
+            $trustee->phone = $request->phone;
             $trustee->address = $request->address;
             $trustee->save();
 
@@ -56,12 +56,12 @@ class FinancialAdmEmpController extends Controller
         $employee->name = $request->name;
         $employee->last_name = $request->last_name;
         $employee->email = $request->email;
-        $employee->related_office = $request->related_office;
+        $employee->related_office = $request->office;
         $employee->id_card = $request->id_card;
         $employee->appointment_date = $request->input('date');
         $employee->degree = $request->degree;
-        $employee->phone = $request->mobile;
-        $employee->job_title = $request->job;
+        $employee->phone = $request->phone;
+        $employee->job_title = $request->job_title;
         $employee->material_state  = $request->mـstate;
         $employee->gender = $request->gender;
         $employee->address = $request->address;
@@ -98,7 +98,7 @@ class FinancialAdmEmpController extends Controller
         $employee->degree_pics = $filetoUpload1;
 
         $employee->save();
-        return redirect()->back();
+        return redirect('fin-adm-employee');
 
     }
 

@@ -154,7 +154,7 @@
                                         <div class="form-group">
                                             <label class="form-label font-weight-bold font-weight-bold">Password</label>
                                             <div class="input-group mb-4">
-                                                    <input type="email" id="password" class="form-control "
+                                                    <input type="password" id="password" class="form-control "
                                                      type="password"
                                                     name="password"
                                                     required autocomplete="new-password" >
@@ -165,7 +165,7 @@
                                         <div class="form-group">
                                             <label class="form-label font-weight-bold font-weight-bold">Confirm Password</label>
                                             <div class="input-group mb-4">
-                                                    <input type="email" id="password_confirmation" class="form-control " type="password"
+                                                    <input type="password" id="password_confirmation" class="form-control " type="password"
                                                     name="password_confirmation" required autocomplete="new-password"  >
                                                     <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
                                                     </div>

@@ -22,18 +22,19 @@
                                     <div class="tab-pane active" id="tab5">
                                         {{-- tab for reg new product to a person --}}
                                         <div class="card-body">
-                                            <form>
+                                            <form action="{{route('delivered-product.store')}}" method="POST" enctype="multipart/form-data">
+                                                @csrf
                                                 <div class="form-group ">
                                                     <div class="row">
                                                         <div class="col-md-6">
                                                             <label for="cagegory-name"
                                                                 class="col-form-label">{{ __('depo/delivered-products.category') }}:</label>
-                                                            <input type="text" class="form-control" id="cagegory-name">
+                                                            <input type="text" name="category" class="form-control" id="cagegory-name">
                                                         </div>
                                                         <div class="col-md-6">
                                                             <label for="item-name"
                                                                 class="col-form-label">{{ __('depo/delivered-products.name') }}:</label>
-                                                            <input type="text" class="form-control" id="item-name">
+                                                            <input type="text" name="name" class="form-control" id="item-name">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -42,12 +43,12 @@
                                                         <div class="col-md-6">
                                                             <label for="quantity"
                                                                 class="col-form-label">{{ __('depo/delivered-products.quantity') }}:</label>
-                                                            <input type="number" class="form-control" id="quantity">
+                                                            <input type="number" name="quantity" class="form-control" id="quantity">
                                                         </div>
                                                         <div class="col-md-6">
                                                             <label for="unit"
                                                                 class="col-form-label">{{ __('depo/delivered-products.unit') }}:</label>
-                                                            <input type="text" class="form-control" id="unit">
+                                                            <input type="text" name="unit" class="form-control" id="unit">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -56,12 +57,12 @@
                                                         <div class="col-md-6">
                                                             <label for="price"
                                                                 class="col-form-label">{{ __('depo/delivered-products.price') }}:</label>
-                                                            <input type="number" class="form-control" id="price">
+                                                            <input type="number" name="price" class="form-control" id="price">
                                                         </div>
                                                         <div class="col-md-6">
-                                                            <label for="Trustee-name"
-                                                                class="col-form-label">{{ __('depo/new-arrivals.total-price') }}:</label>
-                                                            <input type="text" class="form-control" id="Trustee-name">
+                                                            <label for="administration"
+                                                                class="col-form-label">{{ __('depo/delivered-products.offer-office') }}:</label>
+                                                            <input type="text" name="offer_office" class="form-control" id="administration">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -70,49 +71,37 @@
                                                         <div class="col-md-6">
                                                             <label for="based-on"
                                                                 class="col-form-label">{{ __('depo/delivered-products.based-on') }}:</label>
-                                                            <input type="number" class="form-control" id="based-on">
+                                                            <input type="text" name="based_on" class="form-control" id="based-on">
                                                         </div>
                                                         <div class="col-md-6">
                                                             <label for="number"
                                                                 class="col-form-label">{{ __('depo/delivered-products.number') }}:</label>
-                                                            <input type="number" class="form-control" id="number">
+                                                            <input type="number" name="number" class="form-control" id="number">
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="form-group ">
                                                     <div class="row">
                                                         <div  class="col-md-6">
-                                                            <label for="administration"
-                                                                class="col-form-label">{{ __('depo/delivered-products.offer-office') }}:</label>
-                                                            <input type="text" class="form-control" id="administration">
+                                                           
+                                                            <label for="date"
+                                                            class="col-form-label">{{ __('depo/delivered-products.delivered-data') }}:</label>
+                                                        <input type="date" class="form-control" name="delivered_date" id="date"
+                                                            placeholder="YYYY-_MM-DD">
                                                         </div>
                                                         <div class="col-md-6">
                                                             <label for="order-number"
                                                                 class="col-form-label">{{ __('depo/delivered-products.offer-date') }}:</label>
-                                                            <input type="number" class="form-control" id="order-number">
+                                                            <input type="date" name="offer_date" placeholder="YYYY-_MM-DD" class="form-control" id="order-number">
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="form-group">
-                                                    <div class="row">
-                                                        <div class="col-md-6">                                                            
-                                                            <label for="date"
-                                                                class="col-form-label">{{ __('depo/delivered-products.delivered-data') }}:</label>
-                                                            <input type="date" class="form-control" name="" id="date"
-                                                                placeholder="YYYY-_MM-DD">
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <label for="buyer"
-                                                                class="col-form-label">{{ __('depo/delivered-products.employee-name') }}:</label>
-                                                            <input type="text" class="form-control" id="buyer">
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                               
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary"
                                                         data-bs-dismiss="modal">{{ __('depo/all-products.cancel') }}
                                                     </button>
-                                                    <button type="button"
+                                                    <button type="submit"
                                                         class="btn btn-primary">{{ __('depo/all-products.submit') }}</button>
                                                 </div>
 

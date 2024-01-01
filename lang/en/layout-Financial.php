@@ -42,6 +42,7 @@ return [
     'financial-and-administrative' => 'Financial-Admin',
     'general-real-estate' => 'Real-Estate',
     'commodity-accounting' => 'Commodity Acc',
+    'tech' => 'IT Products'
     
     
 ];
