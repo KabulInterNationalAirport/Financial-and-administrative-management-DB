@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class TrusteeDp extends Model
 {
     use HasFactory;
+    
     public function DpNewArrivals()
     {
         return $this->hasMany(DpNewArrivals::class);
