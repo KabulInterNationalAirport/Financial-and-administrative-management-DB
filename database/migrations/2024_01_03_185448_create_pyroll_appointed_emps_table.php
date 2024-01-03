@@ -18,9 +18,9 @@ return new class extends Migration
             $table->string('en_name');
             $table->string('ps_name');
             $table->string('en_last_name')->nullable();
-            $table->string('ps_last_name')->nullable();
-            $table->string('en_father_name')->nullable();
-            $table->string('ps_father_name')->nullable();
+            $table->string('ps_last_name');
+            $table->string('en_father_name');
+            $table->string('ps_father_name');
             $table->string('birth_date');
             $table->string("appointment_date");
             $table->string('position_no');

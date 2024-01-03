@@ -21,8 +21,8 @@ return new class extends Migration
             $table->string("budget_name");
             $table->string('amount');
             $table->string("date");
-            $table->unsignedBigInteger("project_codes_code");
-            $table->foreign("project_codes_code")->references("code")->on("project_codes")->onDelete("cascade");
+            $table->unsignedBigInteger("project_codes_id");
+            $table->foreign("project_codes_id")->references("id")->on("project_codes")->onDelete("cascade");
             $table->timestamps();
         });
     }
