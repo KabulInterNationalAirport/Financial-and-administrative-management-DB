@@ -1,7 +1,11 @@
 <?php
 
+use App\Http\Controllers\CamCarsDeliveredController;
 use App\Http\Controllers\CamDeliveredProductsController;
+use App\Http\Controllers\CamEmpController;
+use App\Http\Controllers\CamItProDeliveredController;
 use App\Http\Controllers\CamOrgStuffController;
+use App\Http\Controllers\CamReportController;
 use App\Http\Controllers\DepoEmpController;
 use App\Http\Controllers\DepoReportController;
 use App\Http\Controllers\DpCarsController;
@@ -15,6 +19,8 @@ use App\Http\Controllers\DpNewArrivalsController;
 use App\Http\Controllers\TrusteeDpController;
 use App\Http\Controllers\DpDamagedProductsController;
 use App\Http\Controllers\MainReportController;
+use App\Http\Controllers\TarminalEmpController;
+use App\Http\Controllers\TarminalReportController;
 use App\Http\Controllers\TotalProductDpController;
 
 Route::group(
@@ -41,7 +47,18 @@ Route::middleware('auth')->group(function () {
         // financial adm mang. employee routes
         Route::resource('fin-adm-employee' , FinancialAdmEmpController::class);
 
-        // main routes of the project
+        // ---------------------------main routes of the project-----------------------------------
+        Route::get("/financial", function () {
+            return view("./financial-administrative-directorate/index");
+        });
+
+        Route::get("/payroll", function () {
+            return view("./financial-administrative-directorate/payroll-management/index");
+        });
+        
+        Route::get("/property", function () {
+            return view("./financial-administrative-directorate/property/index");
+        });
         Route::get('/depo' , function(){
             return view('./financial-administrative-directorate/depo/index');
         });
@@ -54,7 +71,7 @@ Route::middleware('auth')->group(function () {
         Route::get('/report-index' , function(){
             return view('./report-index');
         });
-
+// ---------------------------------------------------------------------------------------------------------------
 
         // depo routes
         // depo All products routes
@@ -74,13 +91,27 @@ Route::middleware('auth')->group(function () {
         // depo IT new arrival products
         Route::resource('depo-it-product', TotalProductDpController::class);
 
+        
         // commodity accounting man routes
         // delivered products route
         Route::resource('delivered-product' , CamDeliveredProductsController::class);
-        // commodity employees routes
+        // commodity organization stuff routes
         Route::resource('commodity-org-stuff', CamOrgStuffController::class);
+        // commodity it products routes
+        Route::resource('comm-it-product' , CamItProDeliveredController::class);
+        // commodity car products routes 
+        Route::resource('commodity-cars' , CamCarsDeliveredController::class);
+        // commodity employees routes
+        Route::resource('commodity-employees' , CamEmpController::class);
+        // commodity reprot routes
+        Route::resource('commodity-report' , CamReportController::class);
 
 
+
+        // terminals mang. routes
+        // terminals employees routes
+        Route::resource('terminal-employee' , TarminalEmpController::class);
+        Route::resource('terminal-report', TarminalReportController::class);
 
 
 
@@ -90,163 +121,7 @@ Route::middleware('auth')->group(function () {
 
 
 
-
-        
-
-
-
-
-        
-        
-        Route::get("/financial", function () {
-            return view("./financial-administrative-directorate/index");
-        });
-
-        Route::get("/acc-emp", function () {
-            return view("./financial-administrative-directorate/commodity-accounting-management/org-stuff/org-stuff-list");
-        });
-
-        Route::get("/acc-add-emp", function () {
-            return view("./financial-administrative-directorate/commodity-accounting-management/org-stuff/add-org-stuff");
-        });
-
-        Route::get("/acc-update-emp", function () {
-            return view("./financial-administrative-directorate/commodity-accounting-management/org-stuff/update-org-stuff");
-        });
-
-        Route::get("/acc-emp-items", function () {
-            return view("./financial-administrative-directorate/commodity-accounting-management/org-stuff/view-org-stuff-items");
-        });
-
-        Route::get("/acc-emp-item-reg", function () {
-            return view("./financial-administrative-directorate/commodity-accounting-management/products/reg-product-org-stuff");
-        });
-        Route::get("/acc-emp-car-reg", function () {
-            return view("./financial-administrative-directorate/commodity-accounting-management/products/reg-car");
-        });
-        Route::get("/uuu", function () {
-            return view("./financial-administrative-directorate/commodity-accounting-management/org-stuff/update-product");
-        });
-
-
-
-
-
-
-        // --------------- for property ------------------
-        Route::get("/property", function () {
-            return view("./financial-administrative-directorate/property/index");
-        });
-        
-        Route::get("/qarardads", function () {
-            return view("./financial-administrative-directorate/property/qrardads/list-qarar-dads");
-        });
-        
-        Route::get("/new-qarardads", function () {
-            return view("./financial-administrative-directorate/property/qrardads/add-qarar-dad");
-        });
-        Route::get("/property-report", function () {
-            return view("./financial-administrative-directorate/property/report");
-        });
-        
-        
-        Route::get("/view-qarardad-details", function () {
-            return view("./financial-administrative-directorate/property/qrardads/details-qarar-dad");
-        });
-
-        Route::get("/update-qarardad", function () {
-            return view("./financial-administrative-directorate/property/qrardads/update-qarar-dad");
-        });
-        
-        Route::get("/view-qarardad", function () {
-            return view("./financial-administrative-directorate/property/qrardads/print-qarar-dad");
-        });
-        
-        
-        Route::get("/estilam", function () {
-            return view("./financial-administrative-directorate/property/oil-estilams/list-estilam");
-        });
-        
-        Route::get("/oil-company", function () {
-            return view("./financial-administrative-directorate/property/oil-estilams/oil-company-qarar-dad/list-oil-qarar-dad");
-        });
-        
-        Route::get("/view", function () {
-            return view("./financial-administrative-directorate/property/oil-estilams/oil-company-qarar-dad/print-oil-qarar-dad");
-        });
-        
-        
-        Route::get("/view-estilam", function () {
-            return view("./financial-administrative-directorate/property/oil-estilams/print-estilam");
-        });
-        
-        
-        Route::get("/add-estilam", function () {
-            return view("./financial-administrative-directorate/property/oil-estilams/add-estilam");
-        });
-        
-        Route::get("/estilam-details", function () {
-            return view("./financial-administrative-directorate/property/oil-estilams/details-estilam");
-        });
-        
-        Route::get("/estilam-update", function () {
-            return view("./financial-administrative-directorate/property/oil-estilams/update-estilam");
-        });
-        
-        
-     
-        
-        Route::get("/revenue", function () {
-            return view("./financial-administrative-directorate/property/revenue/revenue-list");
-        });
-        
-        Route::get("/add-revenue", function () {
-            return view(".financial-administrative-directorate/property/revenue/add-revenue");
-        });
-        
-        Route::get("/print-revenue", function () {
-            return view("./financial-administrative-directorate/property/revenue/print-revenue");
-        });
-        Route::get("/view-revenue", function () {
-            return view("./financial-administrative-directorate/property/revenue/view-revenue-details");
-        });
-        
-        Route::get("/cars-list", function () {
-            return view("./financial-administrative-directorate/property/oil-estilams/oil-cars/cars-list");
-        });
-        
-        
-        // -------------- for payroll management------------|
-        
-        
-        Route::get("/payroll", function () {
-            return view("./financial-administrative-directorate/payroll-management/index");
-        });
-        
-        Route::get("/employee-list", function () {
-            return view("./financial-administrative-directorate/payroll-management/employees/employee-list");
-        });
-        
-        
-        Route::get("/print-doc", function () {
-            return view("./financial-administrative-directorate/payroll-management/employees/print-doc");
-        });
-        
-        Route::get("/edit-employee", function () {
-            return view("./financial-administrative-directorate/payroll-management/employees/edit-employee");
-        });
-        
-        Route::get("/extra-employees", function () {
-            return view("./financial-administrative-directorate/payroll-management/retired-deceased-employees/employee-list");
-        });
-        
-        Route::get("/print-documents", function () {
-            return view("./financial-administrative-directorate/payroll-management/retired-deceased-employees/print-doc");
-        });
-        
-        Route::get("/staff", function () {
-            return view("./financial-administrative-directorate/payroll-management/general-staff-composition/staff-list");
-        });
+      
     });
 
 

@@ -70,6 +70,7 @@ class FinancialAdmReportController extends Controller
     {
         $report = FinancialAdmReport::find($id);
         return view('financial-administrative-directorate.update-report' ,compact('report'));
+        
     }
 
     /**

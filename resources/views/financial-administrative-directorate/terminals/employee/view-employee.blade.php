@@ -1,4 +1,4 @@
-@extends('financial-administrative-directorate.terminals.layout.master')
+@extends('financial-administrative-directorate.depo.layout.master')
 @section('contents')
     <div class="page">
         <div class="page-main">
@@ -11,22 +11,21 @@
                         </div>
                     </div>
                     <!-- END PAGE HEADER -->
-                    <!-- ROW -->
                     <div class="main-proifle">
                         <div class="row">
                             <div class="col-xl-7">
                                 <div class="box-widget widget-user">
                                     <div class="widget-user-image d-sm-flex mb-4">
                                         <span class="avatar"
-                                            style="background-image: url({{ asset('assets/images/users/16.jpg') }})">
+                                            style="background-image: url({{ asset('storage/employee/def.png') }})">
                                             <span class="avatar-status bg-green"></span>
                                         </span>
                                         <div class="ms-sm-4 mt-3">
-                                            <h4 class="pro-user-username mb-3 font-weight-semibold">Abdul Saboor Hemat<i
+                                            <h4 class="pro-user-username mb-3 font-weight-semibold">{{ $employee->name }}
+                                                {{ $employee->last_name }}<i
                                                     class="ri-checkbox-circle-line text-success ms-1 fs-14"></i></h4>
                                             <div class="pro-user mb-2">
-                                                {{-- <h5 class="pro-user-username text-dark mb-1 fs-16">Abdul Saboor Hemat</h5> --}}
-                                                <h6 class="pro-user-desc text-muted fs-12">System Development</h6>
+                                                <h6 class="pro-user-desc text-muted fs-12">{{ $employee->job_title }}</h6>
                                                 <h6 class="pro-user-username text-dark mb-1 fs-16">
                                                     {{ __('employee.kabul-airport') }}</h6>
                                             </div>
@@ -34,12 +33,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-5 col-lg-7">
-                                <div class="text-xl-end mt-4 mt-xl-0">
-                                    <a href="javascript:void(0);"
-                                        class="btn btn-primary">{{ __('employee.edit-profile') }}</a>
-                                </div>
-                            </div>
+                            
                         </div>
 
                     </div>
@@ -62,78 +56,68 @@
                                                     <span class="font-weight-semibold w-50">{{ __('employee.name') }}
                                                     </span>
                                                 </td>
-                                                <td class="py-2 px-5">Abdul Saboor Hemat</td>
+                                                <td class="py-2 px-5">{{ $employee->name }}</td>
                                             </tr>
                                             <tr>
                                                 <td class="py-2">
                                                     <span
                                                         class="font-weight-semibold w-50">{{ __('employee.id-card') }}</span>
                                                 </td>
-                                                <td class="py-2 px-5">75784</td>
+                                                <td class="py-2 px-5">{{ $employee->id_card }}</td>
                                             </tr>
                                             <tr>
                                                 <td class="py-2">
                                                     <span class="font-weight-semibold w-50">{{ __('employee.address') }}
                                                     </span>
                                                 </td>
-                                                <td class="py-2 px-5">Kabul</td>
+                                                <td class="py-2 px-5">{{ $employee->address }}</td>
                                             </tr>
 
                                             <tr>
                                                 <td class="py-2">
                                                     <span class="font-weight-semibold w-50">ایمیل </span>
                                                 </td>
-                                                <td class="py-2 px-5">saboorhemat4600@gmail.com</td>
+                                                <td class="py-2 px-5">{{ $employee->email }}</td>
                                             </tr>
                                             <tr>
                                                 <td class="py-2 px-0">
                                                     <span class="font-weight-semibold w-50">مبایل نمبر </span>
                                                 </td>
-                                                <td class="py-2 px-5">0790161600</td>
+                                                <td class="py-2 px-5">{{ $employee->phone }}</td>
                                             </tr>
                                             <tr>
                                                 <td class="py-2 px-0">
                                                     <span
                                                         class="font-weight-semibold w-50">{{ __('employee.gender') }}</span>
                                                 </td>
-                                                <td class="py-2 px-5">male</td>
+                                                <td class="py-2 px-5">{{ $employee->gender }}</td>
                                             </tr>
                                             <tr>
                                                 <td class="py-2 px-0">
                                                     <span
                                                         class="font-weight-semibold w-50">{{ __('employee.material-state') }}</span>
                                                 </td>
-                                                <td class="py-2 px-5">single</td>
+                                                <td class="py-2 px-5">{{ $employee->material_state }}</td>
                                             </tr>
                                             <tr>
                                                 <td class="py-2 px-0">
                                                     <span
                                                         class="font-weight-semibold w-50">{{ __('employee.appointment-date') }}</span>
                                                 </td>
-                                                <td class="py-2 px-5">2022-2-2</td>
+                                                <td class="py-2 px-5">{{ $employee->appointment_date }}</td>
                                             </tr>
                                             <tr>
                                                 <td class="py-2 px-0">
                                                     <span
                                                         class="font-weight-semibold w-50">{{ __('employee.degree') }}</span>
                                                 </td>
-                                                <td class="py-2 px-5">undergraduate</td>
+                                                <td class="py-2 px-5">{{ $employee->degree }}</td>
                                             </tr>
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
-                            <div class="card-body">
-                                <h5 class="font-weight-semibold">{{ __('employee.details') }}</h5>
-                                <div class="main-profile-bio mb-4">
-                                    <p>simply dummy text of the printing and typesetting industry. Lorem
-                                        Ipsum has been the industry's standard dummy when an unknown
-                                        printer
-                                        took a galley of type and scrambled it to make a type specimen
-                                        book.
-                                        It has survived not only five centuries nchanged.</p>
-                                </div>
-                            </div>
+
                             <div class="card-body border-top">
                                 <h5 class="font-weight-semibold">{{ __('employee.contact') }}</h5>
                                 <div class="main-profile-contact-list d-lg-flex">
@@ -144,7 +128,7 @@
                                         <div class="media-body">
                                             <small class="text-muted">{{ __('employee.mobile') }}</small>
                                             <div class="font-weight-semibold">
-                                                0790161600
+                                                {{ $employee->phone }}
                                             </div>
                                         </div>
                                     </div>
@@ -155,7 +139,7 @@
                                         <div class="media-body">
                                             <small class="text-muted">{{ __('employee.email') }}</small>
                                             <div class="font-weight-semibold">
-                                                saboorhemat@gmail.com
+                                                {{ $employee->email }}
                                             </div>
                                         </div>
                                     </div>
@@ -166,7 +150,7 @@
                                         <div class="media-body">
                                             <small class="text-muted">{{ __('employee.address') }}</small>
                                             <div class="font-weight-semibold">
-                                                kabul
+                                                {{ $employee->address }}
                                             </div>
                                         </div>
                                     </div>

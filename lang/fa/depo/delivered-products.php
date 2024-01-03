@@ -16,5 +16,6 @@ return [
     'employee-name' => 'نام ګیرنده',
     'details' => 'تشریحات',
     'delivered-data'=> 'تاریخ توزیع',
-    'based-on' => 'به اساس'
+    'based-on' => 'به اساس',
+    'receiver' => 'ګیرنده'
 ];

@@ -14,12 +14,9 @@
                             <div class="row mt-4 page-header">
                                 <div class="col-md">
                                     <h3>{{ __('depo/employees.employee-information') }}</h3>
-                                    <h5>{{ __('depo/delivered-products.name') }}: Abdul Saboor hemat</h5>
-                                    <h5> {{ __('depo/employees.mobile') }}: 0790161600</h5>
-                                    <h5>{{ __('depo/employees.email') }}: saboorhemat@gmail.com</h5>
-                                    <h5> {{ __('depo/employees.related-office') }}: آی ټي</h5>
-                                    <h5>{{ __('depo/employees.job-title') }}: د سیستم جوړولو عمومي مدیر</h5>
-                                    <h5>{{ __('depo/employees.id-card') }}: 123456</h5>
+                                    <h5>{{ __('depo/delivered-products.name') }}:{{$employee->name}}</h5>
+                                    <h5> {{ __('depo/employees.related-office') }}:{{$employee->related_office}}</h5>
+                                    <h5>{{ __('depo/employees.job-title') }}:{{$employee->job_title}}</h5>
                                 </div>
                             </div>
                             <div class="table-responsive mt-4">
@@ -35,30 +32,37 @@
                                             <th>{{ __('depo/delivered-products.total-price') }}</th>
                                             <th>{{ __('depo/delivered-products.based-on') }}</th>
                                             <th>{{ __('depo/delivered-products.number') }}</th>
+                                            <th>{{ __('employee.related-office') }}</th>
                                             <th>{{ __('depo/delivered-products.offer-date') }}</th>
                                             <th>{{ __('depo/delivered-products.delivered-data') }}</th>
                                             <th>{{ __('employee.actions') }}</th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        @foreach ($d_items as $item)
+                                        @if ($item->cam_org_stuff_id == $employee->id)
                                         <tr>
-                                            <th scope="row">1</th>
-                                            <td>کمپیوټر</td>
-                                            <td>ډیل ۳۳۳۴</td>
-                                            <td>۳</td>
-                                            <td>عدد</td>
-                                            <td>۱۰۰۰۰</td>
-                                            <td>۳۰۰۰۰</td>
-                                            <td>مکتوب</td>
-                                            <td>۱۲</td>
-                                            <td>۱۴۰۲/۹/۱۲</td>
-                                            <td>۱۴۰۲/۹/۱۲</td>
+                                            <th scope="row">{{$item->id}}</th>
+                                            <td>{{$item->category}}</td>
+                                            <td>{{$item->name}}</td>
+                                            <td>{{$item->quantity}}</td>
+                                            <td>{{$item->unit}}</td>
+                                            <td>{{$item->price}}</td>
+                                            <td>{{$item->price * $item->quantity}}</td>
+                                            <td>{{$item->based_on}}</td>
+                                            <td>{{$item->number}}</td>
+                                            <td>{{$item->order_office}}</td>
+                                            <td>{{$item->order_date}}</td>
+                                            <td>{{$item->delivered_date}}</td>
                                             <td>
                                                 <a class="btn btn-outline-primary  btn-sm" href="/uuu">
                                                     {{ __('depo/employees.edit') }}
                                                 </a>
                                             </td>
                                         </tr>
+                                            
+                                        @endif
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>
@@ -79,34 +83,40 @@
                                         <th>{{ __('depo/new-arrivals.total-price') }}</th>
                                         <th>{{ __('depo/delivered-products.based-on') }}</th>
                                         <th>{{ __('depo/delivered-products.number') }}</th>
+                                        <th>{{ __('employee.related-office') }}</th>
                                         <th>{{ __('depo/delivered-products.offer-date') }}</th>
                                         <th>{{ __('depo/delivered-products.delivered-data') }}</th>
                                         <th>{{ __('employee.actions') }}</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach ($it_items as $item)
+                                    @if ($item->cam_org_stuff_id == $employee->id)
                                     <tr>
-                                        <th scope="row">1</th>
-                                        <td>کمپیوټر</td>
-                                        <td>ډیل ۳۳۳۴</td>
-                                        <td>ks3kfj453</td>
-                                        <td>16GB</td>
-                                        <td>512SSD</td>
-                                        <td>Red</td>
-                                        <td>۳</td>
-                                        <td>عدد</td>
-                                        <td>۱۰۰۰۰</td>
-                                        <td>۳۰۰۰۰</td>
-                                        <td>مکتوب</td>
-                                        <td>۱۲</td>
-                                        <td>۱۴۰۲/۹/۱۲</td>
-                                        <td>۱۴۰۲/۹/۱۲</td>
+                                        <th scope="row">{{$item->id}}</th>
+                                        <td>{{$item->category}}</td>
+                                        <td>{{$item->name}}</td>
+                                        <td>{{$item->serial_no}}</td>
+                                        <td>{{$item->ram}}</td>
+                                        <td>{{$item->hd}}</td>
+                                        <td>{{$item->color}}</td>
+                                        <td>{{$item->quantity}}</td>
+                                        <td>{{$item->unit}}</td>
+                                        <td>{{$item->price}}</td>
+                                        <td>{{$item->price * $item->quantity}}</td>
+                                        <td>{{$item->based_on}}</td>
+                                        <td>{{$item->number}}</td>
+                                        <td>{{$item->order_office}}</td>
+                                        <td>{{$item->order_date}}</td>
+                                        <td>{{$item->delivered_date}}</td>
                                         <td>
                                             <a class="btn btn-outline-primary  btn-sm" href="/uuu">
                                                 {{ __('depo/employees.edit') }}
                                             </a>
                                         </td>
                                     </tr>
+                                    @endif
+                                    @endforeach
                                 </tbody>
                             </table>
                             <h2 class="text-center">موټرونه</h2>
@@ -125,33 +135,40 @@
                                         <th>{{ __('depo/car.total-price') }}</th>
                                         <th>{{ __('depo/delivered-products.based-on') }}</th>
                                         <th>{{ __('depo/delivered-products.number') }}</th>
+                                        <th>{{ __('employee.related-office') }}</th>
                                         <th>{{ __('depo/delivered-products.offer-date') }}</th>
                                         <th>{{ __('depo/delivered-products.delivered-data') }}</th>
                                         <th>{{ __('employee.actions') }}</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>corola</td>
-                                        <td>2005</td>
-                                        <td>2354</td>
-                                        <td>red</td>
-                                        <td>kbl12345</td>
-                                        <td>2</td>
-                                        <td>unit</td>
-                                        <td>122222</td>
-                                        <td>2333333</td>
-                                        <td>مکتوب</td>
-                                        <td>۱۲</td>
-                                        <td>۱۴۰۲/۹/۱۲</td>
-                                        <td>۱۴۰۲/۹/۱۲</td>
-                                        <td>
-                                            <a class="btn btn-outline-primary  btn-sm" href="/uuu">
-                                                {{ __('depo/employees.edit') }}
-                                            </a>
-                                        </td>
-                                    </tr>
+                                    @foreach ($cars as $car)
+                                        @if($item->cam_org_stuff_id == $employee->id)
+                                        <tr>
+                                            <th scope="row">{{$car->id}}</th>
+                                            <td>{{$car->name}}</td>
+                                            <td>{{$car->model}}</td>
+                                            <td>{{$car->engine_no}}</td>
+                                            <td>{{$car->color}}</td>
+                                            <td>{{$car->no_palet}}</td>
+                                            <td>{{$car->quantity}}</td>
+                                            <td>{{$car->unit}}</td>
+                                            <td>{{$car->price}}</td>
+                                            <td>{{$car->price * $car->quantity}}</td>
+                                            <td>{{$car->based_on}}</td>
+                                            <td>{{$car->number}}</td>
+                                            <td>{{$car->order_office}}</td>
+                                            <td>{{$car->order_date}}</td>
+                                            <td>{{$car->delivered_date}}</td>
+                                            <td>
+                                                <a class="btn btn-outline-primary  btn-sm" href="/uuu">
+                                                    {{ __('depo/employees.edit') }}
+                                                </a>
+                                            </td>
+                                        </tr>
+
+                                        @endif
+                                    @endforeach
                                 </tbody>
                             </table>
                             <div class="float-end footer">

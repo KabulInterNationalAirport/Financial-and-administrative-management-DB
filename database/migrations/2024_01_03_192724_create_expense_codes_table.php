@@ -14,7 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::create('expense_codes', function (Blueprint $table) {
-            $table->string('code')->primary();
+            $table->id();
+            $table->string('code');
             $table->string('expense_amount');
             $table->timestamps();
         });

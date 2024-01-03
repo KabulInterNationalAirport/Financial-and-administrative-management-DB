@@ -16,5 +16,6 @@ return [
     'employee-name' => 'Employee Name',
     'details' => 'Details',
     'delivered-data'=> 'Delivered Date',
-    'based-on' => 'Based On'
+    'based-on' => 'Based On',
+    'receiver' => 'Receiver'
 ];

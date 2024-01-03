@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\FinancialAdmReport;
 use Illuminate\Http\Request;
 
-class TarminalReportController extends Controller
+class CamReportController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,7 @@ class TarminalReportController extends Controller
     public function index()
     {
         $reports = FinancialAdmReport::all();
-        return view('financial-administrative-directorate.terminals.report' , compact('reports'));
+        return view('financial-administrative-directorate.commodity-accounting-management.report' , compact('reports'));
     }
 
     /**
@@ -36,15 +36,7 @@ class TarminalReportController extends Controller
      */
     public function store(Request $request)
     {
-        $reprot = new FinancialAdmReport;
-        $reprot->task = $request->task;
-        $reprot->related_office = $request->office;
-        $reprot->task_details = $request->taskdetails;
-        $reprot->state = $request->state;
-        $reprot->date = $request->input('date');
-        $reprot->file = 'hi.png';
-        $reprot->save();
-        return redirect('terminal-report');
+        //
     }
 
     /**
@@ -67,7 +59,7 @@ class TarminalReportController extends Controller
     public function edit($id)
     {
         $report = FinancialAdmReport::find($id);
-        return view('financial-administrative-directorate.terminals.update-report', compact('report'));
+        return view('financial-administrative-directorate.commodity-accounting-management.update-report' ,compact('report'));
     }
 
     /**
@@ -102,7 +94,7 @@ class TarminalReportController extends Controller
         }
         $report->file = $filetoUpload;
         $report->save();
-        return redirect('terminal-report');
+        return redirect('commodity-report');
     }
 
     /**
