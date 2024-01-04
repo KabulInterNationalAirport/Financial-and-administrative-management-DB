@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string('task');
             $table->string('task_details');
             $table->string("related_office");
-            $table->string('date');
             $table->string('state');
             $table->string("file");
             $table->timestamps();

@@ -24,6 +24,9 @@ return new class extends Migration
             $table->string("ram");           
             $table->string('hd');
             $table->string('based_on');
+            $table->string('order_office');
+            $table->string('order_date');
+            $table->string('delivered_date');
             $table->string('file');
             $table->string('number');
             $table->unsignedBigInteger("cam_org_stuff_id");

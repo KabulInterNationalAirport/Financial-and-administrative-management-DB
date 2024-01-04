@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('category');
             $table->string("quantity");
             $table->string('unit');
+            $table->string('remain_products');
             $table->timestamps();
         });
     }

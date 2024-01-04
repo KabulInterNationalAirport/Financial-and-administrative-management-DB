@@ -25,6 +25,9 @@ return new class extends Migration
             $table->string('no_palet');
             $table->string('based_on');
             $table->string('number');
+            $table->string('order_office');
+            $table->string('order_date');
+            $table->string('delivered_date');
             $table->string('file');
             $table->unsignedBigInteger("cam_org_stuff_id");
             $table->foreign("cam_org_stuff_id")->references("id")->on("cam_org_stuffs")->onDelete("cascade");
