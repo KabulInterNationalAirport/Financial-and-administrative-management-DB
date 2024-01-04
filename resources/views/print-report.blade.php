@@ -8,7 +8,7 @@
             </div>
             <div class="main-proifle">
                 <div class="row col-md-12">
-                    <img src="{{asset('storage\employee-doc\def.jpg')}}" alt="sfdg">
+                    <img src="{{asset($report->file)}}" alt="sfdg">
                 </div>
             </div>
            

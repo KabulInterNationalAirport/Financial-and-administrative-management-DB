@@ -59,7 +59,20 @@
                                                             <label class="form-label mb-0 mt-2"> {{__('employee.related-office')}}</label>
                                                         </div>
                                                         <div class="col-md-9">
-                                                            <input type="text" name="office" class="form-control" placeholder=" {{__('employee.related-office')}}">
+                                                            <select name="office"
+                                                                class="form-control custom-select select2"
+                                                                data-placeholder="Select">
+                                                                <option label="Select"></option>
+                                                                <option value="آمریت مالي و خدماتي">آمریت مالي و خدماتي</option>
+                                                                <option value="مدیریت ډیپو">مدیریت ډیپو</option>
+                                                                <option value="مدیریت املاک">مدیریت املاک</option>
+                                                                <option value="مدیریت مالي و اداري">مدیریت مالي و اداري</option>
+                                                                <option value="مدیریت تخلیه تیل">مدیریت تخلیه تیل</option>
+                                                                <option value="مدیریت ترمینل">مدیریت ترمینل</option>
+                                                                <option value="مدیریت معاشات">مدیریت معاشات</option>
+                                                                <option value="مدیریت تدارکات">مدیریت تدارکات</option>
+                                                                <option value="مدیریت محاسبی جنسی">مدیریت محاسبی جنسی</option>
+                                                            </select>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -178,7 +191,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="form-group">
+                                                {{-- <div class="form-group">
                                                     <div class="row">
                                                         <div class="col-md-3">
                                                             <div class="form-label mb-0 mt-2">{{__('employee.profile-pic')}}</div>
@@ -189,7 +202,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </div> --}}
                                                 <div class="form-group">
                                                     <div class="row">
                                                         <div class="col-md-3">

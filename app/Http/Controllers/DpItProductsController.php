@@ -43,6 +43,7 @@ class DpItProductsController extends Controller
         $item->unit = $request->unit;
         $item->save();
         return redirect()->back();
+        
 
     }
 

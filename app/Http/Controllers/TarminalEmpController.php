@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\FinancialAdmEmp;
 use Illuminate\Http\Request;
 
 class TarminalEmpController extends Controller
@@ -13,7 +14,8 @@ class TarminalEmpController extends Controller
      */
     public function index()
     {
-        //
+        $employees = FinancialAdmEmp::all();
+        return view('financial-administrative-directorate.terminals.employee.Employee-list' , compact('employees'));
     }
 
     /**
@@ -45,7 +47,8 @@ class TarminalEmpController extends Controller
      */
     public function show($id)
     {
-        //
+        $employee = FinancialAdmEmp::find($id);
+        return view('financial-administrative-directorate.terminals.employee.view-employee' , compact('employee'));        
     }
 
     /**

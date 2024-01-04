@@ -17,5 +17,6 @@ return [
     'details' => 'جزیئات',
     
     'delivered-data'=> 'توزیع تاریخ',
-    'based-on' => 'په اساس دي'
+    'based-on' => 'په اساس دي',
+    'receiver' => 'اخیستونکی'
 ];

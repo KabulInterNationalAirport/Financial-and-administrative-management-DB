@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\FinancialAdmEmp;
 use Illuminate\Http\Request;
 
 class CamEmpController extends Controller
@@ -13,7 +14,8 @@ class CamEmpController extends Controller
      */
     public function index()
     {
-        //
+        $employees = FinancialAdmEmp::all();
+        return view('financial-administrative-directorate.commodity-accounting-management.employee.Employee-list' , compact('employees'));
     }
 
     /**
@@ -45,7 +47,8 @@ class CamEmpController extends Controller
      */
     public function show($id)
     {
-        //
+        $employee = FinancialAdmEmp::find($id);
+        return view('financial-administrative-directorate.commodity-accounting-management.employee.view-employee' , compact('employee'));
     }
 
     /**

@@ -56,17 +56,17 @@
                                         <td>{{$employee->related_office}}</td>
                                         <td>{{$employee->job_title}}</td>
                                         <td>
-                                            <a class="btn btn-outline-primary  btn-sm" href="/acc-emp-car-reg">
+                                            <a class="btn btn-outline-primary  btn-sm" href="{{url('commodity-cars/'.$employee->id)}}">
                                                 {{ __('depo/employees.reg-car') }}
                                             </a>
                                             <a class="btn btn-outline-success  btn-sm" href="{{url('delivered-product/'.$employee->id)}}">
                                                 {{ __('depo/employees.reg-product') }}
                                             </a>
-                                            <a class="btn btn-outline-info  btn-sm" href="/acc-update-emp">
+                                            <a class="btn btn-outline-info  btn-sm" href="{{url('commodity-org-stuff/'.$employee->id.'/edit')}}">
                                                 {{ __('depo/employees.edit') }}
                                             </a>
                                             <a class="btn btn-outline-secondary btn-icon btn-sm"
-                                                href="/acc-emp-items">{{ __('depo/employees.view-details') }}</a>
+                                                href="{{url('commodity-org-stuff/'.$employee->id)}}">{{ __('depo/employees.view-details') }}</a>
                                         </td>
                                     </tr>
                                         

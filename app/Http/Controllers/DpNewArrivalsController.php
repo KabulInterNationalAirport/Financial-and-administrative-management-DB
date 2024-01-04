@@ -59,7 +59,7 @@ class DpNewArrivalsController extends Controller
         
         $t_product->save();
         $item->save();
-        return redirect()->back();
+        return redirect('depo-new-arrivals');
     }
 
     /**

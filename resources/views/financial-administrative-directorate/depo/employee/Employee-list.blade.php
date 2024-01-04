@@ -22,20 +22,11 @@
                                 </div>
                             </form>
                         </div>
-                        <div class="page-rightheader ms-md-auto">
-                            <div class="align-items-end flex-wrap my-auto right-content breadcrumb-right">
-                                <div class="btn-list">
-                                    <a href="{{route('depo-employee.create')}}" class="btn btn-primary me-3">{{__('depo/employees.add-employee')}} <i class="fa-solid fa-user-plus"></i></a>
-
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
 
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table class="table  table-vcenter text-nowrap table-bordered border-bottom" id="hr-table">
+                            <table class="table  table-vcenter text-center table-bordered border-bottom" id="hr-table">
                                 <thead>
                                     <tr>
                                         <th class=" w-5">{{__('depo/report.id')}}</th>
@@ -52,6 +43,8 @@
                                 </thead>
                                 <tbody>
                                     @foreach ($employees as $employee)
+                                    @if ($employee->related_office == 'مدیریت ډیپو')
+                                        
                                     <tr>
                                         <td>{{$employee->id}}</td>
                                         <td>
@@ -76,10 +69,9 @@
                                                 <i class="feather feather-edit" data-bs-toggle="tooltip"
                                                     data-original-title="View/Edit"></i>
                                             </a>
-                                            <a class="btn btn-danger btn-icon btn-sm" data-bs-toggle="tooltip"
-                                                data-original-title="Delete"><i class="feather feather-trash-2"></i></a>
                                         </td>
                                     </tr>
+                                    @endif
                                     @endforeach
                                 </tbody>
                             </table>

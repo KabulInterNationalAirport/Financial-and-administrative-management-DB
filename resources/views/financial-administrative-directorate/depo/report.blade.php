@@ -24,7 +24,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <form action="{{route('depo-report.store')}}" method="POST" enctype="multipart/form-data">
+                            <form action="{{ route('depo-report.store') }}" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 <div>
                                     <label for="position-name"
@@ -36,8 +36,9 @@
                                     </select>
                                 </div>
                                 <div>
-                                    <label for="task-name" class="col-form-label">{{__('depo/report.task')}}:</label>
-                                    <input type="text" class="form-control" id="task-name" name="task" placeholder="{{__('depo/report.task')}}">
+                                    <label for="task-name" class="col-form-label">{{ __('depo/report.task') }}:</label>
+                                    <input type="text" class="form-control" id="task-name" name="task"
+                                        placeholder="{{ __('depo/report.task') }}">
                                 </div>
                                 <div class="">
                                     <label class="form-label ">{{ __('depo/report.date') }}</label>
@@ -45,25 +46,27 @@
                                         placeholder="DD-MM-YYY">
                                 </div>
                                 <div>
-                                    <label for="details" class="col-form-label">{{__('depo/report.task-details')}}:</label>
-                                    <textarea name="taskdetails" class="form-control" id="details" cols="" rows="" placeholder="{{__('depo/report.task-details')}}"></textarea>
+                                    <label for="details"
+                                        class="col-form-label">{{ __('depo/report.task-details') }}:</label>
+                                    <textarea name="taskdetails" class="form-control" id="details" cols="" rows=""
+                                        placeholder="{{ __('depo/report.task-details') }}"></textarea>
                                 </div>
                                 <div class="custom-controls-stacked d-md-flex mt-3">
-                                    <label class="form-label me-5">{{__('depo/report.state')}}:</label>
+                                    <label class="form-label me-5">{{ __('depo/report.state') }}:</label>
                                     <label class="custom-control custom-radio success me-4">
-                                        <input type="radio" class="custom-control-input" name="state"
-                                            value="تکمیل">
-                                        <span class="custom-control-label">{{__('depo/report.complete')}}</span>
+                                        <input type="radio" class="custom-control-input" name="state" value="تکمیل">
+                                        <span class="custom-control-label">{{ __('depo/report.complete') }}</span>
                                     </label>
                                     <label class="custom-control custom-radio success">
-                                        <input type="radio" class="custom-control-input" name="state"
-                                            value="نو">
-                                        <span class="custom-control-label">{{__('depo/report.new')}}</span>
+                                        <input type="radio" class="custom-control-input" name="state" value="نو">
+                                        <span class="custom-control-label">{{ __('depo/report.new') }}</span>
                                     </label>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{__('depo/all-products.cancel')}}</button>
-                                    <button type="submit" class="btn btn-primary">{{__('depo/all-products.submit')}}</button>
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">{{ __('depo/all-products.cancel') }}</button>
+                                    <button type="submit"
+                                        class="btn btn-primary">{{ __('depo/all-products.submit') }}</button>
                                 </div>
                             </form>
                         </div>
@@ -109,23 +112,25 @@
                                             </thead>
                                             <tbody>
                                                 @foreach ($reports as $report)
-                                                    @if ($report->state == 'نو')
-                                                        <tr>
-                                                            <td>{{ $report->id }}</td>
-                                                            <td>{{ $report->related_office }}</td>
-                                                            <td>{{ $report->task }}</td>
-                                                            <td>{{ $report->task_details }}</td>
-                                                            <th>{{ $report->date }}</th>
-                                                            <td>
-                                                                <span class="badge badge-primary">نا تکمله</span>
-                                                            </td>
-                                                            <td class="">
-                                                                <a href="{{ url('depo-report/' . $report->id . '/edit') }}"
-                                                                    class="btn btn-sm bg-success"><i
-                                                                        class="fa-solid fa-square-check"></i></a>
-                                                            </td>
-                                                        </tr>
-                                                    @else
+                                                    @if ($report->related_office == 'مدیریت ډیپو')
+                                                        @if ($report->state == 'نو')
+                                                            <tr>
+                                                                <td>{{ $report->id }}</td>
+                                                                <td>{{ $report->related_office }}</td>
+                                                                <td>{{ $report->task }}</td>
+                                                                <td>{{ $report->task_details }}</td>
+                                                                <th>{{ $report->date }}</th>
+                                                                <td>
+                                                                    <span class="badge badge-primary">نا تکمله</span>
+                                                                </td>
+                                                                <td class="">
+                                                                    <a href="{{ url('depo-report/' . $report->id . '/edit') }}"
+                                                                        class="btn btn-sm bg-success"><i
+                                                                            class="fa-solid fa-square-check"></i></a>
+                                                                </td>
+                                                            </tr>
+                                                        @else
+                                                        @endif
                                                     @endif
                                                 @endforeach
 
@@ -157,18 +162,20 @@
                                             </thead>
                                             <tbody>
                                                 @foreach ($reports as $report)
-                                                    @if ($report->state == 'تکمیل')
-                                                        <tr>
-                                                            <td>{{ $report->id }}</td>
-                                                            <td>{{ $report->related_office }}</td>
-                                                            <td>{{ $report->task }}</td>
-                                                            <td>{{ $report->task_details }}</td>
-                                                            <th>{{ $report->date }}</th>
-                                                            <td>
-                                                                <span class="badge badge-success">تکمله</span>
-                                                            </td>
-                                                        </tr>
-                                                    @else
+                                                    @if ($report->related_office == 'مدیریت ډیپو')
+                                                        @if ($report->state == 'تکمیل')
+                                                            <tr>
+                                                                <td>{{ $report->id }}</td>
+                                                                <td>{{ $report->related_office }}</td>
+                                                                <td>{{ $report->task }}</td>
+                                                                <td>{{ $report->task_details }}</td>
+                                                                <th>{{ $report->date }}</th>
+                                                                <td>
+                                                                    <span class="badge badge-success">تکمله</span>
+                                                                </td>
+                                                            </tr>
+                                                        @else
+                                                        @endif
                                                     @endif
                                                 @endforeach
                                             </tbody>

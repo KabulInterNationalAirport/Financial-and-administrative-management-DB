@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\CamCarsDelivered;
+use App\Models\CamDeliveredProducts;
+use App\Models\CamItProDelivered;
 use App\Models\CamOrgStuff;
 use Illuminate\Http\Request;
 
@@ -54,7 +57,11 @@ class CamOrgStuffController extends Controller
      */
     public function show($id)
     {
-        //
+        $d_items = CamDeliveredProducts::all();
+        $it_items = CamItProDelivered::all();
+        $cars = CamCarsDelivered::all();
+        $employee = CamOrgStuff::find($id);
+        return view('financial-administrative-directorate.commodity-accounting-management.org-stuff.view-org-stuff-items' , compact('d_items' , 'it_items' , 'cars' , 'employee'));
     }
 
     /**
@@ -65,7 +72,8 @@ class CamOrgStuffController extends Controller
      */
     public function edit($id)
     {
-        //
+        $employee = CamOrgStuff::find($id);
+        return view('financial-administrative-directorate.commodity-accounting-management.org-stuff.update-org-stuff' , compact('employee'));
     }
 
     /**
@@ -77,7 +85,13 @@ class CamOrgStuffController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $employee = CamOrgStuff::find($id);
+        $employee->name = $request->name;
+        $employee->father_name = $request->father_name;
+        $employee->job_title = $request->job_title;
+        $employee->related_office = $request->related_office;
+        $employee->save();
+        return redirect('commodity-org-stuff');
     }
 
     /**

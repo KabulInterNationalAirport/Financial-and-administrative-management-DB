@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\DepoReport;
 use Illuminate\Http\Request;
+use App\Models\FinancialAdmReport;
 
 class DepoReportController extends Controller
 {
@@ -14,7 +15,7 @@ class DepoReportController extends Controller
      */
     public function index()
     {
-        $reports = DepoReport::all();
+        $reports = FinancialAdmReport::all();
         return view('financial-administrative-directorate.depo.report' , compact('reports'));
     }
 
@@ -36,7 +37,7 @@ class DepoReportController extends Controller
      */
     public function store(Request $request)
     {
-        $reprot = new DepoReport;
+        $reprot = new FinancialAdmReport;
         $reprot->task = $request->task;
         $reprot->related_office = $request->office;
         $reprot->task_details = $request->taskdetails;
@@ -44,7 +45,7 @@ class DepoReportController extends Controller
         $reprot->date = $request->input('date');
         $reprot->file = 'hi.png';
         $reprot->save();
-        return redirect()->back();
+        return redirect('depo-report');
     }
 
     /**
@@ -66,7 +67,7 @@ class DepoReportController extends Controller
      */
     public function edit($id)
     {
-        $report = DepoReport::find($id);
+        $report = FinancialAdmReport::find($id);
         return view('financial-administrative-directorate.depo.update-report', compact('report'));
     }
 
@@ -79,7 +80,7 @@ class DepoReportController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $report = DepoReport::find($id);
+        $report = FinancialAdmReport::find($id);
         $report->task = $request->task;
         $report->related_office = $request->office;
         $report->task_details = $request->taskdetails;

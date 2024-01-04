@@ -30,11 +30,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-5 col-lg-7">
-                                <div class="text-xl-end mt-4 mt-xl-0">
-                                    <a href="{{url('fin-adm-employee/'.$employee->id.'/edit')}}" class="btn btn-primary">{{__('employee.edit-profile')}}</a>
-                                </div>
-                            </div>
+                            
                         </div>
 
                     </div>

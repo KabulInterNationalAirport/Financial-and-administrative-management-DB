@@ -49,10 +49,9 @@ class MainReportController extends Controller
      */
     public function show($id)
     {
-        $depo_report = DepoReport::find($id);
-        $fin_adm_report = FinancialAdmReport::find($id);
+        $report = FinancialAdmReport::find($id);
 
-        return view('print-report' , compact('depo_report'));
+        return view('print-report' , compact('report'));
     }
 
     /**
