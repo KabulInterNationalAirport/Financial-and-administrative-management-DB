@@ -22,6 +22,11 @@ use App\Http\Controllers\MainReportController;
 use App\Http\Controllers\TarminalEmpController;
 use App\Http\Controllers\TarminalReportController;
 use App\Http\Controllers\TotalProductDpController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\RoleController;
+use App\Http\Controllers\PermissionController;
+
+
 
 Route::group(
     [
@@ -32,7 +37,8 @@ Route::group(
 // routs of breaze
 Route::get('/', function () {
     return view('index');
-})->middleware(['auth', 'verified'])->name('/');
+});
+// })->middleware(['auth', 'verified'])->name('/');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -118,6 +124,32 @@ Route::middleware('auth')->group(function () {
 
         // this route is for main reports
         Route::resource('main-report' , MainReportController::class);
+
+        Route::group(['prefix' => 'permissions', 'as' => 'permissions.'], function () {
+            Route::get('/index',[PermissionController::class, 'index'])->name('index');
+            Route::get('/create',[PermissionController::class, 'create'])->name('create');
+            Route::post('/store',[PermissionController::class, 'store'])->name('store');
+            Route::get('/edit/{id}',[PermissionController::class, 'edit'])->name('edit');
+            Route::put('/update/{id}',[PermissionController::class, 'update'])->name('update');
+            Route::post('/destroy',[PermissionController::class, 'destroy'])->name('destroy');
+        });
+        Route::group(['prefix' => 'roles', 'as' => 'roles.'], function () {
+            Route::get('/index',[RoleController::class, 'index'])->name('index');
+            Route::get('/create',[RoleController::class, 'create'])->name('create');
+            Route::post('/store',[RoleController::class, 'store'])->name('store');
+            Route::get('/edit/{id}',[RoleController::class, 'edit'])->name('edit');
+            Route::put('/update/{id}',[RoleController::class, 'update'])->name('update');
+            Route::post('/destroy',[RoleController::class, 'destroy'])->name('destroy');
+        });
+        Route::group(['prefix' => 'users', 'as' => 'users.'], function () {
+            Route::get('/index',[UserController::class, 'index'])->name('index');
+            Route::get('/create',[UserController::class, 'create'])->name('create');
+            Route::post('/store',[UserController::class, 'store'])->name('store');
+            Route::get('/show/{id}',[UserController::class, 'show'])->name('show');
+            Route::get('/edit/{id}',[UserController::class, 'edit'])->name('edit');
+            Route::put('/update/{id}',[UserController::class, 'update'])->name('update');
+            Route::post('/destroy',[UserController::class, 'destroy'])->name('destroy');
+        });
 
 
 
