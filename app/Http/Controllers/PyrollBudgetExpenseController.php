@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ExpenseCode;
+use App\Models\ProjectCode;
+use App\Models\PyrollBudgetExpense;
 use Illuminate\Http\Request;
 
 class PyrollBudgetExpenseController extends Controller
@@ -13,7 +16,8 @@ class PyrollBudgetExpenseController extends Controller
      */
     public function index()
     {
-        //
+        $budgets = PyrollBudgetExpense::all();
+        return view('financial-administrative-directorate.payroll-management.expenses.expenses-list', compact('budgets'));
     }
 
     /**
@@ -23,7 +27,9 @@ class PyrollBudgetExpenseController extends Controller
      */
     public function create()
     {
-        //
+        $codes = ProjectCode::all();
+        $e_codes = ExpenseCode::all();
+        return view('financial-administrative-directorate.payroll-management.expenses.add-expense' , compact('codes' , 'e_codes'));
     }
 
     /**
@@ -34,7 +40,44 @@ class PyrollBudgetExpenseController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $item = new PyrollBudgetExpense;
+        $code = ProjectCode::find($request->project_codes_id);
+        $e_code = ExpenseCode::find($request->expense_codes_id);
+        $item->received_type = $request->type;
+        $item->amount = $request->amount;
+        $item->year = $request->year;
+        $item->month = $request->month;
+        $item->based_on = $request->based_on;
+        $item->number = $request->number;
+        $item->date= $request->date;
+        $item->project_codes_id = $request->project_codes_id;
+        $item->expense_codes_id = $request->expense_codes_id;
+        
+        $this->validate($request, [
+            'image' => 'file|image|required'
+        ]);
+        if($request->hasFile('image')){
+            $fileNameWithEx = $request->file('image')->getClientOriginalName();
+            $fielName = pathinfo($fileNameWithEx, PATHINFO_FILENAME);
+            $extesion = $request->file('image')->getClientOriginalExtension();
+            $uploadName = 'budget'. time() .'_report'.'.'.$extesion;
+            $image = $request->file('image')->storeAs('public/report',$uploadName);
+            $filetoUpload = 'storage/report/'.$uploadName;
+        }
+        else{
+            $filetoUpload = 'storage/report/def.jpg';
+        }
+        $item->file = $filetoUpload;
+
+
+        $code->remain_amount = $code->remain_amount - $request->amount;
+        $code->expense_amount = $code->expense_amount + $request->amount;
+
+        $e_code->expense_amount = $e_code->expense_amount + $request->amount;
+        $e_code->save();
+        $code->save();
+        $item->save();
+        return redirect('payroll-budget-expense');
     }
 
     /**

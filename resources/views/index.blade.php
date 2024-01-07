@@ -21,7 +21,7 @@
                                 </h5>
                             </div>
                             <div class="card-image-wrapper">
-                                <img src="{{asset('assets/images/brand/department.png')}}" class="card-img-top img-fluid" alt="...">
+                                <img src="{{asset('assets/images/brand/depp.png')}}" class="card-img-top img-fluid" alt="...">
                                 <h1 class="text-center"><a href="/payroll"
                                         class="btn btn-outline-success it1 border-bottom  font-weight-bold border-top">{{__('layout-Financial.enter')}}</a>
                                 </h1>
@@ -38,7 +38,7 @@
                                 </h5>
                             </div>
                             <div class="card-image-wrapper">
-                                <img src="{{asset('assets/images/brand/financail.png')}}" class="card-img-top img-fluid" alt="...">
+                                <img src="{{asset('assets/images/brand/illustration-vector-graphic-cart.png')}}" class="card-img-top img-fluid" alt="...">
                                 <h1 class="text-center"><a href="/financial"
                                         class="btn btn-outline-dark it2 border-bottom  font-weight-bold border-top">{{__('layout-Financial.enter')}}</a>
                                 </h1>
@@ -55,7 +55,7 @@
                                 </h5>
                             </div>
                             <div class="card-image-wrapper">
-                                <img src="{{asset('assets/images/brand/it.png')}}" width="180" height="180"
+                                <img src="{{asset('assets/images/brand/ittt.png')}}" width="180" height="180"
                                     class="card-img-top img-fluid" alt="...">
                                 <h1 class="text-center"><a href="./depo"
                                         class="btn btn-outline-orange it3 border-bottom  font-weight-bold border-top">{{__('layout-Financial.enter')}}</a>
@@ -74,7 +74,7 @@
                                 </h5>
                             </div>
                             <div class="card-image-wrapper">
-                                <img src="{{asset('assets/images/brand/technical.png')}}" class="card-img-top img-fluid" alt="...">
+                                <img src="{{asset('assets/images/brand/Ground.png')}}" class="card-img-top img-fluid" alt="...">
                                 <h1 class="text-center"><a href="/accounting"
                                         class="btn btn-outline-info it7 border-bottom  font-weight-bold border-top">{{__('layout-Financial.enter')}}</a>
                                 </h1>
@@ -91,7 +91,7 @@
                                 </h5>
                             </div>
                             <div class="card-image-wrapper">
-                                <img src="{{asset('assets/images/brand/security.png')}}" class="card-img-top img-fluid"
+                                <img src="{{asset('assets/images/brand/security1.png')}}" class="card-img-top img-fluid"
                                     alt="...">
                                 <h1 class="text-center"><a href="operational.html"
                                         class="btn btn-outline-success it8 border-bottom  font-weight-bold border-top">{{__('layout-Financial.enter')}}</a>
@@ -109,7 +109,7 @@
                                 </h5>
                             </div>
                             <div class="card-image-wrapper">
-                                <img src="{{asset('assets/images/brand/hard.png')}}" class="card-img-top img-fluid" alt="...">
+                                <img src="{{asset('assets/images/brand/opp.png')}}" class="card-img-top img-fluid" alt="...">
                                 <h1 class="text-center"><a href="department.html"
                                         class="btn btn-outline-dark it9 border-bottom  font-weight-bold border-top">{{__('layout-Financial.enter')}}</a>
                                 </h1>
@@ -127,7 +127,7 @@
                                 </h5>
                             </div>
                             <div class="card-image-wrapper">
-                                <img src="{{asset('assets/images/brand/vip.png')}}" class="card-img-top img-fluid" alt="...">
+                                <img src="{{asset('assets/images/brand/vipp.png')}}" class="card-img-top img-fluid" alt="...">
                                 <h1 class="text-center"><a href="/accounting"
                                         class="btn btn-outline-info it7 border-bottom  font-weight-bold border-top">{{__('layout-Financial.enter')}}</a>
                                 </h1>
@@ -144,7 +144,7 @@
                                 </h5>
                             </div>
                             <div class="card-image-wrapper">
-                                <img src="{{asset('assets/images/brand/operational.png')}}" class="card-img-top img-fluid"
+                                <img src="{{asset('assets/images/brand/Technical1.png')}}" class="card-img-top img-fluid"
                                     alt="...">
                                 <h1 class="text-center"><a href="operational.html"
                                         class="btn btn-outline-success it8 border-bottom  font-weight-bold border-top">{{__('layout-Financial.enter')}}</a>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\EstateOilInquiry;
 use Illuminate\Http\Request;
 
 class EstateOilInquiryController extends Controller
@@ -13,7 +14,8 @@ class EstateOilInquiryController extends Controller
      */
     public function index()
     {
-        //
+        $contracts = EstateOilInquiry::all();
+        return view('financial-administrative-directorate.property.oil-estilams.list-estilam', compact('contracts'));
     }
 
     /**

@@ -35,34 +35,37 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>12-02-2021</td>
-                                <td>
-                                    ارو پطرولیم
-                                </td>
-                                <td>
-                                  7
-                                </td>
-                                <td>
-                                10 ton
-                                </td>
-                                <td>احمد</td>
-                                <td>
-                                    <div class="">
-                                        <a href="/estilam-details" class="action-btns1" data-bs-toggle="tooltip"
-                                            data-bs-placement="top" title="د استلام کتل"><i
-                                                class="fa-solid fa-eye text-primary"></i></a>
-                                        <a href="/estilam-update" class="action-btns1" >
-                                            <i class="fa-solid fa-pen  text-success" data-bs-toggle="tooltip"
-                                                data-bs-placement="top" title="د استلام تغیر کول"></i>
-                                        </a>
-                                        <a href="/view-estilam" class="action-btns1" data-bs-toggle="tooltip"
-                                        data-bs-placement="top" title="د استلام پرینټ"><i
-                                            class="fa-solid fa-print  text-secondary"></i></a>
-                                       
-                                    </div>
-                                </td>
-                            </tr>  
+                            @foreach ($contracts as $contract)
+                                <tr>
+                                    <td>{{$contract->date}}</td>
+                                    <td>
+                                        {{$contract->}} 
+                                    </td>
+                                    <td>
+                                    7
+                                    </td>
+                                    <td>
+                                    10 ton
+                                    </td>
+                                    <td>احمد</td>
+                                    <td>
+                                        <div class="">
+                                            <a href="/estilam-details" class="action-btns1" data-bs-toggle="tooltip"
+                                                data-bs-placement="top" title="د استلام کتل"><i
+                                                    class="fa-solid fa-eye text-primary"></i></a>
+                                            <a href="/estilam-update" class="action-btns1" >
+                                                <i class="fa-solid fa-pen  text-success" data-bs-toggle="tooltip"
+                                                    data-bs-placement="top" title="د استلام تغیر کول"></i>
+                                            </a>
+                                            <a href="/view-estilam" class="action-btns1" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" title="د استلام پرینټ"><i
+                                                class="fa-solid fa-print  text-secondary"></i></a>
+                                        
+                                        </div>
+                                    </td>
+                                </tr>  
+                                
+                            @endforeach
                         </tbody>
                     </table>
                 </div>

@@ -94,7 +94,7 @@
                                 <td>{{$item->name}}</td>
                                 <td>{{$item->quantity}}</td>
                                 <td>{{$item->unit}}</td>
-                                <td>{{$item->quantity}}</td>
+                                <td>{{$item->remain_products}}</td>
                             </tr>
                             @endforeach
                         </tbody>

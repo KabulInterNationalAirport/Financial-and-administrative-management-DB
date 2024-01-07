@@ -6,8 +6,9 @@
 
             <div class="page-header d-xl-flex d-block">
                 <div class="page-leftheader">
-                    <div class="page-title" dir="rtl"><span class="font-weight-normal text-muted ms-2">{{__('layout-Financial.dashboard')}}</span>
-                        {{__('layout-Financial.depot-management')}}</div>
+                    <div class="page-title" dir="rtl"><span
+                            class="font-weight-normal text-muted ms-2">{{ __('layout-Financial.dashboard') }}</span>
+                        {{ __('layout-Financial.logistic') }}</div>
                 </div>
             </div>
             <div class="custom-container">
@@ -23,7 +24,8 @@
                                         </div>
                                     </div>
                                     <div class="col-4">
-                                        <div class="icon1 bg-success my-auto  float-end"> <i class="fa-regular fa-folder"></i> </div>
+                                        <div class="icon1 bg-success my-auto  float-end"> <i
+                                                class="fa-regular fa-folder"></i> </div>
                                     </div>
                                 </div>
                             </div>
@@ -35,13 +37,15 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-8">
-                                        <div class=" text-start"> <span class="fs-14 font-weight-semibold">نوي راغلي اجناس</span>
+                                        <div class=" text-start"> <span class="fs-14 font-weight-semibold">نوي راغلي
+                                                اجناس</span>
                                             <h3 class="">6,578</h3>
 
                                         </div>
                                     </div>
                                     <div class="col-4">
-                                        <div class="icon1 bg-success my-auto  float-end"> <i class="fa-solid fa-file-lines"></i></div>
+                                        <div class="icon1 bg-success my-auto  float-end"> <i
+                                                class="fa-solid fa-file-lines"></i></div>
                                     </div>
                                 </div>
                             </div>
@@ -53,13 +57,15 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-8">
-                                        <div class=" text-start"> <span class="fs-14 font-weight-semibold">خراپ شوي اجناس</span>
+                                        <div class=" text-start"> <span class="fs-14 font-weight-semibold">خراپ شوي
+                                                اجناس</span>
                                             <h3 class="">6,578</h3>
 
                                         </div>
                                     </div>
                                     <div class="col-4">
-                                        <div class="icon1 bg-success my-auto  float-end"> <i class="fa-solid fa-dumpster-fire"></i> </div>
+                                        <div class="icon1 bg-success my-auto  float-end"> <i
+                                                class="fa-solid fa-dumpster-fire"></i> </div>
                                     </div>
                                 </div>
                             </div>
@@ -72,7 +78,8 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-8">
-                                        <div class="text-start"> <span class="fs-14 font-weight-semibold">توزیع شوي اجناس</span>
+                                        <div class="text-start"> <span class="fs-14 font-weight-semibold">توزیع شوي
+                                                اجناس</span>
                                             <h3 class="">124</h3>
 
                                         </div>
@@ -110,13 +117,15 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-8">
-                                        <div class=" text-start"> <span class="fs-14 font-weight-semibold">باقی مانده اجناس</span>
+                                        <div class=" text-start"> <span class="fs-14 font-weight-semibold">باقی مانده
+                                                اجناس</span>
                                             <h3 class="">6,578</h3>
 
                                         </div>
                                     </div>
                                     <div class="col-4">
-                                        <div class="icon1 bg-success my-auto  float-end"><i class="fa-solid fa-basketball"></i> </div>
+                                        <div class="icon1 bg-success my-auto  float-end"><i
+                                                class="fa-solid fa-basketball"></i> </div>
                                     </div>
                                 </div>
                             </div>

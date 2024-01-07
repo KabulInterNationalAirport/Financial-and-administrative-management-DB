@@ -40,6 +40,7 @@ class DpItProductsController extends Controller
         $item->name= $request->name;
         $item->category = $request->category;
         $item->quantity = 0;
+        $item->remain_products = 0;
         $item->unit = $request->unit;
         $item->save();
         return redirect()->back();

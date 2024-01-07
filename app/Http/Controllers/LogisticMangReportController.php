@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\FinancialAdmReport;
 use Illuminate\Http\Request;
 
 class LogisticMangReportController extends Controller
@@ -13,7 +14,8 @@ class LogisticMangReportController extends Controller
      */
     public function index()
     {
-        //
+        $reports = FinancialAdmReport::all();
+        return view('financial-administrative-directorate.logistics.report' , compact('reports'));
     }
 
     /**
@@ -34,7 +36,28 @@ class LogisticMangReportController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $reprot = new FinancialAdmReport;
+        $reprot->task = $request->task;
+        $reprot->related_office = $request->office;
+        $reprot->task_details = $request->taskdetails;
+        $reprot->state = $request->state;
+        $this->validate($request, [
+            'image' => 'file|image|required'
+        ]);
+        if($request->hasFile('image')){
+            $fileNameWithEx = $request->file('image')->getClientOriginalName();
+            $fielName = pathinfo($fileNameWithEx, PATHINFO_FILENAME);
+            $extesion = $request->file('image')->getClientOriginalExtension();
+            $uploadName = 'fin_adm'. time() .'_report'.'.'.$extesion;
+            $image = $request->file('image')->storeAs('public/report',$uploadName);
+            $filetoUpload = 'storage/report/'.$uploadName;
+        }
+        else{
+            $filetoUpload = 'storage/report/def.jpg';
+        }
+        $reprot->file = $filetoUpload;
+        $reprot->save();
+        return redirect('logistic-report');
     }
 
     /**
@@ -56,7 +79,8 @@ class LogisticMangReportController extends Controller
      */
     public function edit($id)
     {
-        //
+        $report = FinancialAdmReport::find($id);
+        return view('financial-administrative-directorate.logistics.update-report', compact('report'));
     }
 
     /**
@@ -68,9 +92,30 @@ class LogisticMangReportController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
-    }
+        $report = FinancialAdmReport::find($id);
+        $report->task = $request->task;
+        $report->related_office = $request->office;
+        $report->task_details = $request->taskdetails;
+        $report->state = $request->state;
 
+        $this->validate($request, [
+            'image' => 'file|image|required'
+        ]);
+        if($request->hasFile('image')){
+            $fileNameWithEx = $request->file('image')->getClientOriginalName();
+            $fielName = pathinfo($fileNameWithEx, PATHINFO_FILENAME);
+            $extesion = $request->file('image')->getClientOriginalExtension();
+            $uploadName = 'fin_adm'. time() .'_report'.'.'.$extesion;
+            $image = $request->file('image')->storeAs('public/report',$uploadName);
+            $filetoUpload = 'storage/report/'.$uploadName;
+        }
+        else{
+            $filetoUpload = 'storage/report/def.jpg';
+        }
+        $report->file = $filetoUpload;
+        $report->save();
+        return redirect('logistic-report');
+    }
     /**
      * Remove the specified resource from storage.
      *

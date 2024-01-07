@@ -66,12 +66,14 @@
                                                                 <option value="آمریت مالي و خدماتي">آمریت مالي و خدماتي</option>
                                                                 <option value="مدیریت ډیپو">مدیریت ډیپو</option>
                                                                 <option value="مدیریت املاک">مدیریت املاک</option>
-                                                                <option value="مدیریت مالي و اداري">مدیریت مالي و اداري</option>
-                                                                <option value="مدیریت تخلیه تیل">مدیریت تخلیه تیل</option>
+                                                                <option value="مدیریت مالی و اداری">مدیریت مالي و اداري</option>
                                                                 <option value="مدیریت ترمینل">مدیریت ترمینل</option>
                                                                 <option value="مدیریت معاشات">مدیریت معاشات</option>
                                                                 <option value="مدیریت تدارکات">مدیریت تدارکات</option>
                                                                 <option value="مدیریت محاسبی جنسی">مدیریت محاسبی جنسی</option>
+                                                                <option value="مدیریت تخلیه تیل">مدیریت تخلیه تیل</option>
+                                                                <option value="مدیریت حفظ مراقبت">مدیریت حفظ مراقبت</option>
+                                                                <option value="مدیریت مامورین">مدیریت مامورین</option>
                                                             </select>
                                                         </div>
                                                     </div>

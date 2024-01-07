@@ -26,7 +26,7 @@ return [
     'general-staff' => 'تشکیل عمومي ریاست',
     'references' => 'حواله جات',
     'badget' => 'بودیجه',
-    'code' => 'کودها',
+    'project-code' => 'کودهای پروژه',
     'management-of-terminals' => 'مدیریت ترمینل ها',
     'car' => 'موترها',
     'kabul-airport' => 'میدان هوايي بین المللي کابل',
@@ -44,4 +44,15 @@ return [
     'commodity-accounting' => 'محاسبی جنسی',
     'tech' => 'اجناس تخنیکي',
     'distributed-car-commodities' => 'لیست موترها',
+    'logistic' => 'مدیریت تدارکات',
+    'oil-discharge' => 'تخلیه تیل',
+    'financial-adm-mang' => 'مالی و اداری',
+    'save-care' => 'حفظ و مراقبت',
+    'attendance' => 'مدیریت مامورین', 
+    'expense-code' => 'کود های مصارف' ,
+    'payroll-budgets' => 'بودیجه عمومي',
+    'save-and-care' => 'حفظ و مراقبت',
+    'financial-administrative' => 'مالي و اداری',
+    'officers-mang' => 'مدیریت مامورین'
+    
 ];

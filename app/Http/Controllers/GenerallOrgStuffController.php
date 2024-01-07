@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\GenerallOrgStuff;
 use Illuminate\Http\Request;
 
 class GenerallOrgStuffController extends Controller
@@ -13,7 +14,8 @@ class GenerallOrgStuffController extends Controller
      */
     public function index()
     {
-        //
+        $stuffs = GenerallOrgStuff::all();
+        return view('financial-administrative-directorate.payroll-management.general-staff-composition.staff-list',compact('stuffs'));
     }
 
     /**
@@ -34,7 +36,12 @@ class GenerallOrgStuffController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $stuff = new GenerallOrgStuff;
+        $stuff->position_no = $request->position;
+        $stuff->quantity = $request->quantity;
+        $stuff->salary = $request->salary;
+        $stuff->save();
+        return redirect()->back();
     }
 
     /**

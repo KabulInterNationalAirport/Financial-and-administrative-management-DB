@@ -44,7 +44,7 @@
                                 <th>{{ __('employee.related-office') }}</th>
                                 <th>{{ __('depo/delivered-products.offer-date') }}</th>
                                 <th>{{ __('depo/delivered-products.delivered-data') }}</th>
-                                <th>{{ __('employee.actions') }}</th>
+                                {{-- <th>{{ __('employee.actions') }}</th> --}}
                             </tr>
                         </thead>
                         <tbody>
@@ -66,11 +66,11 @@
                                 <td>{{$item->order_office}}</td>
                                 <td>{{$item->order_date}}</td>
                                 <td>{{$item->delivered_date}}</td>
-                                <td>
+                                {{-- <td>
                                     <a class="btn btn-outline-primary  btn-sm" href="/uuu">
                                         {{ __('depo/employees.edit') }}
                                     </a>
-                                </td>
+                                </td> --}}
                             </tr>
                             @endforeach
                         </tbody>

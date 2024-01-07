@@ -33,6 +33,12 @@ return [
     'famale' => 'ښځه',
     'single' => 'مجرد' ,
     'married' => 'متحیل',
-    'update-employee' => 'د کارمند تغیرات'
+    'update-employee' => 'د کارمند تغیرات',
+    'appointed-employees' => 'مقرر شوي کارمندان', 
+    'salary' => 'معاش',
+    'sickness' => 'مریضی',
+    'important' => 'ضروری',
+    'picnic' => 'تفریحی',
+    'balance' => 'د کارمند بیلانس'
     
 ];

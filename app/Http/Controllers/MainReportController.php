@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\DepoReport;
 use App\Models\FinancialAdmReport;
 use Illuminate\Http\Request;
 
@@ -15,9 +14,8 @@ class MainReportController extends Controller
      */
     public function index()
     {
-        $depo_reports = DepoReport::all();
         $fin_adm_reports = FinancialAdmReport::all();
-        return view('report' , compact('depo_reports' , 'fin_adm_reports'));
+        return view('report' , compact('fin_adm_reports'));
     }
 
     /**

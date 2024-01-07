@@ -38,12 +38,7 @@
 
                                 <div class="form-group">
                                     <div class="row">
-                                        <div class="col-md-6">
-                                            <label class="form-label ">{{ __('financial/contract.start-date') }}</label>
-                                            <input type="text" name="date" id="date" class="form-control fc-datepicker"
-                                                placeholder="DD-MM-YYY">
-                                        </div>
-                                        <div class="col-md-6">
+                                        <div class="col-md-12">
                                             <label for="details"
                                                 class="col-form-label">{{ __('depo/report.related-images') }}:</label>
                                             <input type="file" src="" name="image" class="form-control"

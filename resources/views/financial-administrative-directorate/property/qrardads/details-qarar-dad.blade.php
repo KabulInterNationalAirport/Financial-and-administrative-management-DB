@@ -24,7 +24,7 @@
                                             </td>
                                             <td>:</td>
                                             <td>
-                                                <span class="font-weight-semibold">6</span>
+                                                <span class="font-weight-semibold">{{$contract->contract_no}}</span>
                                             </td>
                                         </tr>
                                         <tr>
@@ -33,7 +33,7 @@
                                             </td>
                                             <td>:</td>
                                             <td>
-                                                <span class="font-weight-semibold">لابراتوار جوړول</span>
+                                                <span class="font-weight-semibold">{{$contract->contract}}</span>
                                             </td>
                                         </tr>
                                         <tr>
@@ -42,7 +42,7 @@
                                             </td>
                                             <td>:</td>
                                             <td>
-                                                <span class="font-weight-semibold">د کرونا او PCR ټیست</span>
+                                                <span class="font-weight-semibold">{{$contract->contract_reason}}</span>
                                             </td>
                                         </tr>
                                         <tr>
@@ -51,7 +51,7 @@
                                             </td>
                                             <td>:</td>
                                             <td>
-                                                <span class="font-weight-semibold">بین المللی ترمینل غرب طرق</span>
+                                                <span class="font-weight-semibold">{{$contract->location}}</span>
                                             </td>
                                         </tr>
                                         <tr>
@@ -60,7 +60,7 @@
                                             </td>
                                             <td>:</td>
                                             <td>
-                                                <span class="font-weight-semibold">۲۲۰ متره مربع</span>
+                                                <span class="font-weight-semibold">{{$contract->area_mm}}</span>
                                             </td>
                                         </tr>
                                         <tr>
@@ -69,7 +69,7 @@
                                             </td>
                                             <td>:</td>
                                             <td>
-                                                <span class="font-weight-semibold">بیوتیک ۱ لابراتوار</span>
+                                                <span class="font-weight-semibold">{{$contract->company}}</span>
                                             </td>
                                         </tr>
                                         <tr>
@@ -78,7 +78,7 @@
                                             </td>
                                             <td>:</td>
                                             <td>
-                                                <span class="font-weight-semibold">۰۷۹۰۱۶۱۶۰۰</span>
+                                                <span class="font-weight-semibold">{{$contract->executer_num}}</span>
                                             </td>
                                         </tr>
                                         <tr>
@@ -87,7 +87,7 @@
                                             </td>
                                             <td>:</td>
                                             <td>
-                                                <span class="font-weight-semibold">16-06-2021</span>
+                                                <span class="font-weight-semibold">{{$contract->start_date}}</span>
                                             </td>
                                         </tr>
                                         <tr>
@@ -96,7 +96,7 @@
                                             </td>
                                             <td>:</td>
                                             <td>
-                                                <span class="font-weight-semibold">16-06-2021</span>
+                                                <span class="font-weight-semibold">{{$contract->end_date}}</span>
                                             </td>
                                         </tr>
                                         <tr>
@@ -105,7 +105,7 @@
                                             </td>
                                             <td>:</td>
                                             <td>
-                                                <span class="font-weight-semibold badge badge-success">تکمیل</span>
+                                                <span class="font-weight-semibold badge badge-success">{{$contract->state}}</span>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -122,34 +122,7 @@
                             <div class="tab-pane active">
                                 <div class="card-body" style="height: 600px">
                                     <h5 class=" font-weight-semibold mt-3 mb-3">{{__('financial/contract.description')}}</h5>
-                                    <p>At vero eos the moment, so blinded by and equal blame belongs to those who fail in
-                                        their duty through weakness et accusamus et iusto odio dignissimos ducimus qui
-                                        blanditiis praesentium voluptatum deleniti atcorrupti quos dolores et quas molestias
-                                        excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui
-                                        officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
-                                    <p>On the other hand, we denounce with Lorem ipsum dolor sit amet, consectetur
-                                        adipiscing elit righteous indignation and dislike men who are so beguiled and
-                                        demoraliz the charms of pleasure of the moment, so blinded by and equal blame
-                                        belongs to those who fail in their duty through weakness of will, which is the same
-                                        as saying through shrinking from toil and pain.</p>
-                                    <p>On the other hand, we denounce with Lorem ipsum dolor sit amet, consectetur
-                                        adipiscing elit righteous indignation and dislike men who are so beguiled and
-                                        demoraliz the charms of pleasure of the moment, so blinded by and equal blame
-                                        belongs to those who fail in their duty through weakness of will, which is the same
-                                        as saying through shrinking from toil and pain.</p>
-                                    <p>On the other hand, we denounce with Lorem ipsum dolor sit amet,
-                                        consectetur adipiscing elit righteous indignation and dislike men who are so
-                                        beguiled and demoraliz the charms of pleasure of the moment, so blinded by and equal
-                                        blame belongs to those who fail in their duty through weakness of will, which is the
-                                        same as saying through shrinking from toil and pain.</p>
-                                    <ul class="project-description">
-                                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-                                        <li>At vero eos et accusamus et iusto odio dignissimos ducimus</li>
-                                        <li>The industry's standard dummy text ever since the 1500s</li>
-                                        <li>Praesentium voluptatum deleniti atcorrupti quos dolores</li>
-                                        <li>We denounce with righteous indignation and dislike men</li>
-                                    </ul>
-
+                                    <p>{{$contract->contract_details}}</p>
                                 </div>
                             </div>
                         </div>

@@ -38,7 +38,7 @@ class CamItProDeliveredController extends Controller
     public function store(Request $request)
     {
         $total_product = TotalProductDp::find($request->product);
-        $total_product->quantity = $total_product->quantity - $request->quantity;
+        $total_product->remain_products = $total_product->remain_products - $request->quantity;
         $item = new CamItProDelivered();
         $item->name = $request->name;
         $item->category = $request->category;
