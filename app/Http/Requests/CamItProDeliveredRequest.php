@@ -13,7 +13,7 @@ class CamItProDeliveredRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true; // Set this to true if you want to authorize the request
     }
 
     /**
@@ -24,7 +24,22 @@ class CamItProDeliveredRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => 'required|string|max:255',
+            'category' => 'required|string|max:255',
+            'quantity' => 'required|integer',
+            'unit' => 'required|string|max:255',
+            'price' => 'required|numeric',
+            'serial_no' => 'required|string|max:255',
+            'ram' => 'required|string|max:255',
+            'hd' => 'required|string|max:255',
+            'based_on' => 'required|string|max:255',
+            'order_office' => 'required|string|max:255',
+            'order_date' => 'required|string|max:20',
+            'delivered_date' => 'required|string|max:20',
+            'file' => 'required|file|mimes:pdf,png,jpg,jpeg,gif',
+            'number' => 'required|string|max:255',
+            'cam_org_stuff_id' => 'required|integer',
+            'total_products_id' => 'required|integer',
         ];
     }
 }

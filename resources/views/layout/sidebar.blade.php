@@ -67,6 +67,17 @@
                             <span class="side-menu__label">{{ __('layout-Financial.daily-report') }}</span><i
                                 class="angle fa fa-angle-right"></i></a>
                     </li>
+                    <li class="slide">
+										<a class="side-menu__item" data-bs-toggle="slide"  href="javascript:void(0);">
+											<i class="feather feather-airplay sidemenu_icon"></i>
+											<span class="side-menu__label">{{ __('Users Management') }}</span><i class="angle fa fa-angle-right"></i>
+										</a>
+										<ul class="slide-menu">
+										<li class="side-menu-label1"><a  href="javascript:void(0);">{{ __('all.General_Admin') }}</a></li>
+											<li><a href="{{route('users.index')}}" class="slide-item">{{ __('users') }}</a></li>
+											<li><a href="{{route('roles.index')}}" class="slide-item">{{ __('role') }}</a></li>
+											<li><a href="{{route('permissions.index')}}" class="slide-item">{{ __('permission') }}</a></li>
+										</li>	
             </div>
         </aside>
     </div>
