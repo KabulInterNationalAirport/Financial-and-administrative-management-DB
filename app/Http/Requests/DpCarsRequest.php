@@ -13,7 +13,7 @@ class DpCarsRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,16 @@ class DpCarsRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => 'required|string|max:255',
+            'model' => 'required|string|max:255',
+            'engine_no' => 'required|string|max:255',
+            'unit' => 'required|string|max:255',
+            'price' => 'required|numeric',
+            'quantity' => 'required|integer',
+            'color' => 'required|string|max:255',
+            'no_palet' => 'required|string|max:255',
+            'trustee_id' => 'required|integer',
+            'total_products_id' => 'required|integer',
         ];
     }
 }

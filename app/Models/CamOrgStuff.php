@@ -11,6 +11,14 @@ class CamOrgStuff extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'name',
+        'father_name',
+        'job_title',
+        'related_office',
+        'appointment_date',
+    ];
+
     public function DpDamagedProducts()
     {
         return $this->hasMany(DpDamagedProducts::class);

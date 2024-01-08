@@ -13,7 +13,7 @@ class DpNewArrivalsRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,18 @@ class DpNewArrivalsRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => 'required|string|max:255',
+            'category' => 'required|string|max:255',
+            'quantity' => 'required|integer',
+            'unit' => 'required|string|max:255',
+            'price' => 'required|numeric',
+            'm_7' => 'required|string|max:255',
+            'order_no' => 'required|string|max:255',
+            'date' => 'required|string|max:20',
+            'related_office' => 'required|string|max:255',
+            'taken_from' => 'required|string|max:255',
+            'trustee_id' => 'required|integer',
+            'total_products_id' => 'required|integer',
         ];
     }
 }

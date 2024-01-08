@@ -13,7 +13,7 @@ class EstateOilInquiryRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,12 @@ class EstateOilInquiryRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'company_name'=>'required|string|max:255',
+            'date' => 'required|string:max:20',
+            'car_number' => 'required|string|max:255',
+            'oil_total_volume' => 'required|numeric',
+            'follow_person' => 'required|string|max:255',
+            'inquiry_img' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
         ];
     }
 }

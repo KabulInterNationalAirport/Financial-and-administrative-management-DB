@@ -13,7 +13,7 @@ class TrusteeDpRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,14 @@ class TrusteeDpRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => 'required|string|max:255',
+            'last_name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'related_office' => 'required|string|max:255',
+            'job_title' => 'required|string|max:255',
+            'id_card' => 'required|string|max:255',
+            'phone' => 'required|numeric|max:14',
+            'address' => 'required|string|max:255',
         ];
     }
 }

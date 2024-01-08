@@ -13,7 +13,7 @@ class GenerallOrgStuffRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,9 @@ class GenerallOrgStuffRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'position_no' => 'required|string|max:255',
+            'quantity' => 'required|integer|min:1',
+            'salary' => 'required|numeric|min:0',
         ];
     }
 }

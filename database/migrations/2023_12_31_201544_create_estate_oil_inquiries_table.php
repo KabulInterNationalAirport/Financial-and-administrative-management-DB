@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('estate_oil_inquiries', function (Blueprint $table) {
             $table->id();
+            $table->string('company_name');
             $table->string('date');
             $table->string('car_numebr');
             $table->string('oil_total_valume');

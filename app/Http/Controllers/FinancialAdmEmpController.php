@@ -37,7 +37,7 @@ class FinancialAdmEmpController extends Controller
      */
     public function store(Request $request)
     {
-        if($request->job_title == 'trustee' || $request->job_title == 'معتمید')
+        if($request->job_title == 'trustee' || $request->job_title == 'معتمد')
         {
             $trustee = new TrusteeDp;
             $trustee->name = $request->name;

@@ -13,7 +13,7 @@ class DpDamagedProductsRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,15 @@ class DpDamagedProductsRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => 'required|string|max:255',
+            'category' => 'required|string|max:255',
+            'quantity' => 'required|integer',
+            'unit' => 'required|string|max:255',
+            'price' => 'required|numeric',
+            'delivered_emp' => 'required|string|max:255',
+            'related_office' => 'required|string|max:255',
+            'trustee_id' => 'required|integer',
+            'cam_org_stuff_id' => 'required|integer',
         ];
     }
 }

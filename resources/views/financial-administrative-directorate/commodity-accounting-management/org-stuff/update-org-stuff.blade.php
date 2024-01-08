@@ -1,4 +1,4 @@
-@extends('financial-administrative-directorate.depo.layout.master')
+@extends('financial-administrative-directorate.commodity-accounting-management.layout.master')
 @section('contents')
     <div class="page">
         <div class="page-main">
@@ -34,6 +34,9 @@
                                                         <div class="col-md-9">
                                                             <input type="text" name="name" value="{{$employee->name}}" class="form-control mb-md-0 mb-5"
                                                                 placeholder="{{__('depo/employees.name')}}">
+                                                                @error('name')
+                                                                <p class="alert-sm alert-danger ps-1"  role="alert">{{ $message }}</p>
+                                                                @enderror
                                                             <span class="text-muted"></span>
                                                         </div>
                                                     </div>
@@ -45,6 +48,9 @@
                                                         </div>
                                                         <div class="col-md-9">
                                                             <input type="text" name="father_name" value="{{$employee->father_name}}" class="form-control" placeholder="{{__('depo/employees.father-name')}}">
+                                                            @error('father_name')
+                                                                <p class="alert-sm alert-danger ps-1"  role="alert">{{ $message }}</p>
+                                                                @enderror
                                                         </div>
                                                     </div>
                                                 </div>
@@ -56,6 +62,12 @@
                                                         </div>
                                                         <div class="col-md-9">
                                                             <input type="text" name="job_title" value="{{$employee->job_title}}" class="form-control" placeholder="{{__('depo/employees.job-title')}}">
+                                                            @error('job_title')
+                                                                <p class="alert-sm alert-danger ps-1"  role="alert">{{ $message }}</p>
+                                                                @enderror
+                                                        </div>
+                                                        <div class="col-md-9">
+                                                            <input type="hidden" name="appointment_date" value="{{$employee->appointment_date}}" class="form-control" placeholder="{{__('depo/employees.job-title')}}">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -67,12 +79,15 @@
                                                         <div class="col-md-9">
                                                             <input type="text" name="related_office" value="{{$employee->related_office}}" class="form-control"
                                                                 placeholder="{{__('depo/employees.related-office')}}">
+                                                                @error('related_office')
+                                                                <p class="alert-sm alert-danger ps-1"  role="alert">{{ $message }}</p>
+                                                                @enderror
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="card-footer text-end">
                                                     <button type="submit" class="btn btn-primary">{{__('depo/all-products.submit')}}</button>
-                                                    <button type="" class="btn btn-danger">{{__('depo/all-products.cancel')}}</button>
+                                                    <a href="{{url()->previous()}}" class="btn btn-danger">{{__('depo/all-products.cancel')}}</a>
                                                 </div>
                                             </form>
                                         </div>

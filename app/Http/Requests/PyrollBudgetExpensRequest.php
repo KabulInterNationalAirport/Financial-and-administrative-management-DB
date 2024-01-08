@@ -13,7 +13,7 @@ class PyrollBudgetExpensRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,15 @@ class PyrollBudgetExpensRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'year' => 'required|integer', 
+            'month' => 'required|integer|between:1,12',
+            'amount' => 'required|numeric|min:0',
+            'based_on' => 'required|string|max:255',
+            'number' => 'numeric|min:0',
+            'received_type' => 'required|string|max:255',
+            'date' => 'required|string|max:20',
+            'project_codes_id' => 'required|integer|exists:project_codes,id',
+            'expense_codes_id' => 'required|integer|exists:expense_codes,id',
         ];
     }
 }

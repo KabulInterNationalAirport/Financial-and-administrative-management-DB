@@ -20,6 +20,8 @@ return new class extends Migration
             $table->string('status');
             $table->unsignedBigInteger("ECommercialArea_id");
             $table->foreign("ECommercialArea_id")->references("id")->on("estate_commercial_areas")->onDelete("cascade");
+            $table->timestamps();
+
            
         });
     }

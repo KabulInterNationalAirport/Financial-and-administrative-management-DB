@@ -13,7 +13,7 @@ class ProjectCodeRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,11 @@ class ProjectCodeRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'code' => 'required|numeric|min:0',
+            'unit' => 'required|string|max:255',
+            'amount' => 'required|numeric|min:0',
+            'remain_amount' => 'required|numeric|min:0',
+            'expense_amount' => 'required|numeric|min:0',
         ];
     }
 }

@@ -13,7 +13,7 @@ class EstateCommercialAriaRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,16 @@ class EstateCommercialAriaRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'contract_person' => 'required|string|max:255',
+            'monthly_rent' => 'required|numeric',
+            'area_mm' => 'required|string|max:255',
+            'location' => 'required|string|max:255',
+            'start_date' => 'required|string|max:20',
+            'end_date' => 'required|string|max:20',
+            'contract_details' => 'required|string',
+            'activity_form' => 'required|string|max:255',
+            'state' => 'required|string|max:50',
+            'contract_img' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
         ];
     }
 }

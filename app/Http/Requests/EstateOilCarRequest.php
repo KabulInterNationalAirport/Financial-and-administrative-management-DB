@@ -13,7 +13,7 @@ class EstateOilCarRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,13 @@ class EstateOilCarRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'driver' => 'required|string|max:255',
+            'father_name' => 'required|string|max:255',
+            'id_card' => 'required|string|max:255',
+            'vehicale_no' => 'required|string|max:255',
+            'oil_total_valume' => 'required|numeric',
+            'estate_oil_storages_id' => 'required|integer',
+            'estate_oil_inquiries_id' => 'required|integer',
         ];
     }
 }

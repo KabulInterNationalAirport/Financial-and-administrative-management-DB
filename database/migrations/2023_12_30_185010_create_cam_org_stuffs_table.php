@@ -20,7 +20,6 @@ return new class extends Migration
             $table->string("related_office");
             $table->string('job_title');
             $table->string("appointment_date");
-            $table->string("address")->nullable();
             $table->timestamps();
         });
     }

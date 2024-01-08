@@ -13,7 +13,7 @@ class OfficersBalanceRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,12 @@ class OfficersBalanceRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'balance_name' => 'required|string|max:255',
+            'total_days' => 'required|numeric|min:0',
+            'remain_days' => 'required|numeric|min:0',
+            'used_days' => 'required|numeric|min:0',
+            'officers_appointed_emps_id' => 'required|array',
+            'officers_appointed_emps_id.*' => 'required|integer|min:1',
         ];
     }
 }

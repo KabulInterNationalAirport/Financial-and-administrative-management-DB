@@ -13,7 +13,7 @@ class ECAriaRentRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,10 @@ class ECAriaRentRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'date'=>'required|string|max:20',
+            'month'=>'required|string:max:20',
+            'status'=>'required|string:max:50',
+            'ECommercialArea_id'=>'required|integer',
         ];
     }
 }

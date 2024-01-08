@@ -24,6 +24,8 @@ return new class extends Migration
             $table->foreign("estate_oil_storages_id")->references("id")->on("estate_oil_storages")->onDelete("cascade");
             $table->unsignedBigInteger("estate_oil_inquiries_id");
             $table->foreign("estate_oil_inquiries_id")->references("id")->on("estate_oil_inquiries")->onDelete("cascade");
+            $table->timestamps();
+
         });
     }
 

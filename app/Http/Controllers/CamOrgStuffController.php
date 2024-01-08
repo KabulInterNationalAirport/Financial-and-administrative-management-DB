@@ -7,6 +7,7 @@ use App\Models\CamDeliveredProducts;
 use App\Models\CamItProDelivered;
 use App\Models\CamOrgStuff;
 use Illuminate\Http\Request;
+use App\Http\Requests\CamOrgStuffRequest;
 
 class CamOrgStuffController extends Controller
 {
@@ -37,15 +38,20 @@ class CamOrgStuffController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        $stuff = new CamOrgStuff;
-        $stuff->name = $request->name;
-        $stuff->father_name = $request->father_name;
-        $stuff->job_title = $request->job_title;
-        $stuff->related_office = $request->related_office;
-        $stuff->appointment_date = $request->input('date');
-        $stuff->save();
+    public function store(CamOrgStuffRequest $request)
+    {       
+        $validatedData = $request->validated();
+
+        CamOrgStuff::create([
+            'name' => $validatedData['name'],
+            'father_name' => $validatedData['father_name'],
+            'job_title' => $validatedData['job_title'],
+            'related_office' => $validatedData['related_office'],
+            'appointment_date' => $validatedData['appointment_date'],
+
+
+        ]);
+    
         return redirect('commodity-org-stuff');
     }
 
@@ -83,13 +89,15 @@ class CamOrgStuffController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(CamOrgStuffRequest $request, $id)
     {
+        $validatedData = $request->validated();
         $employee = CamOrgStuff::find($id);
-        $employee->name = $request->name;
-        $employee->father_name = $request->father_name;
-        $employee->job_title = $request->job_title;
-        $employee->related_office = $request->related_office;
+        $employee->name = $validatedData['name'];
+        $employee->father_name = $validatedData['father_name'];
+        $employee->job_title = $validatedData['job_title'];
+        $employee->related_office = $validatedData['related_office'];
+        $employee->appointment_date = $validatedData['appointment_date'];
         $employee->save();
         return redirect('commodity-org-stuff');
     }

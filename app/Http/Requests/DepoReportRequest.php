@@ -13,7 +13,7 @@ class DepoReportRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true; // Set this to true if you want to authorize the request
     }
 
     /**
@@ -24,7 +24,11 @@ class DepoReportRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'task' => 'required|string|max:255',
+            'task_details' => 'required|string',
+            'related_office' => 'required|string|max:255',
+            'state' => 'required|string|max:255',
+            'file' => 'required|file|mimes:pdf,png,jpg,jpeg,gif',
         ];
     }
 }

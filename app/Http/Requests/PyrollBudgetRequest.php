@@ -13,7 +13,7 @@ class PyrollBudgetRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,13 @@ class PyrollBudgetRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'year' => 'required|integer',
+            'month' => 'required|integer|between:1,12',
+            'budget_type' => 'required|string|max:255',
+            'budget_name' => 'required|string|max:255',
+            'amount' => 'required|numeric|min:0',
+            'date' => 'required|string|max:20',
+            'project_codes_id' => 'required|integer|exists:project_codes,id',
         ];
     }
 }
