@@ -47,7 +47,7 @@
                                     </table>
 
                                 </div>
-                                <form action="{{ url('balance/'.$idd->id) }}" method="POST" enctype="multipart/form-data">
+                                <form action="{{ url('balance/' . $idd->id) }}" method="POST" enctype="multipart/form-data">
                                     @method('PATCH')
                                     @csrf
                                     <div class="tab-content">
@@ -69,7 +69,7 @@
                                                 <div class="card-footer text-end">
                                                     <button type="submit"
                                                         class="btn btn-primary">{{ __('depo/all-products.submit') }}</button>
-                                                    <a href="{{url()->previous()}}"
+                                                    <a href="{{ url()->previous() }}"
                                                         class="btn btn-danger">{{ __('depo/all-products.cancel') }}</a>
                                                 </div>
                                             </div>

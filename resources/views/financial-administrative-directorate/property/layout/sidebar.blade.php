@@ -23,19 +23,19 @@
 
                     </li>
                     <li class="slide">
-                        <a class="side-menu__item" data-bs-toggle="slide" href="/revenue">
+                        <a class="side-menu__item" data-bs-toggle="slide" href="/estate-commircial-areas">
                             <i class="fa-solid fa-people-roof sidemenu_icon"></i>
                             <span class="side-menu__label">{{__('layout-Financial.commercial-areas')}}</span><i class="angle fa fa-angle-right"></i></a>
 
                     </li>
                     <li class="slide">
-                        <a class="side-menu__item" data-bs-toggle="slide" href="/cars-list">
+                        <a class="side-menu__item" data-bs-toggle="slide" href="/estate-oil-cars">
                             <i class="fa-solid fa-truck-moving sidemenu_icon"></i>
                             <span class="side-menu__label">{{__('layout-Financial.oil-cars')}}</span><i class="angle fa fa-angle-right"></i></a>
 
                     </li>
                     <li class="slide">
-                        <a class="side-menu__item" data-bs-toggle="slide" href="/oil-company">
+                        <a class="side-menu__item" data-bs-toggle="slide" href="/estate-oil-storage">
                             <i class="fa-solid fa-gas-pump sidemenu_icon"></i>
                             <span class="side-menu__label">{{__('layout-Financial.oil-companies')}}</span><i class="angle fa fa-angle-right"></i></a>
 

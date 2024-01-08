@@ -53,6 +53,7 @@ return [
     'payroll-budgets' => 'بودیجه عمومي',
     'save-and-care' => 'حفظ و مراقبت',
     'financial-administrative' => 'مالي و اداری',
-    'officers-mang' => 'مدیریت مامورین'
+    'officers-mang' => 'مدیریت مامورین',
+    'employee-bilance' => 'بیلانس کارمندا'
     
 ];

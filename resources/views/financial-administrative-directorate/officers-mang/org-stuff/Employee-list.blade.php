@@ -120,7 +120,7 @@
                                                             Details
                                                         </a> --}}
                                                         <form action="{{ url('balance/' . $employee->id . '/edit') }}">
-                                                            <button type="submit"
+                                                            <button id="bilance" type="submit"
                                                                 class="btn btn-outline-success btn-sm ms-1">create
                                                                 balance</button>
                                                         </form>

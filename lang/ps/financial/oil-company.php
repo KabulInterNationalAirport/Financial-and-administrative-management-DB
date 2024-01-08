@@ -13,4 +13,7 @@ return [
     'contract-images' => 'د قرارداد انځورونه',
     'company-details' => 'د کمپنۍ معلومات' ,
     'update-company' => 'د کمپنۍ آپډېټ کول',
+    'remain-valume' => 'پاتي تیل',
+    'total-valume' => 'مجموعه مقدار تیل',
+    'location' => 'موقیعت'
 ];

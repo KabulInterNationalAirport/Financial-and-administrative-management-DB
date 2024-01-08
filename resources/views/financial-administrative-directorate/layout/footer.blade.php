@@ -92,6 +92,11 @@
 
  <!-- SWITCHER JS -->
  <script src="{{asset('assets/switcher/js/switcher.js')}}"></script>
+ <script>
+    document.getElementById("bilance").addEventListener("click", function() {
+        this.disabled = true;
+    });
+</script>
 
  </body>
 

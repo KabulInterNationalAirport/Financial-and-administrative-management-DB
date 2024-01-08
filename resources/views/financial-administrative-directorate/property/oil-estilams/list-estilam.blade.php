@@ -7,7 +7,7 @@
                 <div class="page-title">{{__('financial/estilam.estilam-list')}}</div>
                 <div class="page-rightheader header ms-md-auto">
                     <div class="d-flex align-items-end flex-wrap my-auto end-content breadcrumb-end">
-                        <a href="/add-estilam"class="btn btn-primary " >{{__('financial/estilam.add-new')}}<i class="fa-solid fa-plus"></i></a>
+                        <a href="{{route('estate-oil-inquery.create')}}"class="btn btn-primary " >{{__('financial/estilam.add-new')}}<i class="fa-solid fa-plus"></i></a>
                     </div>
                 </div>
             </div>
@@ -39,25 +39,22 @@
                                 <tr>
                                     <td>{{$contract->date}}</td>
                                     <td>
-                                        {{$contract->}} 
+                                        {{$contract->company_name}} 
                                     </td>
                                     <td>
-                                    7
+                                        {{$contract->car_numebr}}
                                     </td>
                                     <td>
-                                    10 ton
+                                        {{$contract->oil_total_valume}}
                                     </td>
-                                    <td>احمد</td>
+                                    <td>{{$contract->follow_person}}</td>
                                     <td>
                                         <div class="">
-                                            <a href="/estilam-details" class="action-btns1" data-bs-toggle="tooltip"
-                                                data-bs-placement="top" title="د استلام کتل"><i
-                                                    class="fa-solid fa-eye text-primary"></i></a>
-                                            <a href="/estilam-update" class="action-btns1" >
+                                            <a href="{{url('estate-oil-inquery/'.$contract->id.'/edit')}}" class="action-btns1" >
                                                 <i class="fa-solid fa-pen  text-success" data-bs-toggle="tooltip"
                                                     data-bs-placement="top" title="د استلام تغیر کول"></i>
                                             </a>
-                                            <a href="/view-estilam" class="action-btns1" data-bs-toggle="tooltip"
+                                            <a href="{{url('estate-oil-inquery/'.$contract->id)}}" class="action-btns1" data-bs-toggle="tooltip"
                                             data-bs-placement="top" title="د استلام پرینټ"><i
                                                 class="fa-solid fa-print  text-secondary"></i></a>
                                         

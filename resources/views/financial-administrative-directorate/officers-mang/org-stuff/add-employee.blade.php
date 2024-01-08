@@ -1,4 +1,4 @@
-@extends('financial-administrative-directorate.layout.master')
+@extends('financial-administrative-directorate.officers-mang.layout.master')
 @section('contents')
     <div class="page">
         <div class="page-main">

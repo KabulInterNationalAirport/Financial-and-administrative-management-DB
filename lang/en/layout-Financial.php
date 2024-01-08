@@ -53,7 +53,8 @@ return [
     'payroll-budgets' => 'Payroll Budget',
     'save-and-care' => 'Save and Care',
     'financial-administrative' => 'Financial-Administrative M',
-    'officers-mang' => 'Officers Management'
+    'officers-mang' => 'Officers Mang',
+    'employee-bilance' => 'Employee Bilance'
     
     
 ];

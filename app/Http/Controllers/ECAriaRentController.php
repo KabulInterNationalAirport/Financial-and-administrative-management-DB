@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ECAriaRent;
+use App\Models\EstateCommercialArea;
 use Illuminate\Http\Request;
 
 class ECAriaRentController extends Controller
@@ -34,7 +36,13 @@ class ECAriaRentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $item = new ECAriaRent;
+        $item->date = $request->date;
+        $item->month = $request->month;
+        $item->status = $request->state;
+        $item->ECommercialArea_id = $request->person;
+        $item->save();
+        return redirect('estate-commircial-areas');
     }
 
     /**
@@ -45,7 +53,8 @@ class ECAriaRentController extends Controller
      */
     public function show($id)
     {
-        //
+        $item = EstateCommercialArea::find($id);
+        return view('financial-administrative-directorate.property.revenue.rent', compact('item'));
     }
 
     /**
@@ -56,7 +65,8 @@ class ECAriaRentController extends Controller
      */
     public function edit($id)
     {
-        //
+        $item = EstateCommercialArea::find($id);
+        return view('financial-administrative-directorate.property.revenue.print-revenue', compact('item'));
     }
 
     /**

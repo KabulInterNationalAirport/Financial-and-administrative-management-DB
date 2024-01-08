@@ -3,7 +3,7 @@
     <div class="app-content main-content">
         <div class="side-app main-container">
             
-            {{-- modal for editing task and adding image to a task --}}
+            {{-- modal for getting money  --}}
             <div class="modal fade" id="addImage" tabindex="-1" aria-labelledby="addImage" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -54,13 +54,14 @@
                     </div>
                 </div>
             </div>
-            {{-- end of the modal editing --}}
+            {{-- end of the modal  --}}
+
             <!-- PAGE HEADER -->
             <div class="page-header d-xl-flex d-block">
                 <div class="page-title">{{__('financial/commercial-areas.commercial-areas-list')}}</div>
                 <div class="page-rightheader header ms-md-auto">
                     <div class="d-flex align-items-end flex-wrap my-auto end-content breadcrumb-end">
-                        <a href="/add-revenue"class="btn btn-primary " >{{__('financial/commercial-areas.add-new')}}<i class="fa-solid fa-plus"></i></a>
+                        <a href="{{route('estate-commircial-areas.create')}}"class="btn btn-primary " >{{__('financial/commercial-areas.add-new')}}<i class="fa-solid fa-plus"></i></a>
                     </div>
                 </div>
             </div>
@@ -92,37 +93,39 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>
-                                    عبدالصبور همت
-                                </td>
-                                <td>
-                                   12000  
-                                </td>
-                                <td>
-                                    ۲۲۰ 
-                                </td>
-                                <td>هوايي میدان ته څیرمه</td>
-                                <td>12-02-2021</td>
-                                <td>12-02-2021</td>
-                                <td>آمریت دفتر</td>
+                            @foreach ($items as $item)
+                                <tr>
+                                    <td>{{$item->id}}</td>
+                                    <td>
+                                        {{$item->contract_person}}
+                                    </td>
+                                    <td>
+                                        {{$item->monthly_rent}}  
+                                    </td>
+                                    <td>
+                                        {{$item->area_mm}} 
+                                    </td>
+                                    <td>{{$item->location}}</td>
+                                    <td>{{$item->start_date}}</td>
+                                    <td>{{$item->end_date}}</td>
+                                    <td>{{$item->activity_form}}</td>
+                                    
+                                    <td><span class="badge badge-success">{{$item->state}}</span></td>
+                                    <td>
+                                        <div>
+                                            <a href="{{url('estate-commircial-areas/'. $item->id)}}" class="action-btns1"  title="د قرار داد کتل"><i
+                                                    class="fa-solid fa-eye text-primary"></i></a>
+                                            <a href="{{url('estate-commircial-areas/'. $item->id.'/edit')}}" class="action-btns1" >
+                                                <i class="fa-solid fa-pen  text-success" title="د قرار داد تغیر کول"></i>
+                                            </a>
+                                            <a href="{{url('commercial-area-rent/'.$item->id.'/edit')}}" class="action-btns1" title="د قرار داد پرینټ"><i class="fa-solid fa-print  text-secondary"></i></a>
+                                            <a href="{{url('commercial-area-rent/'.$item->id)}}" class="action-btns1"  title="د کرایه ورکړه"><i class="fa-regular fa-calendar-check text-info"></i></a>
+                                        
+                                        </div>
+                                    </td>
+                                </tr>  
                                 
-                                <td><span class="badge badge-success">تکمیل</span></td>
-                                <td>
-                                    <div>
-                                        <a href="/view-revenue" class="action-btns1"  title="د قرار داد کتل"><i
-                                                class="fa-solid fa-eye text-primary"></i></a>
-                                        <a href="javascript:void(0);" class="action-btns1" >
-                                            <i class="fa-solid fa-pen  text-success" title="د قرار داد تغیر کول"></i>
-                                        </a>
-                                        <a href="/print-revenue" class="action-btns1" title="د قرار داد پرینټ"><i class="fa-solid fa-print  text-secondary"></i></a>
-                                        <a href="/print-revenue" class="action-btns1" data-bs-target="#addImage"
-                                        data-bs-toggle="modal" title="د کرایه ورکړه"><i class="fa-regular fa-calendar-check text-info"></i></a>
-                                       
-                                    </div>
-                                </td>
-                            </tr>  
+                            @endforeach
                         </tbody>
                     </table>
                 </div>

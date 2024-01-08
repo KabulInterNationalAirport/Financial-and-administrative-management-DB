@@ -8,7 +8,7 @@
             </div>
             <div class="main-proifle">
                 <div class="row col-md-12">
-                    <img src="https://www.fardadgroup.com/wp-content/uploads/2021/01/Sample-commission-contract-2.jpg" alt="">
+                    <img src="{{asset($item->contract_img)}}" alt="">
                 </div>
             </div>
            

@@ -18,9 +18,13 @@ use App\Http\Controllers\DpItProductsController;
 use App\Http\Controllers\DpNewArrivalsController;
 use App\Http\Controllers\TrusteeDpController;
 use App\Http\Controllers\DpDamagedProductsController;
+use App\Http\Controllers\ECAriaRentController;
+use App\Http\Controllers\EstateCommercialAreaController;
 use App\Http\Controllers\EstateContractController;
 use App\Http\Controllers\EstateEmpController;
+use App\Http\Controllers\EstateOilCarController;
 use App\Http\Controllers\EstateOilInquiryController;
+use App\Http\Controllers\EstateOilStorageController;
 use App\Http\Controllers\EstateReport;
 use App\Http\Controllers\EstateReportController;
 use App\Http\Controllers\ExpenseCodeController;
@@ -236,6 +240,14 @@ Route::get('/', function () {
         Route::resource('estate-contract' , EstateContractController::class);
         // real estate oil inquery routes
         Route::resource('estate-oil-inquery' , EstateOilInquiryController::class);
+        // real estate oil storage route
+        Route::resource('estate-oil-storage' , EstateOilStorageController::class);
+        // real estate oil cars routes
+        Route::resource('estate-oil-cars' ,EstateOilCarController::class);
+        // real estate commircial areas routes
+        Route::resource('estate-commircial-areas' , EstateCommercialAreaController::class);
+        // rent routes 
+        Route::resource('commercial-area-rent' , ECAriaRentController::class);
 
 
         

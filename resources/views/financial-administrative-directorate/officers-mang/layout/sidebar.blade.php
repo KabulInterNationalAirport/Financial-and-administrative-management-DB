@@ -23,7 +23,7 @@
                     <li class="slide">
                         <a class="side-menu__item" data-bs-toggle="slide" href="/officer-stuff">
                             <i class="fa-solid fa-building-user sidemenu_icon"></i>
-                            <span class="side-menu__label">{{__("layout-Financial.employees")}}</span><i class="angle fa fa-angle-right"></i></a>
+                            <span class="side-menu__label">{{__("layout-Financial.employee-bilance")}}</span><i class="angle fa fa-angle-right"></i></a>
                     </li>
             </div>
         </aside>

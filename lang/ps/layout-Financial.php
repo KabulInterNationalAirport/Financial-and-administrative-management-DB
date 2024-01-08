@@ -53,7 +53,8 @@ return [
     'payroll-budgets' => 'عمومي بودیجه',
     'save-and-care' => 'حفظ او مراقبت',
     'financial-administrative' => 'مالي او اداري',
-    'officers-mang' => 'مامورینو مدیریت'
+    'officers-mang' => 'مامورینو مدیریت',
+    'employee-bilance' => 'د کارمندانو بیلانس'
     
     
 ];
