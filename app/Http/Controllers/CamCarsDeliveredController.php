@@ -38,10 +38,11 @@ class CamCarsDeliveredController extends Controller
      */
     public function store(Request $request)
     {
-        
+        // return 'sdfsadf';
+        $item = new CamCarsDelivered;
         $total_product = TotalProductDp::find($request->product);
-        $total_product->quantity = $total_product->quantity - $request->quantity;
-        $item = new CamCarsDelivered();
+        $total_product->remain_products = $total_product->remain_products - $request->quantity;
+        
         $item->name = $request->name;
         $item->color = $request->color;
         $item->no_palet = $request->no_palet;
@@ -53,7 +54,7 @@ class CamCarsDeliveredController extends Controller
         $item->order_office = $request->offer_office;
         $item->based_on = $request->based_on;
         $item->number = $request->number;
-        $item->delivered_date = $request->delivered_date;
+        $item->delivered_date = $request->input('delivered_data');
         $item->order_date = $request->offer_date;
         $item->cam_org_stuff_id = $request->employee;
         $item->total_products_id = $request->product;

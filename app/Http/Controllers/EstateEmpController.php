@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\FinancialAdmEmp;
 use Illuminate\Http\Request;
 
 class EstateEmpController extends Controller
@@ -13,7 +14,8 @@ class EstateEmpController extends Controller
      */
     public function index()
     {
-        //
+        $employees = FinancialAdmEmp::all();
+        return view('financial-administrative-directorate.property.employee.employee-list' , compact('employees'));
     }
 
     /**
@@ -45,7 +47,8 @@ class EstateEmpController extends Controller
      */
     public function show($id)
     {
-        //
+        $employee = FinancialAdmEmp::find($id);
+        return view('financial-administrative-directorate.property.employee.view-employee', compact('employee'));
     }
 
     /**

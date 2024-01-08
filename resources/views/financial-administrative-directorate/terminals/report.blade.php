@@ -32,30 +32,32 @@
                                 </select>
                             </div>
                             <div>
-                                <label for="task-name" class="col-form-label">{{__('depo/report.task')}}:</label>
-                                <input type="text" class="form-control" id="task-name" name="task" placeholder="{{__('depo/report.task')}}">
-                            </div>
-                            <div class="">
-                                <label class="form-label ">{{ __('depo/report.date') }}</label>
-                                <input type="text" name="date" class="form-control fc-datepicker"
-                                    placeholder="DD-MM-YYY">
+                                <label for="task-name" class="col-form-label">{{ __('depo/report.task') }}:</label>
+                                <input type="text" class="form-control" id="task-name" name="task"
+                                    placeholder="{{ __('depo/report.task') }}">
                             </div>
                             <div>
-                                <label for="details" class="col-form-label">{{__('depo/report.task-details')}}:</label>
-                                <textarea name="taskdetails" class="form-control" id="details" cols="" rows="" placeholder="{{__('depo/report.task-details')}}"></textarea>
+                                <label for="details"
+                                    class="col-form-label">{{ __('depo/report.task-details') }}:</label>
+                                <textarea name="taskdetails" class="form-control" id="details" cols="" rows=""
+                                    placeholder="{{ __('depo/report.task-details') }}"></textarea>
                             </div>
                             <div class="custom-controls-stacked d-md-flex mt-3">
-                                <label class="form-label me-5">{{__('depo/report.state')}}:</label>
+                                <label class="form-label me-5">{{ __('depo/report.state') }}:</label>
                                 <label class="custom-control custom-radio success me-4">
-                                    <input type="radio" class="custom-control-input" name="state"
-                                        value="تکمیل">
-                                    <span class="custom-control-label">{{__('depo/report.complete')}}</span>
+                                    <input type="radio" class="custom-control-input" name="state" value="تکمیل">
+                                    <span class="custom-control-label">{{ __('depo/report.complete') }}</span>
                                 </label>
                                 <label class="custom-control custom-radio success">
-                                    <input type="radio" class="custom-control-input" name="state"
-                                        value="نو">
-                                    <span class="custom-control-label">{{__('depo/report.new')}}</span>
+                                    <input type="radio" class="custom-control-input" name="state" value="نو">
+                                    <span class="custom-control-label">{{ __('depo/report.new') }}</span>
                                 </label>
+                            </div>
+                            <div>
+                                <label for="details"
+                                class="col-form-label">{{ __('depo/report.related-images') }}:</label>
+                            <input type="file" src="" name="image" class="form-control"
+                                alt="" multiple>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{__('depo/all-products.cancel')}}</button>

@@ -26,7 +26,7 @@ return [
     'general-staff' => 'عمومي تشکیل',
     'references' => 'حوالې',
     'badget' => 'بودیجه',
-    'code' => 'کوډونه',
+    'project-code' => 'پروژې کوډونه',
     'management-of-terminals' => 'د ټرمینلونو مدیریت',
     'car' => 'موټرونه',
     'kabul-airport' => 'کابل نړېوال هوايي ډګر',
@@ -44,5 +44,17 @@ return [
     'commodity-accounting' => 'د توکو د محاسبې ',
     'tech' => 'تخنیکي اجناس',
     'distributed-car-commodities' => 'موټرو لیست',
+    'logistic' => 'تدارکاتو مدیریت',
+    'oil-discharge' => 'تخلیه تیل',
+    'financial-adm-mang' => 'مالي او اداري',
+    'save-care' => 'حفظ و مراقبت',
+    'attendance' => 'مامورینو مدیریت', 
+    'expense-code' => 'مصارفو کوډونه' ,
+    'payroll-budgets' => 'عمومي بودیجه',
+    'save-and-care' => 'حفظ او مراقبت',
+    'financial-administrative' => 'مالي او اداري',
+    'officers-mang' => 'مامورینو مدیریت',
+    'employee-bilance' => 'د کارمندانو بیلانس'
+    
     
 ];

@@ -40,11 +40,6 @@
                                     <input type="text" class="form-control" id="task-name" name="task"
                                         placeholder="{{ __('depo/report.task') }}">
                                 </div>
-                                <div class="">
-                                    <label class="form-label ">{{ __('depo/report.date') }}</label>
-                                    <input type="text" name="date" class="form-control fc-datepicker"
-                                        placeholder="DD-MM-YYY">
-                                </div>
                                 <div>
                                     <label for="details"
                                         class="col-form-label">{{ __('depo/report.task-details') }}:</label>
@@ -61,6 +56,12 @@
                                         <input type="radio" class="custom-control-input" name="state" value="نو">
                                         <span class="custom-control-label">{{ __('depo/report.new') }}</span>
                                     </label>
+                                </div>
+                                <div>
+                                    <label for="details"
+                                    class="col-form-label">{{ __('depo/report.related-images') }}:</label>
+                                <input type="file" src="" name="image" class="form-control"
+                                    alt="" multiple>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary"
@@ -119,7 +120,7 @@
                                                                 <td>{{ $report->related_office }}</td>
                                                                 <td>{{ $report->task }}</td>
                                                                 <td>{{ $report->task_details }}</td>
-                                                                <th>{{ $report->date }}</th>
+                                                                <th>{{ $report->created_at }}</th>
                                                                 <td>
                                                                     <span class="badge badge-primary">نا تکمله</span>
                                                                 </td>
@@ -169,7 +170,7 @@
                                                                 <td>{{ $report->related_office }}</td>
                                                                 <td>{{ $report->task }}</td>
                                                                 <td>{{ $report->task_details }}</td>
-                                                                <th>{{ $report->date }}</th>
+                                                                <th>{{ $report->updated_at }}</th>
                                                                 <td>
                                                                     <span class="badge badge-success">تکمله</span>
                                                                 </td>

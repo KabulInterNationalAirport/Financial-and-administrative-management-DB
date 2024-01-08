@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('date');
             $table->string('car_numebr');
             $table->string('oil_total_valume');
+            $table->string('company_name');
             $table->string('follow_person');
             $table->string('inquiry_img');
             $table->timestamps();

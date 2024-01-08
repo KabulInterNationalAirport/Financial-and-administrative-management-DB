@@ -44,7 +44,7 @@
                                 <th>{{ __('depo/delivered-products.offer-date') }}</th>
                                 <th>{{ __('depo/delivered-products.delivered-data') }}</th>
                                 <th>{{ __('depo/delivered-products.receiver') }}</th>
-                                <th>{{ __('employee.actions') }}</th>
+                                {{-- <th>{{ __('employee.actions') }}</th> --}}
                             </tr>
                         </thead>
                         <tbody>
@@ -66,11 +66,11 @@
                                     <td>{{ $car->order_date }}</td>
                                     <td>{{ $car->delivered_date }}</td>
                                     <td>{{ $car->cam_org_stuff_id }}</td>
-                                    <td>
+                                    {{-- <td>
                                         <a class="btn btn-outline-primary  btn-sm" href="/uuu">
                                             {{ __('depo/employees.edit') }}
                                         </a>
-                                    </td>
+                                    </td> --}}
                                 </tr>
                             @endforeach
                         </tbody>

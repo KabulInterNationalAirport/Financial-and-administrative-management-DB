@@ -13,42 +13,43 @@
                                     aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <form>
+                                <form action="{{route('estate-oil-storage.store')}}" method="POST" enctype="multipart/form-data">
+                                    @csrf
                                     <div>
                                         <label for="cagegory-name"
                                             class="col-form-label">{{ __('financial/oil-company.company-name') }}:</label>
-                                        <input type="text" class="form-control" id="cagegory-name">
+                                        <input type="text" name="company_name" class="form-control" id="cagegory-name">
                                     </div>
                                     <div>
                                         <label for="area"
                                             class="col-form-label">{{ __('financial/oil-company.area-mm') }}:</label>
-                                        <input type="text" class="form-control" id="area">
+                                        <input type="text" name="area_mm" class="form-control" id="area">
                                     </div>
                                     <div>
                                         <label for="start-date"
                                             class="col-form-label">{{ __('financial/contract.start-date') }}:</label>
-                                        <input type="text" class="form-control" id="start-date">
+                                        <input type="text" name="start_date" class="form-control" id="start-date">
                                     </div>
                                     <div>
                                         <label for="end-date"
                                             class="col-form-label">{{ __('financial/contract.end-date') }}:</label>
-                                        <input type="text" class="form-control" id="end-date">
+                                        <input type="text" name="end_date" class="form-control" id="end-date">
                                     </div>
+
                                     <div>
                                         <label for="address"
-                                            class="col-form-label">{{ __('financial/oil-company.address') }}:</label>
-                                        <input type="text" class="form-control" id="address">
+                                            class="col-form-label">{{ __('financial/oil-company.location') }}:</label>
+                                        <input type="text" name="location" class="form-control" id="address">
                                     </div>
                                     <div>
                                         <label class="form-label">{{ __('financial/contract.contract-images') }}:</label>
-                                        <input class="form-control" multiple type="file">
+                                        <input class="form-control" name="image" multiple type="file">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <a href="{{ url()->previous() }}" class="btn btn-secondary">{{ __('depo/all-products.cancel') }}</a>
+                                        <button type="submit" class="btn btn-primary">{{ __('depo/all-products.submit') }}</button>
                                     </div>
                                 </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary"
-                                    data-bs-dismiss="modal">{{ __('depo/all-products.cancel') }}</button>
-                                <button type="button" class="btn btn-primary">{{ __('depo/all-products.submit') }}</button>
                             </div>
                         </div>
                     </div>
@@ -82,45 +83,45 @@
                                     <th>{{ __('financial/oil-company.id') }}</th>
                                     <th>{{ __('financial/oil-company.company-name') }}</th>
                                     <th>{{ __('financial/oil-company.area-mm') }}</th>
+                                    <th>{{ __('financial/oil-company.location') }}</th>
                                     <th>{{ __('financial/contract.start-date') }}</th>
                                     <th>{{ __('financial/contract.end-date') }}</th>
-                                    <th> {{ __('financial/oil-company.address') }}</th>
+                                    <th>{{ __('financial/oil-company.total-valume') }}</th>
+                                    <th>{{ __('financial/oil-company.remain-valume') }}</th>
                                     <th>{{ __('depo/report.actions') }}</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <th>1</th>
-                                    <td>
-                                        ارو پطرولیم
-                                    </td>
-                                    <td>خان مامد</td>
-                                    <td>
-                                        7/9/2023
-                                    </td>
-                                    <td>
-                                        7/9/2023
-                                    </td>
-                                    <td>هوايي ډ‌ګر ته څېرمه</td>
-                                    <td>
-                                        <div class="">
-                                            <a href="/view-oil-company-qarar-dad" class="action-btns1"
-                                                data-bs-toggle="tooltip" data-bs-placement="top" title="د قرار داد کتل"><i
-                                                    class="fa-solid fa-eye text-primary"></i></a>
-                                            <a href="javascript:void(0);" class="action-btns1" data-bs-toggle="modal"
-                                                data-bs-target="#editprojectmodal">
-                                                <i class="fa-solid fa-pen  text-success" data-bs-toggle="tooltip"
-                                                    data-bs-placement="top" title="د قرار داد تغیر کول"></i>
-                                            </a>
-                                            <a href="" class="action-btns1" data-bs-toggle="modal"
-                                                data-bs-target="#editprojectmodal">
-                                                <i class="fa-solid fa-table-list  text-secondary" data-bs-toggle="tooltip"
-                                                    data-bs-placement="top" title=" جزیئات "></i>
-                                            </a>
+                                @foreach ($items as $item)
+                                        <tr>
+                                            <th>{{$item->id}}</th>
+                                            <th>{{$item->company_name}}</th>
+                                            <td>
+                                                {{$item->area_mm}} 
+                                            </td>
+                                            <td>{{$item->location}}</td>
+                                            <td>
+                                                {{$item->start_date}}
+                                            </td>
+                                            <td>
+                                                {{$item->end_date}}
+                                            </td>
+                                            <td>{{$item->oil_total_valume}}</td>
+                                            <th>{{$item->oil_remain_valume}}</th>
+                                            <td>
+                                                <div class="">
+                                                    {{-- <a href="" class="action-btns1" >
+                                                        <i class="fa-solid fa-pen  text-success"  title="د قرار داد تغیر کول"></i>
+                                                    </a> --}}
+                                                    <a href="{{url('estate-oil-storage/'.$item->id)}}" class="action-btns1" >
+                                                        <i class="fa-solid fa-print  text-secondary" title="{{__('depo/all-products.print')}}"></i>
+                                                    </a>
 
-                                        </div>
-                                    </td>
-                                </tr>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    
+                                @endforeach
                             </tbody>
                         </table>
                     </div>

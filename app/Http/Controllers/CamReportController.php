@@ -76,7 +76,6 @@ class CamReportController extends Controller
         $report->related_office = $request->office;
         $report->task_details = $request->taskdetails;
         $report->state = $request->state;
-        $report->date = $request->input('date');
 
         $this->validate($request, [
             'image' => 'file|image|required'

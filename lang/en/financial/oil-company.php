@@ -13,4 +13,7 @@ return [
     'contract-images' => 'Contract Images',
     'company-details' => 'Company Details' ,
     'update-company' => 'Update Company',
+    'remain-valume' => 'Remain Valume',
+    'total-valume' => 'Total Valume',
+    'location' => 'Location'
 ];

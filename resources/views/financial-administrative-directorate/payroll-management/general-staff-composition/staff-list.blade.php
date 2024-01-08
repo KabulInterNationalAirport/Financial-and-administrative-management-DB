@@ -18,10 +18,11 @@
                                     aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <form>
+                                <form action="{{route('org-stuff.store')}}" method="POST" enctype="multipart/form-data">
+                                    @csrf
                                     <div>
                                         <label for="position-name" class="col-form-label">د بست نوع:</label>
-                                            <select name="" class="form-control custom-select select2"
+                                            <select name="position" class="form-control custom-select select2"
                                             data-placeholder="د بست نوع">
                                             <option label="د بست نوع"></option>
                                             <option value="1">1</option>
@@ -31,15 +32,15 @@
                                     </div>
                                     <div>
                                         <label for="item-name" class="col-form-label">تعداد:</label>
-                                        <input type="number" class="form-control" id="quantity">
+                                        <input type="number" name="quantity" class="form-control" id="quantity">
                                     </div>
                                     <div>
                                         <label for="item-name" class="col-form-label">معاش:</label>
-                                        <input type="number" class="form-control" id="salary">
+                                        <input type="number" name="salary" class="form-control" id="salary">
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">بند کړۍ</button>
-                                        <button type="button" class="btn btn-primary">ذخیره کړۍ</button>
+                                        <button type="submit" class="btn btn-primary">ذخیره کړۍ</button>
                                     </div>
                                 </form>
                             </div>
@@ -71,36 +72,36 @@
                                         id="emp-attendance">
                                         <thead class="bg-info">
                                             <tr>
-                                                <th>نمبر</th>
-                                                <th>د بست نوع</th>
-                                                <th>د بست تعداد</th>
-                                                <th>معاش</th>
-                                                <th>مجموعه</th>
+                                                <th>{{__('employee.id-card')}}</th>
+                                                <th>{{__('employee.job-title')}}</th>
+                                                <th>{{__('depo/damaged-products.quantity')}}</th>
+                                                <th>{{__('employee.salary')}}</th>
+                                                <th>{{__('depo/car.total-price')}}</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-
+                                            @php
+                                                $stu = 0;
+                                            @endphp
+                                            @foreach ($stuffs as $stuff)
                                             <tr>
-                                                <td>1</td>
-                                                <td>4</td>
-                                                <td>120</td>
-                                                <td>25000</td>
-                                                <td>356674</td>
+                                                <td>{{$stuff->id}}</td>
+                                                <td>{{$stuff->position_no}}</td>
+                                                <td>{{$stuff->quantity}}</td>
+                                                <td>{{$stuff->salary}}</td>
+                                                <td>{{$stuff->salary * $stuff->quantity}}</td>
+                                                @php
+                                                    $stu = $stu + $stuff->salary * $stuff->quantity
+                                                @endphp
                                             </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>3</td>
-                                                <td>40</td>
-                                                <td>30000</td>
-                                                <td>1234567</td>
-                                            </tr>
+                                            @endforeach
                                             <tr>
                                                 <th colspan="4">د معاشاتو میاشتنی مقدار</th>
-                                                <th>1500000</th>
+                                                <th>{{$stu}}</th>
                                               </tr>
                                             <tr>
                                                 <th colspan="4">د معاشاتو کلنی مقدار</th>
-                                                <th>1500000</th>
+                                                <th>{{$stu *12}}</th>
                                               </tr>
                                         </tbody>
                                     </table>

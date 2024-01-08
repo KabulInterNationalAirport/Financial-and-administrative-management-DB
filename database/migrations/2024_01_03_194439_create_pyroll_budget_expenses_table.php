@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string("number");
             $table->string("received_type");
             $table->string("date");
+            $table->string("file");
             $table->unsignedBigInteger("project_codes_id");
             $table->foreign("project_codes_id")->references("id")->on("project_codes")->onDelete("cascade");
             $table->unsignedBigInteger("expense_codes_id");

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ProjectCode;
+use App\Models\PyrollBudget;
 use Illuminate\Http\Request;
 
 class PyrollBudgetController extends Controller
@@ -13,8 +15,8 @@ class PyrollBudgetController extends Controller
      */
     public function index()
     {
-        //
-    }
+        $budgets = PyrollBudget::all();
+        return view('financial-administrative-directorate.payroll-management.budgets.budget-list' , compact('budgets'));    }
 
     /**
      * Show the form for creating a new resource.
@@ -23,7 +25,8 @@ class PyrollBudgetController extends Controller
      */
     public function create()
     {
-        //
+        $codes = ProjectCode::all();
+        return view('financial-administrative-directorate.payroll-management.budgets.add-budget', compact('codes'));
     }
 
     /**
@@ -34,7 +37,36 @@ class PyrollBudgetController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $item =new PyrollBudget;
+        $code = ProjectCode::find($request->code);
+        $item->budget_type = $request->type;
+        $item->budget_name = $request->name;
+        $item->amount = $request->amount;
+        $item->date = $request->input('date');
+        $item->year = $request->year;
+        $item->month = $request->month;
+        $this->validate($request, [
+            'image' => 'file|image|required'
+        ]);
+        if($request->hasFile('image')){
+            $fileNameWithEx = $request->file('image')->getClientOriginalName();
+            $fielName = pathinfo($fileNameWithEx, PATHINFO_FILENAME);
+            $extesion = $request->file('image')->getClientOriginalExtension();
+            $uploadName = 'budget'. time() .'_report'.'.'.$extesion;
+            $image = $request->file('image')->storeAs('public/report',$uploadName);
+            $filetoUpload = 'storage/report/'.$uploadName;
+        }
+        else{
+            $filetoUpload = 'storage/report/def.jpg';
+        }
+        $item->file = $filetoUpload;
+
+        $item->project_codes_id = $request->code;
+        $code->amount = $code->amount + $request->amount;
+        $code->remain_amount = $code->remain_amount + $request->amount;
+        $code->save();
+        $item->save();
+        return redirect('payroll-budget');
     }
 
     /**

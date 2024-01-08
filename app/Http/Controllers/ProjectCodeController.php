@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ProjectCode;
 use Illuminate\Http\Request;
 
 class ProjectCodeController extends Controller
@@ -13,7 +14,8 @@ class ProjectCodeController extends Controller
      */
     public function index()
     {
-        //
+        $codes = ProjectCode::all();
+        return view('financial-administrative-directorate.payroll-management.project-codes.project-codes-list', compact('codes'));
     }
 
     /**
@@ -34,7 +36,14 @@ class ProjectCodeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $code = new ProjectCode;
+        $code->code = $request->code;
+        $code->unit = $request->unit;
+        $code->amount = 0;
+        $code->remain_amount= 0 ;
+        $code->expense_amount= 0;
+        $code->save();
+        return redirect('payroll-project-codes');
     }
 
     /**

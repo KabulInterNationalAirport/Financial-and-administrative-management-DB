@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ExpenseCode;
 use Illuminate\Http\Request;
 
 class ExpenseCodeController extends Controller
@@ -13,7 +14,8 @@ class ExpenseCodeController extends Controller
      */
     public function index()
     {
-        //
+        $codes = ExpenseCode::all();
+        return view('financial-administrative-directorate.payroll-management.expense-codes.expense-code-list' , compact('codes'));
     }
 
     /**
@@ -34,7 +36,11 @@ class ExpenseCodeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $code = new ExpenseCode;
+        $code->code = $request->code;
+        $code->expense_amount = 0;
+        $code->save();
+        return redirect('payroll-expense-codes');
     }
 
     /**

@@ -33,6 +33,12 @@ return [
     'famale' => 'Famale',
     'single' => 'Single' ,
     'married' => 'Married',
-    'update-employee' => 'Update Employee'
+    'update-employee' => 'Update Employee',
+    'appointed-employees' => 'Appointed Employees',
+    'salary' => 'Salary',
+    'sickness' => 'Sickness',
+    'important' => 'Important',
+    'picnic' => 'Picnic',
+    'balance' => 'Bilance'
     
 ];

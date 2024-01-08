@@ -18,7 +18,38 @@ use App\Http\Controllers\DpItProductsController;
 use App\Http\Controllers\DpNewArrivalsController;
 use App\Http\Controllers\TrusteeDpController;
 use App\Http\Controllers\DpDamagedProductsController;
+use App\Http\Controllers\ECAriaRentController;
+use App\Http\Controllers\EstateCommercialAreaController;
+use App\Http\Controllers\EstateContractController;
+use App\Http\Controllers\EstateEmpController;
+use App\Http\Controllers\EstateOilCarController;
+use App\Http\Controllers\EstateOilInquiryController;
+use App\Http\Controllers\EstateOilStorageController;
+use App\Http\Controllers\EstateReport;
+use App\Http\Controllers\EstateReportController;
+use App\Http\Controllers\ExpenseCodeController;
+use App\Http\Controllers\FAdmMangEmployeeController;
+use App\Http\Controllers\FAdmMangReportController;
+use App\Http\Controllers\GenerallOrgStuffController;
+use App\Http\Controllers\LogisticEmpController;
+use App\Http\Controllers\LogisticMangReportController;
 use App\Http\Controllers\MainReportController;
+use App\Http\Controllers\OfficersAppointedEmpController;
+use App\Http\Controllers\OfficersBalanceController;
+use App\Http\Controllers\OfficersEmployeeController;
+use App\Http\Controllers\OfficersMangReportController;
+use App\Http\Controllers\OilDischargeEmployeeController;
+use App\Http\Controllers\OilDMangReportController;
+use App\Http\Controllers\PayRollEmployeeController;
+use App\Http\Controllers\ProjectCodeController;
+use App\Http\Controllers\PyrollAppointedEmpController;
+use App\Http\Controllers\PyrollBudgetController;
+use App\Http\Controllers\PyrollBudgetExpenseController;
+use App\Http\Controllers\PyrollReportController;
+use App\Http\Controllers\SaveCareEmployeeController;
+use App\Http\Controllers\SaveCareMangReportController;
+use App\Http\Controllers\SearchController;
+use App\Http\Controllers\ShowRetiredEmployeesController;
 use App\Http\Controllers\TarminalEmpController;
 use App\Http\Controllers\TarminalReportController;
 use App\Http\Controllers\TotalProductDpController;
@@ -35,18 +66,19 @@ Route::group(
     ], function(){ 
 
 // routs of breaze
-Route::get('/', function () {
-    return view('index');
-});
+// Route::get('/', function () {
+//     return view('index');
 // })->middleware(['auth', 'verified'])->name('/');
-    });
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-
+Route::get('/', function () {
+    return view('index');
+});
         // financial adm mang. report routes
         Route::resource('fin-adm-report' , FinancialAdmReportController::class);
 
@@ -76,6 +108,21 @@ Route::middleware('auth')->group(function () {
         });
         Route::get('/report-index' , function(){
             return view('./report-index');
+        });
+        Route::get('/logistic' , function(){
+            return view('./financial-administrative-directorate/logistics/index');
+        });
+        Route::get('/oil-descharge' , function(){
+            return view('./financial-administrative-directorate/oil-descharge/index');
+        });
+        Route::get('/save-and-care' , function(){
+            return view('./financial-administrative-directorate/save-and-care/index');
+        });
+        Route::get('/financial-administrative' , function(){
+            return view('./financial-administrative-directorate/financial-administrative/index');
+        });
+        Route::get('/officers' , function(){
+            return view('./financial-administrative-directorate/officers-mang/index');
         });
 // ---------------------------------------------------------------------------------------------------------------
 
@@ -117,13 +164,98 @@ Route::middleware('auth')->group(function () {
         // terminals mang. routes
         // terminals employees routes
         Route::resource('terminal-employee' , TarminalEmpController::class);
+        // terminal report routes
         Route::resource('terminal-report', TarminalReportController::class);
 
 
+        // logistics mang. routes
+        // logistic report route
+        Route::resource('logistic-report', LogisticMangReportController::class);
+        // logistic employee routes
+        Route::resource('logistic-employee' , LogisticEmpController::class);
 
 
+        // payroll management routes
+        // project codes routes here
+        Route::resource('payroll-project-codes' , ProjectCodeController::class);
+        // expense codes routes here
+        Route::resource('payroll-expense-codes', ExpenseCodeController::class);
+        // budgets routes
+        Route::resource('payroll-budget' , PyrollBudgetController::class);
+        // budgets routes
+        Route::resource('payroll-budget-expense' , PyrollBudgetExpenseController::class);
+        // payroll management employees
+        Route::resource('payroll-employee' , PayRollEmployeeController::class);
+        // payroll report route
+        Route::resource('payroll-report' , PyrollReportController::class);
+        // payroll appointed stuff
+        Route::resource('appointed-stuff', PyrollAppointedEmpController::class);
+        // payroll retired employee list invokable controller
+        Route::get('retired-employees' , ShowRetiredEmployeesController::class);
+        // org general stuff routes
+        Route::resource('org-stuff' , GenerallOrgStuffController::class);
+
+
+        // oil discharge routes here
+        // oil discharge report routes
+        Route::resource('oil-d-report' , OilDMangReportController::class);
+        // oil discharge employee routes
+        Route::resource('oil-d-employee' , OilDischargeEmployeeController::class);
+
+        // save and care manag. routes here 
+        // save-care reprot routes
+        Route::resource('save-care-report' , SaveCareMangReportController::class);
+        // save-care employee routes
+        Route::resource('save-care-employee' , SaveCareEmployeeController::class);
+
+
+
+        // financial and administrative management routes
+        // fin and adm report routes
+        Route::resource('fin-adm-m-report' , FAdmMangReportController::class);
+        // fin adn amd mang employee routes
+        Route::resource('fin-adm-m-employee' , FAdmMangEmployeeController::class);
+
+
+        // officers mang routes here
+        // officers report route 
+        Route::resource('officer-report', OfficersMangReportController::class);
+        // officers employee routes
+        Route::resource('officer-employee' , OfficersEmployeeController::class);
+        // officers stuff list routes
+        Route::resource('officer-stuff',OfficersAppointedEmpController::class);
+        // officers stuff list searching route
+        Route::get('/officer-stuff-search' , [SearchController::class , 'search']);
+        // employee balance routes
+        Route::resource('balance' , OfficersBalanceController::class);
+
+
+
+        // property mang routes
+        // real estate report route
+        Route::resource('estate-report', EstateReportController::class);
+        // real estate employee route
+        Route::resource('estate-employee' , EstateEmpController::class);
+        // real estate contract routes
+        Route::resource('estate-contract' , EstateContractController::class);
+        // real estate oil inquery routes
+        Route::resource('estate-oil-inquery' , EstateOilInquiryController::class);
+        // real estate oil storage route
+        Route::resource('estate-oil-storage' , EstateOilStorageController::class);
+        // real estate oil cars routes
+        Route::resource('estate-oil-cars' ,EstateOilCarController::class);
+        // real estate commircial areas routes
+        Route::resource('estate-commircial-areas' , EstateCommercialAreaController::class);
+        // rent routes 
+        Route::resource('commercial-area-rent' , ECAriaRentController::class);
+
+
+        
         // this route is for main reports
         Route::resource('main-report' , MainReportController::class);
+
+
+    });
 
         Route::group(['prefix' => 'permissions', 'as' => 'permissions.'], function () {
             Route::get('/index',[PermissionController::class, 'index'])->name('index');

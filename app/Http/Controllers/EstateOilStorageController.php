@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\EstateOilStorage;
 use Illuminate\Http\Request;
 
 class EstateOilStorageController extends Controller
@@ -13,7 +14,8 @@ class EstateOilStorageController extends Controller
      */
     public function index()
     {
-        //
+        $items = EstateOilStorage::all();
+        return view('financial-administrative-directorate.property.oil-estilams.oil-company-qarar-dad.list-oil-qarar-dad' , compact('items'));
     }
 
     /**
@@ -34,7 +36,31 @@ class EstateOilStorageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $item = new EstateOilStorage;
+        $item->company_name = $request->company_name;
+        $item->area_mm = $request->area_mm;
+        $item->location = $request->location;
+        $item->start_date = $request->start_date;
+        $item->end_date = $request->end_date;
+        $item->oil_total_valume = 0;
+        $item->oil_remain_valume = 0;
+        $this->validate($request, [
+            'image' => 'file|image|required'
+        ]);
+        if($request->hasFile('image')){
+            $fileNameWithEx = $request->file('image')->getClientOriginalName();
+            $fielName = pathinfo($fileNameWithEx, PATHINFO_FILENAME);
+            $extesion = $request->file('image')->getClientOriginalExtension();
+            $uploadName = 'fin_adm'. time() .'_report'.'.'.$extesion;
+            $image = $request->file('image')->storeAs('public/report',$uploadName);
+            $filetoUpload = 'storage/report/'.$uploadName;
+        }
+        else{
+            $filetoUpload = 'storage/report/def.jpg';
+        }
+        $item->contract_img = $filetoUpload;
+        $item->save();
+        return redirect('estate-oil-storage');
     }
 
     /**
@@ -45,7 +71,8 @@ class EstateOilStorageController extends Controller
      */
     public function show($id)
     {
-        //
+        $item = EstateOilStorage::find($id);
+        return view('financial-administrative-directorate.property.oil-estilams.oil-company-qarar-dad.print-oil-qarar-dad' , compact('item'));
     }
 
     /**

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\OfficersAppointedEmp;
+use App\Models\OfficersBalance;
 use Illuminate\Http\Request;
 
 class OfficersAppointedEmpController extends Controller
@@ -13,7 +15,9 @@ class OfficersAppointedEmpController extends Controller
      */
     public function index()
     {
-        //
+        $balances = OfficersBalance::all();
+        $employees = OfficersAppointedEmp::all();
+        return view('financial-administrative-directorate.officers-mang.org-stuff.Employee-list', compact('employees' , 'balances'));
     }
 
     /**
@@ -23,7 +27,7 @@ class OfficersAppointedEmpController extends Controller
      */
     public function create()
     {
-        //
+        return view('financial-administrative-directorate.officers-mang.org-stuff.add-employee');
     }
 
     /**
@@ -34,7 +38,21 @@ class OfficersAppointedEmpController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $emp = new OfficersAppointedEmp;
+        $emp->name = $request->name;
+        $emp->last_name = $request->last_name;
+        $emp->father_name = $request->father_name;
+        $emp->birth_date = $request->birth_date;
+        $emp->appointment_date = $request->app_date;
+        $emp->position_no = $request->position;
+        $emp->degree = $request->degree;
+        $emp->bank_card = $request->bank_card;
+        $emp->phone = $request->phone;
+        $emp->state = 'فعال';
+
+        $emp->save();
+        return redirect('officer-stuff');
+        
     }
 
     /**
@@ -47,6 +65,8 @@ class OfficersAppointedEmpController extends Controller
     {
         //
     }
+
+   
 
     /**
      * Show the form for editing the specified resource.

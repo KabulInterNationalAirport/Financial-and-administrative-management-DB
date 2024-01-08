@@ -12,42 +12,42 @@
                 <ul class="side-menu">
                     <li class="side-item side-item-category mt-4"></li>
                     <li class="slide">
-                        <a class="side-menu__item" data-bs-toggle="slide" href="/qarardads">
+                        <a class="side-menu__item" data-bs-toggle="slide" href="/estate-contract">
                             <i class="fa-solid fa-list-ul sidemenu_icon"></i>
                             <span class="side-menu__label">{{__('layout-Financial.list-of-contracts')}}</span><i class="angle fa fa-angle-right"></i></a>
                     </li>
                     <li class="slide">
-                        <a class="side-menu__item" data-bs-toggle="slide" href="/estilam">
+                        <a class="side-menu__item" data-bs-toggle="slide" href="/estate-oil-inquery">
                             <i class="fa-solid fa-list-ol sidemenu_icon"></i>
                             <span class="side-menu__label">{{__('layout-Financial.fuel-inquiries')}}</span><i class="angle fa fa-angle-right"></i></a>
 
                     </li>
                     <li class="slide">
-                        <a class="side-menu__item" data-bs-toggle="slide" href="/revenue">
+                        <a class="side-menu__item" data-bs-toggle="slide" href="/estate-commircial-areas">
                             <i class="fa-solid fa-people-roof sidemenu_icon"></i>
                             <span class="side-menu__label">{{__('layout-Financial.commercial-areas')}}</span><i class="angle fa fa-angle-right"></i></a>
 
                     </li>
                     <li class="slide">
-                        <a class="side-menu__item" data-bs-toggle="slide" href="/cars-list">
+                        <a class="side-menu__item" data-bs-toggle="slide" href="/estate-oil-cars">
                             <i class="fa-solid fa-truck-moving sidemenu_icon"></i>
                             <span class="side-menu__label">{{__('layout-Financial.oil-cars')}}</span><i class="angle fa fa-angle-right"></i></a>
 
                     </li>
                     <li class="slide">
-                        <a class="side-menu__item" data-bs-toggle="slide" href="/oil-company">
+                        <a class="side-menu__item" data-bs-toggle="slide" href="/estate-oil-storage">
                             <i class="fa-solid fa-gas-pump sidemenu_icon"></i>
                             <span class="side-menu__label">{{__('layout-Financial.oil-companies')}}</span><i class="angle fa fa-angle-right"></i></a>
 
                     </li>
                     <li class="slide">
-                        <a class="side-menu__item" data-bs-toggle="slide" href="/motamid">
+                        <a class="side-menu__item" data-bs-toggle="slide" href="/estate-employee">
                             <i class="fa-solid fa-user-tie sidemenu_icon"></i>
                             <span class="side-menu__label">{{__('layout-Financial.employees')}}</span><i class="angle fa fa-angle-right"></i></a>
 
                     </li>
                     <li class="slide">
-                        <a class="side-menu__item" data-bs-toggle="slide" href="/property-report">
+                        <a class="side-menu__item" data-bs-toggle="slide" href="/estate-report">
                             <i class="fa-solid fa-newspaper sidemenu_icon"></i>
                             <span class="side-menu__label">{{__('layout-Financial.daily-report')}}</span><i class="angle fa fa-angle-right"></i></a>
 

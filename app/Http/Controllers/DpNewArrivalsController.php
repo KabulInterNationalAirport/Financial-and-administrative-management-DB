@@ -41,7 +41,8 @@ class DpNewArrivalsController extends Controller
     public function store(Request $request)
     {
         $t_product = TotalProductDp::find($request->product);
-        $t_product->quantity = $request->quantity;
+        $t_product->quantity = $t_product->quantity + $request->quantity;
+        $t_product->remain_products = $t_product->remain_products + $request->quantity;
 
         $item = new DpNewArrivals;
         $item->name = $request->name;

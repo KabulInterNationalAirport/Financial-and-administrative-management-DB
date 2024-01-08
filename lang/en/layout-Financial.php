@@ -26,7 +26,7 @@ return [
     'general-staff' => 'General Staff',
     'references' => 'References',
     'badget' => 'Budget',
-    'code' => 'Codes' ,
+    'project-code' => 'Project Codes' ,
     'management-of-terminals' => 'Management of terminals',
     'car' => 'Cars',
     'kabul-airport' => 'Kabul International Airport',
@@ -44,6 +44,17 @@ return [
     'commodity-accounting' => 'Commodity Acc',
     'tech' => 'IT Products',
     'distributed-car-commodities' => 'Distributed car Commodities',
+    'logistic' => 'Logistic Mang',
+    'oil-discharge' => 'Oil DisCharge mang',
+    'financial-adm-mang' => 'Financial-administrative',
+    'save-care' => 'Save-Care mang',
+    'attendance' => 'Attendance mang' , 
+    'expense-code' => 'Expense Codes' ,
+    'payroll-budgets' => 'Payroll Budget',
+    'save-and-care' => 'Save and Care',
+    'financial-administrative' => 'Financial-Administrative M',
+    'officers-mang' => 'Officers Mang',
+    'employee-bilance' => 'Employee Bilance'
     
     
 ];

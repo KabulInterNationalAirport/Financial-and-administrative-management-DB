@@ -115,7 +115,7 @@
                                 <th>{{ __('depo/delivered-products.unit') }}</th>
                                 <th>{{ __('depo/delivered-products.price') }}</th>
                                 <th>{{ __('depo/delivered-products.total-price') }}</th>
-                                <th>{{ __('depo/delivered-products.details') }}</th>
+                                {{-- <th>{{ __('depo/delivered-products.details') }}</th> --}}
                             </tr>
                         </thead>
                         <tbody>
@@ -134,13 +134,13 @@
                                 <td>{{$product->unit}}</td>
                                 <td>{{$product->price}}</td>
                                 <td>{{$product->price * $product->quantity}}</td>
-                                <td>
+                                {{-- <td>
                                     <a class="action-btns1 bg-success btn-sm" data-bs-target="#showingProduct"
                                         data-bs-toggle="modal"><i class="fa-regular fa-pen-to-square"></i></a>
                                         <a class="action-btns1 bg-danger  btn-sm" href="/acc-emp-item-reg">
                                             <i class="fa-solid fa-print"></i>
                                         </a>
-                                </td>
+                                </td> --}}
                             </tr>
                                 
                             @endforeach

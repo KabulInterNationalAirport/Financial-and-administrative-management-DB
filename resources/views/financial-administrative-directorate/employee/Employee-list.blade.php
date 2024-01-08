@@ -24,7 +24,7 @@
                         <div class="page-rightheader ms-md-auto">
                             <div class="align-items-end flex-wrap my-auto right-content breadcrumb-right">
                                 <div class="btn-list">
-                                    <a href="/fin-adm-employee/create" class="btn btn-primary me-3">{{__('depo/employees.add-employee')}} <i class="fa-solid fa-user-plus"></i></a>
+                                    <a href="{{route('fin-adm-employee.create')}}" class="btn btn-primary me-3">{{__('depo/employees.add-employee')}} <i class="fa-solid fa-user-plus"></i></a>
 
                                 </div>
                             </div>

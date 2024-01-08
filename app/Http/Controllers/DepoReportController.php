@@ -42,8 +42,21 @@ class DepoReportController extends Controller
         $reprot->related_office = $request->office;
         $reprot->task_details = $request->taskdetails;
         $reprot->state = $request->state;
-        $reprot->date = $request->input('date');
-        $reprot->file = 'hi.png';
+        $this->validate($request, [
+            'image' => 'file|image|required'
+        ]);
+        if($request->hasFile('image')){
+            $fileNameWithEx = $request->file('image')->getClientOriginalName();
+            $fielName = pathinfo($fileNameWithEx, PATHINFO_FILENAME);
+            $extesion = $request->file('image')->getClientOriginalExtension();
+            $uploadName = 'fin_adm'. time() .'_report'.'.'.$extesion;
+            $image = $request->file('image')->storeAs('public/report',$uploadName);
+            $filetoUpload = 'storage/report/'.$uploadName;
+        }
+        else{
+            $filetoUpload = 'storage/report/def.jpg';
+        }
+        $reprot->file = $filetoUpload;
         $reprot->save();
         return redirect('depo-report');
     }
@@ -85,7 +98,6 @@ class DepoReportController extends Controller
         $report->related_office = $request->office;
         $report->task_details = $request->taskdetails;
         $report->state = $request->state;
-        $report->date = $request->input('date');
 
         $this->validate($request, [
             'image' => 'file|image|required'
